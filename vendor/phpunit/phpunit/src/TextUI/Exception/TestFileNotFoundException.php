@@ -22,8 +22,13 @@ final class TestFileNotFoundException extends RuntimeException implements Except
         parent::__construct(
             sprintf(
                 'Test file "%s" not found',
+<<<<<<< HEAD
                 $path
             )
+=======
+                $path,
+            ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

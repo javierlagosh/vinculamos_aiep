@@ -116,7 +116,11 @@ class Profiler implements ResetInterface
     /**
      * Finds profiler tokens for the given criteria.
      *
+<<<<<<< HEAD
      * @param string|null $limit The maximum number of tokens to return
+=======
+     * @param int|null    $limit The maximum number of tokens to return
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      * @param string|null $start The start date to search from
      * @param string|null $end   The end date to search to
      *
@@ -124,7 +128,11 @@ class Profiler implements ResetInterface
      *
      * @see https://php.net/datetime.formats for the supported date/time formats
      */
+<<<<<<< HEAD
     public function find(?string $ip, ?string $url, ?string $limit, ?string $method, ?string $start, ?string $end, string $statusCode = null)
+=======
+    public function find(?string $ip, ?string $url, ?int $limit, ?string $method, ?string $start, ?string $end, string $statusCode = null)
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     {
         return $this->storage->find($ip, $url, $limit, $method, $this->getTimestamp($start), $this->getTimestamp($end), $statusCode);
     }

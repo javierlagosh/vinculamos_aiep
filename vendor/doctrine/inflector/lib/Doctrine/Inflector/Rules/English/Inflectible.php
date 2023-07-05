@@ -98,6 +98,10 @@ class Inflectible
         yield new Substitution(new Word('blouse'), new Word('blouses'));
         yield new Substitution(new Word('brother'), new Word('brothers'));
         yield new Substitution(new Word('cafe'), new Word('cafes'));
+<<<<<<< HEAD
+=======
+        yield new Substitution(new Word('cave'), new Word('caves'));
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         yield new Substitution(new Word('chateau'), new Word('chateaux'));
         yield new Substitution(new Word('niveau'), new Word('niveaux'));
         yield new Substitution(new Word('child'), new Word('children'));

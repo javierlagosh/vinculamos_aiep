@@ -38,9 +38,13 @@ final class DelimiterParser implements InlineParserInterface
         $cursor    = $inlineContext->getCursor();
         $processor = $this->collection->getDelimiterProcessor($character);
 
+<<<<<<< HEAD
         if ($processor === null) {
             throw new \LogicException('Delimiter processor should never be null here');
         }
+=======
+        \assert($processor !== null); // Delimiter processor should never be null here
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
         $charBefore = $cursor->peek(-1);
         if ($charBefore === null) {

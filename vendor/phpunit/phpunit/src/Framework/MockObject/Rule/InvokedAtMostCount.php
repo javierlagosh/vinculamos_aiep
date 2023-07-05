@@ -48,7 +48,11 @@ final class InvokedAtMostCount extends InvocationOrder
         if ($count > $this->allowedInvocations) {
             throw new ExpectationFailedException(
                 'Expected invocation at most ' . $this->allowedInvocations .
+<<<<<<< HEAD
                 ' times but it occurred ' . $count . ' time(s).'
+=======
+                ' times but it occurred ' . $count . ' time(s).',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
     }

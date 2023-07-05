@@ -13,6 +13,10 @@ declare(strict_types=1);
 
 namespace League\CommonMark;
 
+<<<<<<< HEAD
+=======
+use League\CommonMark\Exception\CommonMarkException;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use League\CommonMark\Output\RenderedContentInterface;
 
 /**
@@ -27,7 +31,11 @@ interface MarkdownConverterInterface
      *
      * @deprecated since 2.2; use {@link ConverterInterface::convert()} instead
      *
+<<<<<<< HEAD
      * @throws \RuntimeException
+=======
+     * @throws CommonMarkException
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function convertToHtml(string $markdown): RenderedContentInterface;
 }

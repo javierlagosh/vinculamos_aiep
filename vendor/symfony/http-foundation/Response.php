@@ -774,8 +774,15 @@ class Response
             return (int) $this->headers->getCacheControlDirective('max-age');
         }
 
+<<<<<<< HEAD
         if (null !== $this->getExpires()) {
             return (int) $this->getExpires()->format('U') - (int) $this->getDate()->format('U');
+=======
+        if (null !== $expires = $this->getExpires()) {
+            $maxAge = (int) $expires->format('U') - (int) $this->getDate()->format('U');
+
+            return max($maxAge, 0);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         return null;
@@ -819,7 +826,11 @@ class Response
      *
      * It returns null when no freshness information is present in the response.
      *
+<<<<<<< HEAD
      * When the responses TTL is <= 0, the response may not be served from cache without first
+=======
+     * When the response's TTL is 0, the response may not be served from cache without first
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      * revalidating with the origin.
      *
      * @final
@@ -828,7 +839,11 @@ class Response
     {
         $maxAge = $this->getMaxAge();
 
+<<<<<<< HEAD
         return null !== $maxAge ? $maxAge - $this->getAge() : null;
+=======
+        return null !== $maxAge ? max($maxAge - $this->getAge(), 0) : null;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 
     /**

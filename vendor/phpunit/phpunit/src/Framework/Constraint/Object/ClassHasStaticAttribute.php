@@ -16,6 +16,11 @@ use ReflectionException;
 
 /**
  * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+<<<<<<< HEAD
+=======
+ *
+ * @deprecated https://github.com/sebastianbergmann/phpunit/issues/4601
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  */
 final class ClassHasStaticAttribute extends ClassHasAttribute
 {
@@ -26,7 +31,11 @@ final class ClassHasStaticAttribute extends ClassHasAttribute
     {
         return sprintf(
             'has static attribute "%s"',
+<<<<<<< HEAD
             $this->attributeName()
+=======
+            $this->attributeName(),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -49,7 +58,11 @@ final class ClassHasStaticAttribute extends ClassHasAttribute
             throw new Exception(
                 $e->getMessage(),
                 $e->getCode(),
+<<<<<<< HEAD
                 $e
+=======
+                $e,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
         // @codeCoverageIgnoreEnd

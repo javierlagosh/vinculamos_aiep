@@ -9,10 +9,17 @@
  */
 namespace SebastianBergmann\Type;
 
+<<<<<<< HEAD
 use function array_unique;
 use function assert;
 use function count;
 use function implode;
+=======
+use function assert;
+use function count;
+use function implode;
+use function in_array;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use function sort;
 
 final class IntersectionType extends Type
@@ -114,6 +121,7 @@ final class IntersectionType extends Type
         foreach ($types as $type) {
             assert($type instanceof ObjectType);
 
+<<<<<<< HEAD
             $names[] = $type->className()->qualifiedName();
         }
 
@@ -121,6 +129,15 @@ final class IntersectionType extends Type
             throw new RuntimeException(
                 'An intersection type must not contain duplicate types'
             );
+=======
+            $classQualifiedName = $type->className()->qualifiedName();
+
+            if (in_array($classQualifiedName, $names, true)) {
+                throw new RuntimeException('An intersection type must not contain duplicate types');
+            }
+
+            $names[] = $classQualifiedName;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
     }
 }

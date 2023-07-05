@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,6 +15,10 @@
 
 namespace Psy\Command;
 
+<<<<<<< HEAD
+=======
+use Psy\Exception\RuntimeException;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use Psy\Output\ShellOutput;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -46,12 +54,28 @@ HELP
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $buf = $this->getApplication()->getCodeBuffer();
         if ($input->getOption('clear')) {
             $this->getApplication()->resetCodeBuffer();
+=======
+     *
+     * @return int 0 if everything went fine, or an exit code
+     */
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
+        $app = $this->getApplication();
+        if (!$app instanceof \Psy\Shell) {
+            throw new RuntimeException('Buffer command requires a \Psy\Shell application');
+        }
+
+        $buf = $app->getCodeBuffer();
+        if ($input->getOption('clear')) {
+            $app->resetCodeBuffer();
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             $output->writeln($this->formatLines($buf, 'urgent'), ShellOutput::NUMBER_LINES);
         } else {
             $output->writeln($this->formatLines($buf), ShellOutput::NUMBER_LINES);

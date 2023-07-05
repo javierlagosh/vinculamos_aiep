@@ -2,12 +2,21 @@
 
 # PHPUnit
 
+<<<<<<< HEAD
 PHPUnit is a programmer-oriented testing framework for PHP. It is an instance of the xUnit architecture for unit testing frameworks.
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/phpunit/phpunit.svg?style=flat-square)](https://packagist.org/packages/phpunit/phpunit)
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.3-8892BF.svg?style=flat-square)](https://php.net/)
 [![CI Status](https://github.com/sebastianbergmann/phpunit/workflows/CI/badge.svg?branch=9.5&event=push)](https://phpunit.de/build-status.html)
 [![Type Coverage](https://shepherd.dev/github/sebastianbergmann/phpunit/coverage.svg)](https://shepherd.dev/github/sebastianbergmann/phpunit)
+=======
+[![Latest Stable Version](https://poser.pugx.org/phpunit/phpunit/v/stable.png)](https://packagist.org/packages/phpunit/phpunit)
+[![CI Status](https://github.com/sebastianbergmann/phpunit/workflows/CI/badge.svg)](https://github.com/sebastianbergmann/phpunit/actions)
+[![Type Coverage](https://shepherd.dev/github/sebastianbergmann/phpunit/coverage.svg)](https://shepherd.dev/github/sebastianbergmann/phpunit)
+[![codecov](https://codecov.io/gh/sebastianbergmann/phpunit/branch/9.6/graph/badge.svg)](https://codecov.io/gh/sebastianbergmann/phpunit)
+
+PHPUnit is a programmer-oriented testing framework for PHP. It is an instance of the xUnit architecture for unit testing frameworks.
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
 ## Installation
 
@@ -25,7 +34,11 @@ Alternatively, you may use [Composer](https://getcomposer.org/) to download and 
 
 ## Contribute
 
+<<<<<<< HEAD
 Please refer to [CONTRIBUTING.md](https://github.com/sebastianbergmann/phpunit/blob/master/.github/CONTRIBUTING.md) for information on how to contribute to PHPUnit and its related projects.
+=======
+Please refer to [CONTRIBUTING.md](https://github.com/sebastianbergmann/phpunit/blob/main/.github/CONTRIBUTING.md) for information on how to contribute to PHPUnit and its related projects.
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
 ## List of Contributors
 
@@ -34,6 +47,7 @@ Thanks to everyone who has contributed to PHPUnit! You can find a detailed list 
 * [PHPUnit](https://github.com/sebastianbergmann/phpunit/graphs/contributors)
 * [php-code-coverage](https://github.com/sebastianbergmann/php-code-coverage/graphs/contributors)
 
+<<<<<<< HEAD
 A very special thanks to everyone who has contributed to the documentation and helps maintain the translations:
 
 * [English](https://github.com/sebastianbergmann/phpunit-documentation-english/graphs/contributors)
@@ -42,4 +56,7 @@ A very special thanks to everyone who has contributed to the documentation and h
 * [Japanese](https://github.com/sebastianbergmann/phpunit-documentation-japanese/graphs/contributors)
 * [Brazilian Portuguese](https://github.com/sebastianbergmann/phpunit-documentation-brazilian-portuguese/graphs/contributors)
 * [Simplified Chinese](https://github.com/sebastianbergmann/phpunit-documentation-chinese/graphs/contributors)
+=======
+A very special thanks to everyone who has contributed to the [documentation](https://github.com/sebastianbergmann/phpunit-documentation-english/graphs/contributors).
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 

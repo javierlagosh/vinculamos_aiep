@@ -147,7 +147,11 @@ class ResponseCacheStrategy implements ResponseCacheStrategyInterface
 
         if (is_numeric($this->ageDirectives['expires'])) {
             $date = clone $response->getDate();
+<<<<<<< HEAD
             $date->modify('+'.($this->ageDirectives['expires'] + $this->age).' seconds');
+=======
+            $date = $date->modify('+'.($this->ageDirectives['expires'] + $this->age).' seconds');
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             $response->setExpires($date);
         }
     }

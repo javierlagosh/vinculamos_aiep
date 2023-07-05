@@ -28,6 +28,10 @@ use Monolog\Formatter\FormatterInterface;
  * @see https://www.flowdock.com/api/push
  *
  * @phpstan-import-type FormattedRecord from AbstractProcessingHandler
+<<<<<<< HEAD
+=======
+ * @deprecated Since 2.9.0 and 3.3.0, Flowdock was shutdown we will thus drop this handler in Monolog 4
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  */
 class FlowdockHandler extends SocketHandler
 {

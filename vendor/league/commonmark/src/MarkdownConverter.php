@@ -14,6 +14,10 @@ declare(strict_types=1);
 namespace League\CommonMark;
 
 use League\CommonMark\Environment\EnvironmentInterface;
+<<<<<<< HEAD
+=======
+use League\CommonMark\Exception\CommonMarkException;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use League\CommonMark\Output\RenderedContentInterface;
 use League\CommonMark\Parser\MarkdownParser;
 use League\CommonMark\Parser\MarkdownParserInterface;
@@ -51,7 +55,11 @@ class MarkdownConverter implements ConverterInterface, MarkdownConverterInterfac
      *
      * @return RenderedContentInterface Rendered HTML
      *
+<<<<<<< HEAD
      * @throws \RuntimeException
+=======
+     * @throws CommonMarkException
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function convert(string $input): RenderedContentInterface
     {
@@ -69,7 +77,11 @@ class MarkdownConverter implements ConverterInterface, MarkdownConverterInterfac
      *
      * @return RenderedContentInterface Rendered HTML
      *
+<<<<<<< HEAD
      * @throws \RuntimeException
+=======
+     * @throws CommonMarkException
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function convertToHtml(string $markdown): RenderedContentInterface
     {
@@ -83,7 +95,11 @@ class MarkdownConverter implements ConverterInterface, MarkdownConverterInterfac
      *
      * @see MarkdownConverter::convert()
      *
+<<<<<<< HEAD
      * @throws \RuntimeException
+=======
+     * @throws CommonMarkException
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function __invoke(string $markdown): RenderedContentInterface
     {

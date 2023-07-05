@@ -428,7 +428,11 @@ class Process implements \IteratorAggregate
 
         do {
             $this->checkTimeout();
+<<<<<<< HEAD
             $running = '\\' === \DIRECTORY_SEPARATOR ? $this->isRunning() : $this->processPipes->areOpen();
+=======
+            $running = $this->isRunning() && ('\\' === \DIRECTORY_SEPARATOR || $this->processPipes->areOpen());
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             $this->readPipes($running, '\\' !== \DIRECTORY_SEPARATOR || !$running);
         } while ($running);
 
@@ -617,10 +621,17 @@ class Process implements \IteratorAggregate
      *
      * @param int $flags A bit field of Process::ITER_* flags
      *
+<<<<<<< HEAD
      * @throws LogicException in case the output has been disabled
      * @throws LogicException In case the process is not started
      *
      * @return \Generator<string, string>
+=======
+     * @return \Generator<string, string>
+     *
+     * @throws LogicException in case the output has been disabled
+     * @throws LogicException In case the process is not started
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     #[\ReturnTypeWillChange]
     public function getIterator(int $flags = 0)
@@ -910,7 +921,11 @@ class Process implements \IteratorAggregate
      * Stops the process.
      *
      * @param int|float $timeout The timeout in seconds
+<<<<<<< HEAD
      * @param int       $signal  A POSIX signal to send in case the process has not stop at timeout, default is SIGKILL (9)
+=======
+     * @param int|null  $signal  A POSIX signal to send in case the process has not stop at timeout, default is SIGKILL (9)
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      *
      * @return int|null The exit-code of the process or null if it's not running
      */

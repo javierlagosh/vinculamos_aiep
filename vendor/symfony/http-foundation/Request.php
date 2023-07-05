@@ -191,7 +191,11 @@ class Request
     protected $session;
 
     /**
+<<<<<<< HEAD
      * @var string
+=======
+     * @var string|null
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     protected $locale;
 
@@ -439,12 +443,21 @@ class Request
     /**
      * Clones a request and overrides some of its parameters.
      *
+<<<<<<< HEAD
      * @param array $query      The GET parameters
      * @param array $request    The POST parameters
      * @param array $attributes The request attributes (parameters parsed from the PATH_INFO, ...)
      * @param array $cookies    The COOKIE parameters
      * @param array $files      The FILES parameters
      * @param array $server     The SERVER parameters
+=======
+     * @param array|null $query      The GET parameters
+     * @param array|null $request    The POST parameters
+     * @param array|null $attributes The request attributes (parameters parsed from the PATH_INFO, ...)
+     * @param array|null $cookies    The COOKIE parameters
+     * @param array|null $files      The FILES parameters
+     * @param array|null $server     The SERVER parameters
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      *
      * @return static
      */
@@ -522,10 +535,17 @@ class Request
         $cookies = [];
 
         foreach ($this->cookies as $k => $v) {
+<<<<<<< HEAD
             $cookies[] = $k.'='.$v;
         }
 
         if (!empty($cookies)) {
+=======
+            $cookies[] = \is_array($v) ? http_build_query([$k => $v], '', '; ', \PHP_QUERY_RFC3986) : "$k=$v";
+        }
+
+        if ($cookies) {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             $cookieHeader = 'Cookie: '.implode('; ', $cookies)."\r\n";
         }
 
@@ -1452,7 +1472,11 @@ class Request
      */
     public function getLocale()
     {
+<<<<<<< HEAD
         return null === $this->locale ? $this->defaultLocale : $this->locale;
+=======
+        return $this->locale ?? $this->defaultLocale;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 
     /**
@@ -1573,9 +1597,15 @@ class Request
     /**
      * Gets the request body decoded as array, typically from a JSON payload.
      *
+<<<<<<< HEAD
      * @throws JsonException When the body cannot be decoded to an array
      *
      * @return array
+=======
+     * @return array
+     *
+     * @throws JsonException When the body cannot be decoded to an array
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function toArray()
     {

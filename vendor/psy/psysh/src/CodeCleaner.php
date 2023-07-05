@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -18,6 +22,10 @@ use Psy\CodeCleaner\AbstractClassPass;
 use Psy\CodeCleaner\AssignThisVariablePass;
 use Psy\CodeCleaner\CalledClassPass;
 use Psy\CodeCleaner\CallTimePassByReferencePass;
+<<<<<<< HEAD
+=======
+use Psy\CodeCleaner\CodeCleanerPass;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use Psy\CodeCleaner\EmptyArrayDimFetchPass;
 use Psy\CodeCleaner\ExitPass;
 use Psy\CodeCleaner\FinalClassPass;
@@ -82,8 +90,11 @@ class CodeCleaner
 
     /**
      * Check whether this CodeCleaner is in YOLO mode.
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function yolo(): bool
     {
@@ -93,7 +104,11 @@ class CodeCleaner
     /**
      * Get default CodeCleaner passes.
      *
+<<<<<<< HEAD
      * @return array
+=======
+     * @return CodeCleanerPass[]
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private function getDefaultPasses(): array
     {
@@ -150,7 +165,11 @@ class CodeCleaner
      * This list should stay in sync with the "rewriting shenanigans" in
      * getDefaultPasses above.
      *
+<<<<<<< HEAD
      * @return array
+=======
+     * @return CodeCleanerPass[]
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private function getYoloPasses(): array
     {
@@ -240,8 +259,11 @@ class CodeCleaner
      * Check whether a given backtrace frame is a call to Psy\debug.
      *
      * @param array $stackFrame
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private static function isDebugCall(array $stackFrame): bool
     {
@@ -288,8 +310,11 @@ class CodeCleaner
      * Set the current local namespace.
      *
      * @param array|null $namespace (default: null)
+<<<<<<< HEAD
      *
      * @return array|null
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function setNamespace(array $namespace = null)
     {
@@ -369,8 +394,11 @@ class CodeCleaner
      *
      * @param \PhpParser\Error $e
      * @param string           $code
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private function parseErrorIsUnclosedString(\PhpParser\Error $e, string $code): bool
     {

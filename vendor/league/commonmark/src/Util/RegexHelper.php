@@ -16,6 +16,10 @@ declare(strict_types=1);
 
 namespace League\CommonMark\Util;
 
+<<<<<<< HEAD
+=======
+use League\CommonMark\Exception\InvalidArgumentException;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use League\CommonMark\Extension\CommonMark\Node\Block\HtmlBlock;
 
 /**
@@ -161,7 +165,11 @@ final class RegexHelper
      *
      * @phpstan-param HtmlBlock::TYPE_* $type
      *
+<<<<<<< HEAD
      * @throws \InvalidArgumentException if an invalid type is given
+=======
+     * @throws InvalidArgumentException if an invalid type is given
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      *
      * @psalm-pure
      */
@@ -183,7 +191,11 @@ final class RegexHelper
             case HtmlBlock::TYPE_7_MISC_ELEMENT:
                 return '/^(?:' . self::PARTIAL_OPENTAG . '|' . self::PARTIAL_CLOSETAG . ')\\s*$/i';
             default:
+<<<<<<< HEAD
                 throw new \InvalidArgumentException('Invalid HTML block type');
+=======
+                throw new InvalidArgumentException('Invalid HTML block type');
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
     }
 
@@ -196,7 +208,11 @@ final class RegexHelper
      *
      * @phpstan-param HtmlBlock::TYPE_* $type
      *
+<<<<<<< HEAD
      * @throws \InvalidArgumentException if an invalid type is given
+=======
+     * @throws InvalidArgumentException if an invalid type is given
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      *
      * @psalm-pure
      */
@@ -214,7 +230,11 @@ final class RegexHelper
             case HtmlBlock::TYPE_5_CDATA:
                 return '/\]\]>/';
             default:
+<<<<<<< HEAD
                 throw new \InvalidArgumentException('Invalid HTML block type');
+=======
+                throw new InvalidArgumentException('Invalid HTML block type');
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
     }
 

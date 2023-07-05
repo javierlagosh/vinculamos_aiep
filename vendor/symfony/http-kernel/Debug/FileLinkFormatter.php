@@ -41,7 +41,11 @@ class FileLinkFormatter
 
     /**
      * @param string|array|null $fileLinkFormat
+<<<<<<< HEAD
      * @param string|\Closure   $urlFormat the URL format, or a closure that returns it on-demand
+=======
+     * @param string|\Closure   $urlFormat      the URL format, or a closure that returns it on-demand
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function __construct($fileLinkFormat = null, RequestStack $requestStack = null, string $baseDir = null, $urlFormat = null)
     {

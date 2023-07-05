@@ -37,7 +37,11 @@ final class JsonMatches extends Constraint
     {
         return sprintf(
             'matches JSON string "%s"',
+<<<<<<< HEAD
             $this->value
+=======
+            $this->value,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -100,7 +104,11 @@ final class JsonMatches extends Constraint
                 Json::prettify($recodedValue),
                 Json::prettify($recodedOther),
                 false,
+<<<<<<< HEAD
                 'Failed asserting that two json values are equal.'
+=======
+                'Failed asserting that two json values are equal.',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

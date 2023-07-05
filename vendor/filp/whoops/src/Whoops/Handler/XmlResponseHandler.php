@@ -43,7 +43,12 @@ class XmlResponseHandler extends Handler
         $response = [
             'error' => Formatter::formatExceptionAsDataArray(
                 $this->getInspector(),
+<<<<<<< HEAD
                 $this->addTraceToOutput()
+=======
+                $this->addTraceToOutput(),
+                $this->getRun()->getFrameFilters()
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             ),
         ];
 

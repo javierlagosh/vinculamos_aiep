@@ -9,6 +9,7 @@
  * file that was distributed with this source code.
  */
 
+<<<<<<< HEAD
 // @codeCoverageIgnoreStart
 
 use Carbon\CarbonInterface;
@@ -16,6 +17,14 @@ use Symfony\Component\Translation\PluralizationRules;
 
 if (class_exists('Symfony\\Component\\Translation\\PluralizationRules')) {
     PluralizationRules::set(function ($number) {
+=======
+use Carbon\CarbonInterface;
+use Symfony\Component\Translation\PluralizationRules;
+
+// @codeCoverageIgnoreStart
+if (class_exists(PluralizationRules::class)) {
+    PluralizationRules::set(static function ($number) {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         return (($number % 10 == 1) && ($number % 100 != 11)) ? 0 : ((($number % 10 >= 2) && ($number % 10 <= 4) && (($number % 100 < 10) || ($number % 100 >= 20))) ? 1 : 2);
     }, 'be');
 }

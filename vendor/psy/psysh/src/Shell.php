@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -15,8 +19,13 @@ use Psy\CodeCleaner\NoReturnValue;
 use Psy\Exception\BreakException;
 use Psy\Exception\ErrorException;
 use Psy\Exception\Exception as PsyException;
+<<<<<<< HEAD
 use Psy\Exception\ThrowUpException;
 use Psy\Exception\TypeErrorException;
+=======
+use Psy\Exception\RuntimeException;
+use Psy\Exception\ThrowUpException;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use Psy\ExecutionLoop\ProcessForker;
 use Psy\ExecutionLoop\RunkitReloader;
 use Psy\Formatter\TraceFormatter;
@@ -49,7 +58,11 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class Shell extends Application
 {
+<<<<<<< HEAD
     const VERSION = 'v0.11.9';
+=======
+    const VERSION = 'v0.11.18';
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /** @deprecated */
     const PROMPT = '>>> ';
@@ -229,7 +242,11 @@ class Shell extends Application
     }
 
     /**
+<<<<<<< HEAD
      * @return array
+=======
+     * @return Matcher\AbstractMatcher[]
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     protected function getDefaultMatchers(): array
     {
@@ -339,7 +356,11 @@ class Shell extends Application
 
         try {
             return parent::run($input, $output);
+<<<<<<< HEAD
         } catch (\Exception $e) {
+=======
+        } catch (\Throwable $e) {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             $this->writeException($e);
         }
 
@@ -349,7 +370,11 @@ class Shell extends Application
     /**
      * Runs PsySH.
      *
+<<<<<<< HEAD
      * @throws \Exception if thrown via the `throw-up` command
+=======
+     * @throws \Throwable if thrown via the `throw-up` command
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      *
      * @param InputInterface  $input  An Input instance
      * @param OutputInterface $output An Output instance
@@ -375,7 +400,11 @@ class Shell extends Application
      * Initializes tab completion and readline history, then spins up the
      * execution loop.
      *
+<<<<<<< HEAD
      * @throws \Exception if thrown via the `throw-up` command
+=======
+     * @throws \Throwable if thrown via the `throw-up` command
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      *
      * @return int 0 if everything went fine, or an error code
      */
@@ -471,8 +500,11 @@ class Shell extends Application
             foreach ($__psysh__->getIncludes() as $__psysh_include__) {
                 try {
                     include_once $__psysh_include__;
+<<<<<<< HEAD
                 } catch (\Error $_e) {
                     $__psysh__->writeException(ErrorException::fromError($_e));
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 } catch (\Exception $_e) {
                     $__psysh__->writeException($_e);
                 }
@@ -596,8 +628,11 @@ class Shell extends Application
      * Run execution loop listeners on user input.
      *
      * @param string $input
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function onInput(string $input): string
     {
@@ -614,8 +649,11 @@ class Shell extends Application
      * Run execution loop listeners on code to be executed.
      *
      * @param string $code
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function onExecute(string $code): string
     {
@@ -632,7 +670,11 @@ class Shell extends Application
             $output = $output->getErrorOutput();
         }
 
+<<<<<<< HEAD
         $output->writeln(\sprintf('<aside>%s</aside>', OutputFormatter::escape($code)), ConsoleOutput::VERBOSITY_DEBUG);
+=======
+        $output->writeln(\sprintf('<whisper>%s</whisper>', OutputFormatter::escape($code)), ConsoleOutput::VERBOSITY_DEBUG);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
         return $code;
     }
@@ -816,7 +858,11 @@ class Shell extends Application
     /**
      * Get PHP files to be parsed and executed before running the interactive shell.
      *
+<<<<<<< HEAD
      * @return array
+=======
+     * @return string[]
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getIncludes(): array
     {
@@ -911,7 +957,11 @@ class Shell extends Application
      *
      * This is useful for commands which manipulate the buffer.
      *
+<<<<<<< HEAD
      * @return array
+=======
+     * @return string[]
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getCodeBuffer(): array
     {
@@ -939,6 +989,12 @@ class Shell extends Application
 
         if ($input->hasParameterOption(['--help', '-h'])) {
             $helpCommand = $this->get('help');
+<<<<<<< HEAD
+=======
+            if (!$helpCommand instanceof Command\HelpCommand) {
+                throw new RuntimeException('Invalid help command instance');
+            }
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             $helpCommand->setCommand($command);
 
             return $helpCommand->run(new StringInput(''), $this->output);
@@ -1150,16 +1206,26 @@ class Shell extends Application
     }
 
     /**
+<<<<<<< HEAD
      * Renders a caught Exception.
+=======
+     * Renders a caught Exception or Error.
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      *
      * Exceptions are formatted according to severity. ErrorExceptions which were
      * warnings or Strict errors aren't rendered as harshly as real errors.
      *
      * Stores $e as the last Exception in the Shell Context.
      *
+<<<<<<< HEAD
      * @param \Exception $e An exception instance
      */
     public function writeException(\Exception $e)
+=======
+     * @param \Throwable $e An exception or error instance
+     */
+    public function writeException(\Throwable $e)
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     {
         // No need to write the break exception during a non-interactive run.
         if ($e instanceof BreakException && $this->nonInteractive) {
@@ -1206,8 +1272,11 @@ class Shell extends Application
      * Check whether the last exec was successful.
      *
      * Returns true if a return value was logged rather than an exception.
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getLastExecSuccess(): bool
     {
@@ -1215,6 +1284,7 @@ class Shell extends Application
     }
 
     /**
+<<<<<<< HEAD
      * Helper for formatting an exception for writeException().
      *
      * @todo extract this to somewhere it makes more sense
@@ -1224,6 +1294,15 @@ class Shell extends Application
      * @return string
      */
     public function formatException(\Exception $e): string
+=======
+     * Helper for formatting an exception or error for writeException().
+     *
+     * @todo extract this to somewhere it makes more sense
+     *
+     * @param \Throwable $e
+     */
+    public function formatException(\Throwable $e): string
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     {
         $indent = $this->config->theme()->compact() ? '' : '  ';
 
@@ -1266,8 +1345,11 @@ class Shell extends Application
      * Helper for getting an output style for the given ErrorException's level.
      *
      * @param \ErrorException $e
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     protected function getSeverity(\ErrorException $e): string
     {
@@ -1297,6 +1379,7 @@ class Shell extends Application
     /**
      * Helper for getting an output style for the given ErrorException's level.
      *
+<<<<<<< HEAD
      * @param \Exception $e
      *
      * @return string
@@ -1304,6 +1387,13 @@ class Shell extends Application
     protected function getMessageLabel(\Exception $e): string
     {
         if ($e instanceof ErrorException) {
+=======
+     * @param \Throwable $e
+     */
+    protected function getMessageLabel(\Throwable $e): string
+    {
+        if ($e instanceof \ErrorException) {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             $severity = $e->getSeverity();
 
             if ($severity & \error_reporting()) {
@@ -1360,11 +1450,15 @@ class Shell extends Application
 
         try {
             return $closure->execute();
+<<<<<<< HEAD
         } catch (\TypeError $_e) {
             $this->writeException(TypeErrorException::fromTypeError($_e));
         } catch (\Error $_e) {
             $this->writeException(ErrorException::fromError($_e));
         } catch (\Exception $_e) {
+=======
+        } catch (\Throwable $_e) {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             $this->writeException($_e);
         }
     }
@@ -1522,8 +1616,11 @@ class Shell extends Application
 
     /**
      * Get the shell output header.
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     protected function getHeader(): string
     {
@@ -1534,8 +1631,11 @@ class Shell extends Application
      * Get the current version of Psy Shell.
      *
      * @deprecated call self::getVersionHeader instead
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getVersion(): string
     {
@@ -1546,8 +1646,11 @@ class Shell extends Application
      * Get a pretty header including the current version of Psy Shell.
      *
      * @param bool $useUnicode
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public static function getVersionHeader(bool $useUnicode = false): string
     {

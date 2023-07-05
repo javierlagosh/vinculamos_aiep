@@ -20,12 +20,27 @@
 
 namespace Mockery\Generator;
 
+<<<<<<< HEAD
+=======
+use ReflectionAttribute;
+use ReflectionClass;
+
+use function array_map;
+use function array_unique;
+
+use const PHP_VERSION_ID;
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 class DefinedTargetClass implements TargetClassInterface
 {
     private $rfc;
     private $name;
 
+<<<<<<< HEAD
     public function __construct(\ReflectionClass $rfc, $alias = null)
+=======
+    public function __construct(ReflectionClass $rfc, $alias = null)
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     {
         $this->rfc = $rfc;
         $this->name = $alias === null ? $rfc->getName() : $alias;
@@ -33,7 +48,23 @@ class DefinedTargetClass implements TargetClassInterface
 
     public static function factory($name, $alias = null)
     {
+<<<<<<< HEAD
         return new self(new \ReflectionClass($name), $alias);
+=======
+        return new self(new ReflectionClass($name), $alias);
+    }
+
+    public function getAttributes()
+    {
+        if (\PHP_VERSION_ID < 80000) {
+            return [];
+        }
+
+        return array_unique(['\AllowDynamicProperties', ...array_map(
+            static fn (ReflectionAttribute $attribute): string => '\\' . $attribute->getName(),
+            $this->rfc->getAttributes()
+        )]);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 
     public function getName()

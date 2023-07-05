@@ -132,7 +132,12 @@ class Reflector
      */
     private static function typeToString(\ReflectionType $type, \ReflectionClass $declaringClass)
     {
+<<<<<<< HEAD
         return \implode('|', \array_map(function (array $typeInformation) {
+=======
+        $char = $type instanceof \ReflectionIntersectionType ? "&" : "|";
+        return \implode($char, \array_map(function (array $typeInformation) {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             return $typeInformation['typeHint'];
         }, self::getTypeInformation($type, $declaringClass)));
     }
@@ -219,6 +224,14 @@ class Reflector
             return sprintf('?%s', $typeHint);
         }
 
+<<<<<<< HEAD
         return $typeHint === 'mixed' ? 'mixed' : sprintf('%s|null', $typeHint);
+=======
+        if ($typeHint === 'null' || $typeHint === 'mixed') {
+            return $typeHint;
+        }
+
+        return sprintf('%s|null', $typeHint);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 }

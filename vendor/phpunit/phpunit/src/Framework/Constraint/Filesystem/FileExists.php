@@ -48,7 +48,11 @@ final class FileExists extends Constraint
     {
         return sprintf(
             'file "%s" exists',
+<<<<<<< HEAD
             $other
+=======
+            $other,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

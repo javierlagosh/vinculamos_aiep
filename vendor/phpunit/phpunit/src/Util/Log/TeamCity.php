@@ -77,7 +77,11 @@ final class TeamCity extends DefaultResultPrinter
                 'message'  => self::getMessage($t),
                 'details'  => self::getDetails($t),
                 'duration' => self::toMilliseconds($time),
+<<<<<<< HEAD
             ]
+=======
+            ],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -169,7 +173,11 @@ final class TeamCity extends DefaultResultPrinter
                 'message'  => self::getMessage($t),
                 'details'  => self::getDetails($t),
                 'duration' => self::toMilliseconds($time),
+<<<<<<< HEAD
             ]
+=======
+            ],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -189,7 +197,11 @@ final class TeamCity extends DefaultResultPrinter
 
             $this->printEvent(
                 'testCount',
+<<<<<<< HEAD
                 ['count' => count($suite)]
+=======
+                ['count' => count($suite)],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -271,7 +283,11 @@ final class TeamCity extends DefaultResultPrinter
             [
                 'name'     => $test->getName(),
                 'duration' => self::toMilliseconds($time),
+<<<<<<< HEAD
             ]
+=======
+            ],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -351,7 +367,11 @@ final class TeamCity extends DefaultResultPrinter
         return str_replace(
             ['|', "'", "\n", "\r", ']', '['],
             ['||', "|'", '|n', '|r', '|]', '|['],
+<<<<<<< HEAD
             $text
+=======
+            $text,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -367,7 +387,11 @@ final class TeamCity extends DefaultResultPrinter
             throw new Exception(
                 $e->getMessage(),
                 $e->getCode(),
+<<<<<<< HEAD
                 $e
+=======
+                $e,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
         // @codeCoverageIgnoreEnd

@@ -51,7 +51,11 @@ final class ConsecutiveCalls implements Stub
 
         return sprintf(
             'return user-specified value %s',
+<<<<<<< HEAD
             $exporter->export($this->value)
+=======
+            $exporter->export($this->value),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

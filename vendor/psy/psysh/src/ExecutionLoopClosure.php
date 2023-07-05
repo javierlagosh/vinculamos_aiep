@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -12,9 +16,13 @@
 namespace Psy;
 
 use Psy\Exception\BreakException;
+<<<<<<< HEAD
 use Psy\Exception\ErrorException;
 use Psy\Exception\ThrowUpException;
 use Psy\Exception\TypeErrorException;
+=======
+use Psy\Exception\ThrowUpException;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
 /**
  * The Psy Shell's execution loop scope.
@@ -80,11 +88,15 @@ class ExecutionLoopClosure extends ExecutionClosure
                     $__psysh__->writeException($_e);
 
                     throw $_e;
+<<<<<<< HEAD
                 } catch (\TypeError $_e) {
                     $__psysh__->writeException(TypeErrorException::fromTypeError($_e));
                 } catch (\Error $_e) {
                     $__psysh__->writeException(ErrorException::fromError($_e));
                 } catch (\Exception $_e) {
+=======
+                } catch (\Throwable $_e) {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     $__psysh__->writeException($_e);
                 }
 

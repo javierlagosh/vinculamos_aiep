@@ -19,6 +19,15 @@ class Validators
 {
 	use Nette\StaticClass;
 
+<<<<<<< HEAD
+=======
+	private const BuiltinTypes = [
+		'string' => 1, 'int' => 1, 'float' => 1, 'bool' => 1, 'array' => 1, 'object' => 1,
+		'callable' => 1, 'iterable' => 1, 'void' => 1, 'null' => 1, 'mixed' => 1, 'false' => 1,
+		'never' => 1, 'true' => 1,
+	];
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 	/** @var array<string,?callable> */
 	protected static $validators = [
 		// PHP types
@@ -118,7 +127,12 @@ class Validators
 		$key,
 		?string $expected = null,
 		string $label = "item '%' in array"
+<<<<<<< HEAD
 	): void {
+=======
+	): void
+	{
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 		if (!array_key_exists($key, $array)) {
 			throw new AssertionException('Missing ' . str_replace('%', $key, $label) . '.');
 
@@ -327,7 +341,11 @@ class Validators
 			[$alpha]([-0-9$alpha]{0,17}[$alpha])?              # top domain
 		$)Dix
 XX
+<<<<<<< HEAD
 , $value);
+=======
+			, $value);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 	}
 
 
@@ -351,7 +369,11 @@ XX
 			(\\#\\S*)?                                      # fragment
 		$)Dix
 XX
+<<<<<<< HEAD
 , $value);
+=======
+			, $value);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 	}
 
 
@@ -380,4 +402,41 @@ XX
 	{
 		return preg_match('#^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$#D', $value) === 1;
 	}
+<<<<<<< HEAD
+=======
+
+
+	/**
+	 * Determines if type is PHP built-in type. Otherwise, it is the class name.
+	 */
+	public static function isBuiltinType(string $type): bool
+	{
+		return isset(self::BuiltinTypes[strtolower($type)]);
+	}
+
+
+	/**
+	 * Determines if type is special class name self/parent/static.
+	 */
+	public static function isClassKeyword(string $name): bool
+	{
+		return (bool) preg_match('#^(self|parent|static)$#Di', $name);
+	}
+
+
+	/**
+	 * Checks whether the given type declaration is syntactically valid.
+	 */
+	public static function isTypeDeclaration(string $type): bool
+	{
+		return (bool) preg_match(<<<'XX'
+		~(
+			\?? (?<type> \\? (?<name> [a-zA-Z_\x7f-\xff][\w\x7f-\xff]*) (\\ (?&name))* ) |
+			(?<intersection> (?&type) (& (?&type))+ ) |
+			(?<upart> (?&type) | \( (?&intersection) \) )  (\| (?&upart))+
+		)$~xAD
+XX
+			, $type);
+	}
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 }

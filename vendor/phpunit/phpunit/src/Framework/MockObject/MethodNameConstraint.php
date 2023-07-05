@@ -33,7 +33,11 @@ final class MethodNameConstraint extends Constraint
     {
         return sprintf(
             'is "%s"',
+<<<<<<< HEAD
             $this->methodName
+=======
+            $this->methodName,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 

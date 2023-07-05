@@ -22,8 +22,13 @@ final class ReturnValueNotConfiguredException extends \PHPUnit\Framework\Excepti
             sprintf(
                 'Return value inference disabled and no expectation set up for %s::%s()',
                 $invocation->getClassName(),
+<<<<<<< HEAD
                 $invocation->getMethodName()
             )
+=======
+                $invocation->getMethodName(),
+            ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

@@ -21,8 +21,13 @@ final class UnknownTypeException extends \PHPUnit\Framework\Exception implements
         parent::__construct(
             sprintf(
                 'Class or interface "%s" does not exist',
+<<<<<<< HEAD
                 $type
             )
+=======
+                $type,
+            ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

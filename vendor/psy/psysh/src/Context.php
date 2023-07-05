@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -92,8 +96,11 @@ class Context
 
     /**
      * Get all defined variables.
+<<<<<<< HEAD
      *
      * @return array
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getAll(): array
     {
@@ -102,8 +109,11 @@ class Context
 
     /**
      * Get all defined magic variables: $_, $_e, $__out, $__class, $__file, etc.
+<<<<<<< HEAD
      *
      * @return array
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getSpecialVariables(): array
     {
@@ -168,21 +178,37 @@ class Context
     }
 
     /**
+<<<<<<< HEAD
      * Set the most recent Exception.
      *
      * @param \Exception $e
      */
     public function setLastException(\Exception $e)
+=======
+     * Set the most recent Exception or Error.
+     *
+     * @param \Throwable $e
+     */
+    public function setLastException(\Throwable $e)
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     {
         $this->lastException = $e;
     }
 
     /**
+<<<<<<< HEAD
      * Get the most recent Exception.
      *
      * @throws \InvalidArgumentException If no Exception has been caught
      *
      * @return \Exception|null
+=======
+     * Get the most recent Exception or Error.
+     *
+     * @throws \InvalidArgumentException If no Exception has been caught
+     *
+     * @return \Throwable|null
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getLastException()
     {
@@ -285,8 +311,11 @@ class Context
 
     /**
      * Get command-scope magic variables: $__class, $__file, etc.
+<<<<<<< HEAD
      *
      * @return array
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getCommandScopeVariables(): array
     {
@@ -310,8 +339,11 @@ class Context
      * Check whether a variable name is a magic variable.
      *
      * @param string $name
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public static function isSpecialVariableName(string $name): bool
     {

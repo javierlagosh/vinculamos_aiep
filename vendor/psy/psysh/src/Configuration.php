@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -118,6 +122,10 @@ class Configuration
 
     // services
     private $readline;
+<<<<<<< HEAD
+=======
+    /** @var ShellOutput */
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     private $output;
     private $shell;
     private $cleaner;
@@ -126,6 +134,10 @@ class Configuration
     private $presenter;
     private $autoCompleter;
     private $checker;
+<<<<<<< HEAD
+=======
+    /** @deprecated */
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     private $prompt;
     private $configPaths;
 
@@ -145,6 +157,11 @@ class Configuration
             $this->configFile = $config['configFile'];
         } elseif (isset($_SERVER['PSYSH_CONFIG']) && $_SERVER['PSYSH_CONFIG']) {
             $this->configFile = $_SERVER['PSYSH_CONFIG'];
+<<<<<<< HEAD
+=======
+        } elseif (\PHP_SAPI === 'cli-server' && ($configFile = \getenv('PSYSH_CONFIG'))) {
+            $this->configFile = $configFile;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         // legacy baseDir option
@@ -176,8 +193,11 @@ class Configuration
      * @throws \InvalidArgumentException
      *
      * @param InputInterface $input
+<<<<<<< HEAD
      *
      * @return self
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public static function fromInput(InputInterface $input): self
     {
@@ -536,7 +556,11 @@ class Configuration
     /**
      * Get files to be included by default at the start of each shell session.
      *
+<<<<<<< HEAD
      * @return array
+=======
+     * @return string[]
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getDefaultIncludes(): array
     {
@@ -618,8 +642,11 @@ class Configuration
      * overridden.
      *
      * @throws RuntimeException if no temporary directory is set and it is not possible to create one
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getRuntimeDir(): string
     {
@@ -649,8 +676,11 @@ class Configuration
      *
      * Defaults to `/history` inside the shell's base config dir unless
      * explicitly overridden.
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getHistoryFile(): string
     {
@@ -819,8 +849,11 @@ class Configuration
      * Get the appropriate Readline implementation class name.
      *
      * @see self::getReadline
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private function getReadlineClass(): string
     {
@@ -960,8 +993,11 @@ class Configuration
      * By default, PsySH will automatically insert semicolons at the end of
      * statements if they're missing. To strictly require semicolons, set
      * `requireSemicolons` to true.
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function requireSemicolons(): bool
     {
@@ -986,8 +1022,11 @@ class Configuration
      *
      * Note that this does not disable Unicode output in general, it just makes
      * it so PsySH won't output any itself.
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function useUnicode(): bool
     {
@@ -1022,8 +1061,11 @@ class Configuration
      * level.
      *
      *     http://php.net/manual/en/function.error-reporting.php
+<<<<<<< HEAD
      *
      * @return int
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function errorLoggingLevel(): int
     {
@@ -1044,8 +1086,11 @@ class Configuration
      * Get a CodeCleaner service instance.
      *
      * If none has been explicitly defined, this will create a new instance.
+<<<<<<< HEAD
      *
      * @return CodeCleaner
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getCodeCleaner(): CodeCleaner
     {
@@ -1109,8 +1154,11 @@ class Configuration
 
     /**
      * @deprecated Call `useTabCompletion` instead
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getTabCompletion(): bool
     {
@@ -1142,8 +1190,11 @@ class Configuration
      *
      * @see self::verbosity
      * @see self::getPager
+<<<<<<< HEAD
      *
      * @return ShellOutput
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getOutput(): ShellOutput
     {
@@ -1188,8 +1239,11 @@ class Configuration
 
     /**
      * Get the interactive setting for shell input.
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getInputInteractive(): bool
     {
@@ -1268,8 +1322,11 @@ class Configuration
 
     /**
      * Get an AutoCompleter service instance.
+<<<<<<< HEAD
      *
      * @return AutoCompleter
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getAutoCompleter(): AutoCompleter
     {
@@ -1282,8 +1339,11 @@ class Configuration
 
     /**
      * @deprecated Nothing should be using this anymore
+<<<<<<< HEAD
      *
      * @return array
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getTabCompletionMatchers(): array
     {
@@ -1444,8 +1504,11 @@ class Configuration
 
     /**
      * Get the Presenter service.
+<<<<<<< HEAD
      *
      * @return Presenter
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getPresenter(): Presenter
     {
@@ -1477,8 +1540,11 @@ class Configuration
      * are found.
      *
      * This will default to true in a future release, but is false for now.
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function warnOnMultipleConfigs(): bool
     {
@@ -1488,6 +1554,11 @@ class Configuration
     /**
      * Set the current color mode.
      *
+<<<<<<< HEAD
+=======
+     * @throws \InvalidArgumentException if the color mode isn't auto, forced or disabled
+     *
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      * @param string $colorMode
      */
     public function setColorMode(string $colorMode)
@@ -1507,8 +1578,11 @@ class Configuration
 
     /**
      * Get the current color mode.
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function colorMode(): string
     {
@@ -1539,8 +1613,11 @@ class Configuration
 
     /**
      * Get the current interactive mode.
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function interactiveMode(): string
     {
@@ -1561,8 +1638,11 @@ class Configuration
      * Get an update checker service instance.
      *
      * If none has been explicitly defined, this will create a new instance.
+<<<<<<< HEAD
      *
      * @return Checker
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getChecker(): Checker
     {
@@ -1598,8 +1678,11 @@ class Configuration
      *
      * One of 'always', 'daily', 'weekly', 'monthly' or 'never'. If none is
      * explicitly set, default to 'weekly'.
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getUpdateCheck(): string
     {
@@ -1663,11 +1746,26 @@ class Configuration
     /**
      * Set the prompt.
      *
+<<<<<<< HEAD
      * @param string $prompt
+=======
+     * @deprecated The `prompt` configuration has been replaced by Themes and support will
+     * eventually be removed. In the meantime, prompt is applied first by the Theme, then overridden
+     * by any explicitly defined prompt.
+     *
+     * Note that providing a prompt but not a theme config will implicitly use the `classic` theme.
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function setPrompt(string $prompt)
     {
         $this->prompt = $prompt;
+<<<<<<< HEAD
+=======
+
+        if (isset($this->theme)) {
+            $this->theme->setPrompt($prompt);
+        }
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 
     /**
@@ -1682,8 +1780,11 @@ class Configuration
 
     /**
      * Get the force array indexes.
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function forceArrayIndexes(): bool
     {
@@ -1703,7 +1804,11 @@ class Configuration
     /**
      * Set the current output Theme.
      *
+<<<<<<< HEAD
      * @param Theme|string|array Theme (or Theme config)
+=======
+     * @param Theme|string|array $theme Theme (or Theme config)
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function setTheme($theme)
     {
@@ -1713,6 +1818,13 @@ class Configuration
 
         $this->theme = $theme;
 
+<<<<<<< HEAD
+=======
+        if (isset($this->prompt)) {
+            $this->theme->setPrompt($this->prompt);
+        }
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         if (isset($this->output)) {
             $this->output->setTheme($theme);
             $this->applyFormatterStyles();
@@ -1725,7 +1837,16 @@ class Configuration
     public function theme(): Theme
     {
         if (!isset($this->theme)) {
+<<<<<<< HEAD
             $this->theme = new Theme();
+=======
+            // If a prompt is explicitly set, and a theme is not, base it on the `classic` theme.
+            $this->theme = $this->prompt ? new Theme('classic') : new Theme();
+        }
+
+        if (isset($this->prompt)) {
+            $this->theme->setPrompt($this->prompt);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         return $this->theme;
@@ -1785,8 +1906,11 @@ class Configuration
 
     /**
      * Get the configured output verbosity.
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function verbosity(): string
     {
@@ -1849,13 +1973,20 @@ class Configuration
      * Guess whether stdin is piped.
      *
      * This is mostly useful for deciding whether to use non-interactive mode.
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function inputIsPiped(): bool
     {
         if ($this->pipedInput === null) {
+<<<<<<< HEAD
             $this->pipedInput = \defined('STDIN') && static::looksLikeAPipe(\STDIN);
+=======
+            $this->pipedInput = \defined('STDIN') && self::looksLikeAPipe(\STDIN);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         return $this->pipedInput;
@@ -1865,13 +1996,20 @@ class Configuration
      * Guess whether shell output is piped.
      *
      * This is mostly useful for deciding whether to use non-decorated output.
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function outputIsPiped(): bool
     {
         if ($this->pipedOutput === null) {
+<<<<<<< HEAD
             $this->pipedOutput = static::looksLikeAPipe($this->getOutput()->getStream());
+=======
+            $this->pipedOutput = self::looksLikeAPipe($this->getOutput()->getStream());
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         return $this->pipedOutput;
@@ -1881,8 +2019,11 @@ class Configuration
      * Guess whether an input or output stream is piped.
      *
      * @param resource|int $stream
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private static function looksLikeAPipe($stream): bool
     {

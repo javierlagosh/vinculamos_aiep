@@ -18,11 +18,20 @@ use Ramsey\Collection\Exception\InvalidArgumentException;
 use Ramsey\Collection\Tool\TypeTrait;
 use Ramsey\Collection\Tool\ValueToStringTrait;
 
+<<<<<<< HEAD
+=======
+use function var_export;
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 /**
  * This class provides a basic implementation of `TypedMapInterface`, to
  * minimize the effort required to implement this interface.
  *
+<<<<<<< HEAD
  * @template K
+=======
+ * @template K of array-key
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  * @template T
  * @extends AbstractMap<T>
  * @implements TypedMapInterface<T>
@@ -37,33 +46,51 @@ abstract class AbstractTypedMap extends AbstractMap implements TypedMapInterface
      * @param T $value
      *
      * @inheritDoc
+<<<<<<< HEAD
      *
      * @psalm-suppress MoreSpecificImplementedParamType
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function offsetSet($offset, $value): void
     {
         if ($offset === null) {
             throw new InvalidArgumentException(
                 'Map elements are key/value pairs; a key must be provided for '
+<<<<<<< HEAD
                 . 'value ' . var_export($value, true)
+=======
+                . 'value ' . var_export($value, true),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
         if ($this->checkType($this->getKeyType(), $offset) === false) {
             throw new InvalidArgumentException(
                 'Key must be of type ' . $this->getKeyType() . '; key is '
+<<<<<<< HEAD
                 . $this->toolValueToString($offset)
+=======
+                . $this->toolValueToString($offset),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
         if ($this->checkType($this->getValueType(), $value) === false) {
             throw new InvalidArgumentException(
                 'Value must be of type ' . $this->getValueType() . '; value is '
+<<<<<<< HEAD
                 . $this->toolValueToString($value)
             );
         }
 
         /** @psalm-suppress MixedArgumentTypeCoercion */
+=======
+                . $this->toolValueToString($value),
+            );
+        }
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         parent::offsetSet($offset, $value);
     }
 }

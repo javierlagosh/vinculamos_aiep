@@ -43,11 +43,25 @@ final class StandardTestSuiteLoader implements TestSuiteLoader
             FileLoader::checkAndLoad($suiteClassFile);
 
             $loadedClasses = array_values(
+<<<<<<< HEAD
                 array_diff(get_declared_classes(), $loadedClasses)
             );
 
             if (empty($loadedClasses)) {
                 throw $this->exceptionFor($suiteClassName, $suiteClassFile);
+=======
+                array_diff(get_declared_classes(), $loadedClasses),
+            );
+
+            if (empty($loadedClasses)) {
+                throw new Exception(
+                    sprintf(
+                        'Class %s could not be found in %s',
+                        $suiteClassName,
+                        $suiteClassFile,
+                    ),
+                );
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             }
         }
 
@@ -66,7 +80,17 @@ final class StandardTestSuiteLoader implements TestSuiteLoader
         }
 
         if (!class_exists($suiteClassName, false)) {
+<<<<<<< HEAD
             throw $this->exceptionFor($suiteClassName, $suiteClassFile);
+=======
+            throw new Exception(
+                sprintf(
+                    'Class %s could not be found in %s',
+                    $suiteClassName,
+                    $suiteClassFile,
+                ),
+            );
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         try {
@@ -76,12 +100,30 @@ final class StandardTestSuiteLoader implements TestSuiteLoader
             throw new Exception(
                 $e->getMessage(),
                 $e->getCode(),
+<<<<<<< HEAD
                 $e
+=======
+                $e,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
         // @codeCoverageIgnoreEnd
 
+<<<<<<< HEAD
         if ($class->isSubclassOf(TestCase::class) && !$class->isAbstract()) {
+=======
+        if ($class->isSubclassOf(TestCase::class)) {
+            if ($class->isAbstract()) {
+                throw new Exception(
+                    sprintf(
+                        'Class %s declared in %s is abstract',
+                        $suiteClassName,
+                        $suiteClassFile,
+                    ),
+                );
+            }
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             return $class;
         }
 
@@ -91,6 +133,7 @@ final class StandardTestSuiteLoader implements TestSuiteLoader
                 // @codeCoverageIgnoreStart
             } catch (ReflectionException $e) {
                 throw new Exception(
+<<<<<<< HEAD
                     $e->getMessage(),
                     $e->getCode(),
                     $e
@@ -104,12 +147,45 @@ final class StandardTestSuiteLoader implements TestSuiteLoader
         }
 
         throw $this->exceptionFor($suiteClassName, $suiteClassFile);
+=======
+                    sprintf(
+                        'Method %s::suite() declared in %s is abstract',
+                        $suiteClassName,
+                        $suiteClassFile,
+                    ),
+                );
+            }
+
+            if (!$method->isPublic()) {
+                throw new Exception(
+                    sprintf(
+                        'Method %s::suite() declared in %s is not public',
+                        $suiteClassName,
+                        $suiteClassFile,
+                    ),
+                );
+            }
+
+            if (!$method->isStatic()) {
+                throw new Exception(
+                    sprintf(
+                        'Method %s::suite() declared in %s is not static',
+                        $suiteClassName,
+                        $suiteClassFile,
+                    ),
+                );
+            }
+        }
+
+        return $class;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 
     public function reload(ReflectionClass $aClass): ReflectionClass
     {
         return $aClass;
     }
+<<<<<<< HEAD
 
     private function exceptionFor(string $className, string $filename): Exception
     {
@@ -121,4 +197,6 @@ final class StandardTestSuiteLoader implements TestSuiteLoader
             )
         );
     }
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 }

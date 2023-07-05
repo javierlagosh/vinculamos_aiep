@@ -33,7 +33,13 @@ use function current;
 use function end;
 use function in_array;
 use function is_int;
+<<<<<<< HEAD
 use function reset;
+=======
+use function is_object;
+use function reset;
+use function spl_object_id;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use function sprintf;
 use function unserialize;
 use function usort;
@@ -78,7 +84,11 @@ abstract class AbstractCollection extends AbstractArray implements CollectionInt
         if ($this->checkType($this->getType(), $value) === false) {
             throw new InvalidArgumentException(
                 'Value must be of type ' . $this->getType() . '; value is '
+<<<<<<< HEAD
                 . $this->toolValueToString($value)
+=======
+                . $this->toolValueToString($value),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -95,7 +105,11 @@ abstract class AbstractCollection extends AbstractArray implements CollectionInt
     public function remove($element): bool
     {
         if (($position = array_search($element, $this->data, true)) !== false) {
+<<<<<<< HEAD
             unset($this->data[$position]);
+=======
+            unset($this[$position]);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
             return true;
         }
@@ -176,7 +190,11 @@ abstract class AbstractCollection extends AbstractArray implements CollectionInt
                 $bValue = $this->extractValue($b, $propertyOrMethod);
 
                 return ($aValue <=> $bValue) * ($order === self::SORT_DESC ? -1 : 1);
+<<<<<<< HEAD
             }
+=======
+            },
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         return $collection;
@@ -244,15 +262,29 @@ abstract class AbstractCollection extends AbstractArray implements CollectionInt
         foreach ($collections as $index => $collection) {
             if (!$collection instanceof static) {
                 throw new CollectionMismatchException(
+<<<<<<< HEAD
                     sprintf('Collection with index %d must be of type %s', $index, static::class)
+=======
+                    sprintf('Collection with index %d must be of type %s', $index, static::class),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
 
             // When using generics (Collection.php, Set.php, etc),
             // we also need to make sure that the internal types match each other
+<<<<<<< HEAD
             if ($collection->getType() !== $this->getType()) {
                 throw new CollectionMismatchException(
                     sprintf('Collection items in collection with index %d must be of type %s', $index, $this->getType())
+=======
+            if ($this->getUniformType($collection) !== $this->getUniformType($this)) {
+                throw new CollectionMismatchException(
+                    sprintf(
+                        'Collection items in collection with index %d must be of type %s',
+                        $index,
+                        $this->getType(),
+                    ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
 
@@ -290,7 +322,11 @@ abstract class AbstractCollection extends AbstractArray implements CollectionInt
 
         // When using generics (Collection.php, Set.php, etc),
         // we also need to make sure that the internal types match each other
+<<<<<<< HEAD
         if ($other->getType() !== $this->getType()) {
+=======
+        if ($this->getUniformType($other) !== $this->getUniformType($this)) {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             throw new CollectionMismatchException('Collection items must be of type ' . $this->getType());
         }
     }
@@ -315,4 +351,24 @@ abstract class AbstractCollection extends AbstractArray implements CollectionInt
                 return $a === $b ? 0 : ($a < $b ? 1 : -1);
             };
     }
+<<<<<<< HEAD
+=======
+
+    /**
+     * @param CollectionInterface<mixed> $collection
+     */
+    private function getUniformType(CollectionInterface $collection): string
+    {
+        switch ($collection->getType()) {
+            case 'integer':
+                return 'int';
+            case 'boolean':
+                return 'bool';
+            case 'double':
+                return 'float';
+            default:
+                return $collection->getType();
+        }
+    }
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 }

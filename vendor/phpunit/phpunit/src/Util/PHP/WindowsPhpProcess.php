@@ -36,7 +36,11 @@ final class WindowsPhpProcess extends DefaultPhpProcess
     {
         if (false === $stdout_handle = tmpfile()) {
             throw new Exception(
+<<<<<<< HEAD
                 'A temporary file could not be created; verify that your TEMP environment variable is writable'
+=======
+                'A temporary file could not be created; verify that your TEMP environment variable is writable',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

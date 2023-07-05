@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -46,6 +50,11 @@ class ValidClassNamePass extends NamespaceAwarePass
      * trait methods.
      *
      * @param Node $node
+<<<<<<< HEAD
+=======
+     *
+     * @return int|Node|null Replacement node (or special return value)
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function enterNode(Node $node)
     {
@@ -70,6 +79,11 @@ class ValidClassNamePass extends NamespaceAwarePass
 
     /**
      * @param Node $node
+<<<<<<< HEAD
+=======
+     *
+     * @return int|Node|Node[]|null Replacement node (or special return value)
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function leaveNode(Node $node)
     {
@@ -261,13 +275,20 @@ class ValidClassNamePass extends NamespaceAwarePass
      * Get a symbol type key for storing in the scope name cache.
      *
      * @deprecated No longer used. Scope type should be passed into ensureCanDefine directly.
+<<<<<<< HEAD
+=======
+     *
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      * @codeCoverageIgnore
      *
      * @throws FatalErrorException
      *
      * @param Stmt $stmt
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     protected function getScopeType(Stmt $stmt): string
     {
@@ -288,8 +309,11 @@ class ValidClassNamePass extends NamespaceAwarePass
      * Gives `self`, `static` and `parent` a free pass.
      *
      * @param string $name
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     protected function classExists(string $name): bool
     {
@@ -307,8 +331,11 @@ class ValidClassNamePass extends NamespaceAwarePass
      * Check whether an interface exists, or has been defined in the current code snippet.
      *
      * @param string $name
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     protected function interfaceExists(string $name): bool
     {
@@ -319,8 +346,11 @@ class ValidClassNamePass extends NamespaceAwarePass
      * Check whether a trait exists, or has been defined in the current code snippet.
      *
      * @param string $name
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     protected function traitExists(string $name): bool
     {
@@ -347,8 +377,11 @@ class ValidClassNamePass extends NamespaceAwarePass
      *
      * @param string $msg
      * @param Stmt   $stmt
+<<<<<<< HEAD
      *
      * @return FatalErrorException
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     protected function createError(string $msg, Stmt $stmt): FatalErrorException
     {

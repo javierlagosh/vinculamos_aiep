@@ -31,28 +31,48 @@ final class TestBuilder
 
         if (!$theClass->isInstantiable()) {
             return new ErrorTestCase(
+<<<<<<< HEAD
                 sprintf('Cannot instantiate class "%s".', $className)
+=======
+                sprintf('Cannot instantiate class "%s".', $className),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
         $backupSettings = TestUtil::getBackupSettings(
             $className,
+<<<<<<< HEAD
             $methodName
+=======
+            $methodName,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $preserveGlobalState = TestUtil::getPreserveGlobalStateSettings(
             $className,
+<<<<<<< HEAD
             $methodName
+=======
+            $methodName,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $runTestInSeparateProcess = TestUtil::getProcessIsolationSettings(
             $className,
+<<<<<<< HEAD
             $methodName
+=======
+            $methodName,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $runClassInSeparateProcess = TestUtil::getClassProcessIsolationSettings(
             $className,
+<<<<<<< HEAD
             $methodName
+=======
+            $methodName,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $constructor = $theClass->getConstructor();
@@ -71,14 +91,22 @@ final class TestBuilder
             try {
                 $data = TestUtil::getProvidedData(
                     $className,
+<<<<<<< HEAD
                     $methodName
+=======
+                    $methodName,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             } catch (IncompleteTestError $e) {
                 $message = sprintf(
                     "Test for %s::%s marked incomplete by data provider\n%s",
                     $className,
                     $methodName,
+<<<<<<< HEAD
                     $this->throwableToString($e)
+=======
+                    $this->throwableToString($e),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
 
                 $data = new IncompleteTestCase($className, $methodName, $message);
@@ -87,7 +115,11 @@ final class TestBuilder
                     "Test for %s::%s skipped by data provider\n%s",
                     $className,
                     $methodName,
+<<<<<<< HEAD
                     $this->throwableToString($e)
+=======
+                    $this->throwableToString($e),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
 
                 $data = new SkippedTestCase($className, $methodName, $message);
@@ -96,7 +128,11 @@ final class TestBuilder
                     "The data provider specified for %s::%s is invalid.\n%s",
                     $className,
                     $methodName,
+<<<<<<< HEAD
                     $this->throwableToString($t)
+=======
+                    $this->throwableToString($t),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
 
                 $data = new ErrorTestCase($message);
@@ -111,7 +147,11 @@ final class TestBuilder
                     $runTestInSeparateProcess,
                     $preserveGlobalState,
                     $runClassInSeparateProcess,
+<<<<<<< HEAD
                     $backupSettings
+=======
+                    $backupSettings,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             } else {
                 $test = $this->buildTestWithoutData($className);
@@ -125,7 +165,11 @@ final class TestBuilder
                 $runTestInSeparateProcess,
                 $preserveGlobalState,
                 $runClassInSeparateProcess,
+<<<<<<< HEAD
                 $backupSettings
+=======
+                $backupSettings,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -149,7 +193,11 @@ final class TestBuilder
         array $backupSettings
     ): DataProviderTestSuite {
         $dataProviderTestSuite = new DataProviderTestSuite(
+<<<<<<< HEAD
             $className . '::' . $methodName
+=======
+            $className . '::' . $methodName,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $groups = TestUtil::getGroups($className, $methodName);
@@ -169,7 +217,11 @@ final class TestBuilder
                     $runTestInSeparateProcess,
                     $preserveGlobalState,
                     $runClassInSeparateProcess,
+<<<<<<< HEAD
                     $backupSettings
+=======
+                    $backupSettings,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
 
                 $dataProviderTestSuite->addTest($_test, $groups);
@@ -208,7 +260,11 @@ final class TestBuilder
 
         if ($backupSettings['backupStaticAttributes'] !== null) {
             $test->setBackupStaticAttributes(
+<<<<<<< HEAD
                 $backupSettings['backupStaticAttributes']
+=======
+                $backupSettings['backupStaticAttributes'],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
     }
@@ -225,7 +281,11 @@ final class TestBuilder
             return sprintf(
                 "%s\n%s",
                 $message,
+<<<<<<< HEAD
                 Filter::getFilteredStacktrace($t)
+=======
+                Filter::getFilteredStacktrace($t),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -233,7 +293,11 @@ final class TestBuilder
             "%s: %s\n%s",
             get_class($t),
             $message,
+<<<<<<< HEAD
             Filter::getFilteredStacktrace($t)
+=======
+            Filter::getFilteredStacktrace($t),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

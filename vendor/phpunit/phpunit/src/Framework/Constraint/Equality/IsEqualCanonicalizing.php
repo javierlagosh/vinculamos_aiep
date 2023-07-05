@@ -58,7 +58,11 @@ final class IsEqualCanonicalizing extends Constraint
         try {
             $comparator = $comparatorFactory->getComparatorFor(
                 $this->value,
+<<<<<<< HEAD
                 $other
+=======
+                $other,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
 
             $comparator->assertEquals(
@@ -66,7 +70,11 @@ final class IsEqualCanonicalizing extends Constraint
                 $other,
                 0.0,
                 true,
+<<<<<<< HEAD
                 false
+=======
+                false,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         } catch (ComparisonFailure $f) {
             if ($returnResult) {
@@ -75,7 +83,11 @@ final class IsEqualCanonicalizing extends Constraint
 
             throw new ExpectationFailedException(
                 trim($description . "\n" . $f->getMessage()),
+<<<<<<< HEAD
                 $f
+=======
+                $f,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -96,13 +108,21 @@ final class IsEqualCanonicalizing extends Constraint
 
             return sprintf(
                 "is equal to '%s'",
+<<<<<<< HEAD
                 $this->value
+=======
+                $this->value,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
         return sprintf(
             'is equal to %s',
+<<<<<<< HEAD
             $this->exporter()->export($this->value)
+=======
+            $this->exporter()->export($this->value),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

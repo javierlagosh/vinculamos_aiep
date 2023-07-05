@@ -17,6 +17,10 @@ namespace Ramsey\Collection;
 use ArrayIterator;
 use Traversable;
 
+<<<<<<< HEAD
+=======
+use function count;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use function serialize;
 use function unserialize;
 
@@ -34,7 +38,11 @@ abstract class AbstractArray implements ArrayInterface
      *
      * @var array<array-key, T>
      */
+<<<<<<< HEAD
     protected $data = [];
+=======
+    protected array $data = [];
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * Constructs a new array object.
@@ -83,8 +91,11 @@ abstract class AbstractArray implements ArrayInterface
      *
      * @return T|null the value stored at the offset, or null if the offset
      *     does not exist.
+<<<<<<< HEAD
      *
      * @psalm-suppress InvalidAttribute
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     #[\ReturnTypeWillChange] // phpcs:ignore
     public function offsetGet($offset)

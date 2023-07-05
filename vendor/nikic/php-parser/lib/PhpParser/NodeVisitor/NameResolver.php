@@ -161,7 +161,11 @@ class NameResolver extends NodeVisitorAbstract
         return null;
     }
 
+<<<<<<< HEAD
     private function addAlias(Stmt\UseUse $use, $type, Name $prefix = null) {
+=======
+    private function addAlias(Stmt\UseUse $use, int $type, Name $prefix = null) {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         // Add prefix for group uses
         $name = $prefix ? Name::concat($prefix, $use->name) : $use->name;
         // Type is determined either by individual element or whole use declaration

@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -25,8 +29,11 @@ if (!\function_exists('Psy\\sh')) {
      * Command to return the eval-able code to startup PsySH.
      *
      *     eval(\Psy\sh());
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     function sh(): string
     {
@@ -157,6 +164,12 @@ if (!\function_exists('Psy\\info')) {
 
         $config = $lastConfig ?: new Configuration();
         $configEnv = (isset($_SERVER['PSYSH_CONFIG']) && $_SERVER['PSYSH_CONFIG']) ? $_SERVER['PSYSH_CONFIG'] : false;
+<<<<<<< HEAD
+=======
+        if ($configEnv === false && \PHP_SAPI === 'cli-server') {
+            $configEnv = \getenv('PSYSH_CONFIG');
+        }
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
         $shellInfo = [
             'PsySH version' => Shell::VERSION,
@@ -230,6 +243,19 @@ if (!\function_exists('Psy\\info')) {
             'output pager'     => $config->getPager(),
         ];
 
+<<<<<<< HEAD
+=======
+        $theme = $config->theme();
+        // TODO: show styles (but only if they're different than default?)
+        $output['theme'] = [
+            'compact'      => $theme->compact(),
+            'prompt'       => $theme->prompt(),
+            'bufferPrompt' => $theme->bufferPrompt(),
+            'replayPrompt' => $theme->replayPrompt(),
+            'returnValue'  => $theme->returnValue(),
+        ];
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         $pcntl = [
             'pcntl available' => ProcessForker::isPcntlSupported(),
             'posix available' => ProcessForker::isPosixSupported(),

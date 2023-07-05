@@ -12,10 +12,17 @@
     ],
     "require": {
         "php": "^7.2.5 || ^8.0",
+<<<<<<< HEAD
         "phpoption/phpoption": "^1.9"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5.28 || ^9.5.21"
+=======
+        "phpoption/phpoption": "^1.9.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5.32 || ^9.6.3 || ^10.0.12"
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     },
     "autoload": {
         "psr-4": {

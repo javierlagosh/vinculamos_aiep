@@ -16,9 +16,18 @@ use PhpParser\Node\Scalar\String_;
 use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\ClassConst;
 use PhpParser\Node\Stmt\ClassMethod;
+<<<<<<< HEAD
 use PhpParser\Node\Stmt\Enum_;
 use PhpParser\Node\Stmt\Interface_;
 use PhpParser\Node\Stmt\Namespace_;
+=======
+use PhpParser\Node\Stmt\Else_;
+use PhpParser\Node\Stmt\ElseIf_;
+use PhpParser\Node\Stmt\Enum_;
+use PhpParser\Node\Stmt\Interface_;
+use PhpParser\Node\Stmt\Namespace_;
+use PhpParser\Node\Stmt\Nop;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use PhpParser\Node\Stmt\Property;
 use PhpParser\Node\Stmt\TryCatch;
 use PhpParser\Node\Stmt\UseUse;
@@ -876,6 +885,27 @@ abstract class ParserAbstract implements Parser
         return $attributes;
     }
 
+<<<<<<< HEAD
+=======
+    /** @param ElseIf_|Else_ $node */
+    protected function fixupAlternativeElse($node) {
+        // Make sure a trailing nop statement carrying comments is part of the node.
+        $numStmts = \count($node->stmts);
+        if ($numStmts !== 0 && $node->stmts[$numStmts - 1] instanceof Nop) {
+            $nopAttrs = $node->stmts[$numStmts - 1]->getAttributes();
+            if (isset($nopAttrs['endLine'])) {
+                $node->setAttribute('endLine', $nopAttrs['endLine']);
+            }
+            if (isset($nopAttrs['endFilePos'])) {
+                $node->setAttribute('endFilePos', $nopAttrs['endFilePos']);
+            }
+            if (isset($nopAttrs['endTokenPos'])) {
+                $node->setAttribute('endTokenPos', $nopAttrs['endTokenPos']);
+            }
+        }
+    }
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     protected function checkClassModifier($a, $b, $modifierPos) {
         try {
             Class_::verifyClassModifier($a, $b);

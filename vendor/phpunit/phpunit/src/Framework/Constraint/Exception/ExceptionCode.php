@@ -61,7 +61,11 @@ final class ExceptionCode extends Constraint
         return sprintf(
             '%s is equal to expected exception code %s',
             $this->exporter()->export($other->getCode()),
+<<<<<<< HEAD
             $this->exporter()->export($this->expectedCode)
+=======
+            $this->exporter()->export($this->expectedCode),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

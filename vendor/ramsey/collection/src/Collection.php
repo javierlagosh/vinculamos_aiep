@@ -80,10 +80,15 @@ class Collection extends AbstractCollection
      *
      * A collection's type is immutable once it is set. For this reason, this
      * property is set private.
+<<<<<<< HEAD
      *
      * @var string
      */
     private $collectionType;
+=======
+     */
+    private string $collectionType;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * Constructs a collection object of the specified type, optionally with the

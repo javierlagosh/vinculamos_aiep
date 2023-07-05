@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://vinculamos.local/'),
+    'url' => env('APP_URL', 'http://vinculamos.localhost/'),
 
     'asset_url' => env('ASSET_URL', null),
 

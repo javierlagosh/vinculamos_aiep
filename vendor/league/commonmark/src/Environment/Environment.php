@@ -21,6 +21,10 @@ use League\CommonMark\Delimiter\Processor\DelimiterProcessorCollection;
 use League\CommonMark\Delimiter\Processor\DelimiterProcessorInterface;
 use League\CommonMark\Event\DocumentParsedEvent;
 use League\CommonMark\Event\ListenerData;
+<<<<<<< HEAD
+=======
+use League\CommonMark\Exception\AlreadyInitializedException;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
 use League\CommonMark\Extension\ConfigurableExtensionInterface;
 use League\CommonMark\Extension\ExtensionInterface;
@@ -416,12 +420,20 @@ final class Environment implements EnvironmentInterface, EnvironmentBuilderInter
     }
 
     /**
+<<<<<<< HEAD
      * @throws \RuntimeException
+=======
+     * @throws AlreadyInitializedException
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private function assertUninitialized(string $message): void
     {
         if ($this->extensionsInitialized) {
+<<<<<<< HEAD
             throw new \RuntimeException($message . ' Extensions have already been initialized.');
+=======
+            throw new AlreadyInitializedException($message . ' Extensions have already been initialized.');
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
     }
 

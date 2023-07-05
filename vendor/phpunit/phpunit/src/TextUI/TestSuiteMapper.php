@@ -60,7 +60,11 @@ final class TestSuiteMapper
                         $directory->path(),
                         $directory->suffix(),
                         $directory->prefix(),
+<<<<<<< HEAD
                         $exclude
+=======
+                        $exclude,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
 
                     if (!empty($files)) {
@@ -96,7 +100,11 @@ final class TestSuiteMapper
             throw new RuntimeException(
                 $e->getMessage(),
                 $e->getCode(),
+<<<<<<< HEAD
                 $e
+=======
+                $e,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
     }

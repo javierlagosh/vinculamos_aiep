@@ -95,7 +95,11 @@ final class TestFailure
         return sprintf(
             '%s: %s',
             $this->testName,
+<<<<<<< HEAD
             $this->thrownException->getMessage()
+=======
+            $this->thrownException->getMessage(),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 

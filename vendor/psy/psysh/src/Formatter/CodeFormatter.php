@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -32,7 +36,11 @@ class CodeFormatter implements ReflectorFormatter
     const HIGHLIGHT_CONST = 'const';
     const HIGHLIGHT_NUMBER = 'number';
     const HIGHLIGHT_STRING = 'string';
+<<<<<<< HEAD
     const HIGHLIGHT_COMMENT = 'comment';
+=======
+    const HIGHLIGHT_COMMENT = 'code_comment';
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     const HIGHLIGHT_INLINE_HTML = 'inline_html';
 
     private static $tokenMap = [
@@ -122,8 +130,11 @@ class CodeFormatter implements ReflectorFormatter
      * This is typehinted as \Reflector but we've narrowed the input via self::isReflectable already.
      *
      * @param \ReflectionClass|\ReflectionFunctionAbstract $reflector
+<<<<<<< HEAD
      *
      * @return int
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private static function getStartLine(\Reflector $reflector): int
     {
@@ -309,9 +320,15 @@ class CodeFormatter implements ReflectorFormatter
     /**
      * Check whether a Reflector instance is reflectable by this formatter.
      *
+<<<<<<< HEAD
      * @param \Reflector $reflector
      *
      * @return bool
+=======
+     * @phpstan-assert-if-true \ReflectionClass|\ReflectionFunctionAbstract $reflector
+     *
+     * @param \Reflector $reflector
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private static function isReflectable(\Reflector $reflector): bool
     {

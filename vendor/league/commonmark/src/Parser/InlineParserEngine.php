@@ -134,7 +134,11 @@ final class InlineParserEngine implements InlineParserEngineInterface
     private function matchParsers(string $contents): array
     {
         $contents    = \trim($contents);
+<<<<<<< HEAD
         $isMultibyte = \mb_strlen($contents, 'UTF-8') !== \strlen($contents);
+=======
+        $isMultibyte = ! \mb_check_encoding($contents, 'ASCII');
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
         $ret = [];
 

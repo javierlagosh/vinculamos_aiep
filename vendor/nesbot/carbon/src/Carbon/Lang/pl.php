@@ -62,7 +62,11 @@ return [
     },
     'after' => ':time po',
     'before' => ':time przed',
+<<<<<<< HEAD
     'diff_now' => 'przed chwilą',
+=======
+    'diff_now' => 'teraz',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'diff_today' => 'Dziś',
     'diff_today_regexp' => 'Dziś(?:\\s+o)?',
     'diff_yesterday' => 'wczoraj',

@@ -31,6 +31,10 @@ class TimeDataCollector extends DataCollector implements LateDataCollectorInterf
     {
         $this->kernel = $kernel;
         $this->stopwatch = $stopwatch;
+<<<<<<< HEAD
+=======
+        $this->data = ['events' => [], 'stopwatch_installed' => false, 'start_time' => 0];
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 
     /**
@@ -57,7 +61,11 @@ class TimeDataCollector extends DataCollector implements LateDataCollectorInterf
      */
     public function reset()
     {
+<<<<<<< HEAD
         $this->data = [];
+=======
+        $this->data = ['events' => [], 'stopwatch_installed' => false, 'start_time' => 0];
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
         if (null !== $this->stopwatch) {
             $this->stopwatch->reset();

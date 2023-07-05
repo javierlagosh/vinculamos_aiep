@@ -164,7 +164,12 @@ class CurlMultiHandler
             \usleep(250);
         }
 
+<<<<<<< HEAD
         while (\curl_multi_exec($this->_mh, $this->active) === \CURLM_CALL_MULTI_PERFORM);
+=======
+        while (\curl_multi_exec($this->_mh, $this->active) === \CURLM_CALL_MULTI_PERFORM) {
+        }
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
         $this->processMessages();
     }

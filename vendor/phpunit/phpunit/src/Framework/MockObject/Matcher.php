@@ -117,8 +117,13 @@ final class Matcher
 
         if ($this->afterMatchBuilderId !== null) {
             $matcher = $invocation->getObject()
+<<<<<<< HEAD
                                   ->__phpunit_getInvocationHandler()
                                   ->lookupMatcher($this->afterMatchBuilderId);
+=======
+                ->__phpunit_getInvocationHandler()
+                ->lookupMatcher($this->afterMatchBuilderId);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
             if (!$matcher) {
                 throw new MatchBuilderNotFoundException($this->afterMatchBuilderId);
@@ -143,9 +148,15 @@ final class Matcher
                     "Expectation failed for %s when %s\n%s",
                     $this->methodNameRule->toString(),
                     $this->invocationRule->toString(),
+<<<<<<< HEAD
                     $e->getMessage()
                 ),
                 $e->getComparisonFailure()
+=======
+                    $e->getMessage(),
+                ),
+                $e->getComparisonFailure(),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -167,8 +178,13 @@ final class Matcher
     {
         if ($this->afterMatchBuilderId !== null) {
             $matcher = $invocation->getObject()
+<<<<<<< HEAD
                                   ->__phpunit_getInvocationHandler()
                                   ->lookupMatcher($this->afterMatchBuilderId);
+=======
+                ->__phpunit_getInvocationHandler()
+                ->lookupMatcher($this->afterMatchBuilderId);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
             if (!$matcher) {
                 throw new MatchBuilderNotFoundException($this->afterMatchBuilderId);
@@ -199,9 +215,15 @@ final class Matcher
                     "Expectation failed for %s when %s\n%s",
                     $this->methodNameRule->toString(),
                     $this->invocationRule->toString(),
+<<<<<<< HEAD
                     $e->getMessage()
                 ),
                 $e->getComparisonFailure()
+=======
+                    $e->getMessage(),
+                ),
+                $e->getComparisonFailure(),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -239,8 +261,13 @@ final class Matcher
                     "Expectation failed for %s when %s.\n%s",
                     $this->methodNameRule->toString(),
                     $this->invocationRule->toString(),
+<<<<<<< HEAD
                     TestFailure::exceptionToString($e)
                 )
+=======
+                    TestFailure::exceptionToString($e),
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
     }

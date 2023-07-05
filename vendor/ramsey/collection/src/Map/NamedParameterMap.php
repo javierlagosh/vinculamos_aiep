@@ -21,6 +21,10 @@ use Ramsey\Collection\Tool\ValueToStringTrait;
 use function array_combine;
 use function array_key_exists;
 use function is_int;
+<<<<<<< HEAD
+=======
+use function var_export;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
 /**
  * `NamedParameterMap` represents a mapping of values to a set of named keys
@@ -38,7 +42,11 @@ class NamedParameterMap extends AbstractMap
      *
      * @var array<string, string>
      */
+<<<<<<< HEAD
     protected $namedParameters;
+=======
+    protected array $namedParameters;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * Constructs a new `NamedParameterMap`.
@@ -70,14 +78,22 @@ class NamedParameterMap extends AbstractMap
         if ($offset === null) {
             throw new InvalidArgumentException(
                 'Map elements are key/value pairs; a key must be provided for '
+<<<<<<< HEAD
                 . 'value ' . var_export($value, true)
+=======
+                . 'value ' . var_export($value, true),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
         if (!array_key_exists($offset, $this->namedParameters)) {
             throw new InvalidArgumentException(
                 'Attempting to set value for unconfigured parameter \''
+<<<<<<< HEAD
                 . $offset . '\''
+=======
+                . $offset . '\'',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -85,7 +101,11 @@ class NamedParameterMap extends AbstractMap
             throw new InvalidArgumentException(
                 'Value for \'' . $offset . '\' must be of type '
                 . $this->namedParameters[$offset] . '; value is '
+<<<<<<< HEAD
                 . $this->toolValueToString($value)
+=======
+                . $this->toolValueToString($value),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

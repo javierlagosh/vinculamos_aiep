@@ -29,10 +29,15 @@ class DoubleEndedQueue extends Queue implements DoubleEndedQueueInterface
 {
     /**
      * Index of the last element in the queue.
+<<<<<<< HEAD
      *
      * @var int
      */
     private $tail = -1;
+=======
+     */
+    private int $tail = -1;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * @inheritDoc
@@ -42,7 +47,11 @@ class DoubleEndedQueue extends Queue implements DoubleEndedQueueInterface
         if ($this->checkType($this->getType(), $value) === false) {
             throw new InvalidArgumentException(
                 'Value must be of type ' . $this->getType() . '; value is '
+<<<<<<< HEAD
                 . $this->toolValueToString($value)
+=======
+                . $this->toolValueToString($value),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -52,6 +61,11 @@ class DoubleEndedQueue extends Queue implements DoubleEndedQueueInterface
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * @throws InvalidArgumentException if $element is of the wrong type
+     *
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      * @inheritDoc
      */
     public function addFirst($element): bool
@@ -59,7 +73,11 @@ class DoubleEndedQueue extends Queue implements DoubleEndedQueueInterface
         if ($this->checkType($this->getType(), $element) === false) {
             throw new InvalidArgumentException(
                 'Value must be of type ' . $this->getType() . '; value is '
+<<<<<<< HEAD
                 . $this->toolValueToString($element)
+=======
+                . $this->toolValueToString($element),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

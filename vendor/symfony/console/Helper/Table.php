@@ -805,7 +805,11 @@ class Table
                             $textContent = Helper::removeDecoration($this->output->getFormatter(), $cell);
                             $textLength = Helper::width($textContent);
                             if ($textLength > 0) {
+<<<<<<< HEAD
                                 $contentColumns = str_split($textContent, ceil($textLength / $cell->getColspan()));
+=======
+                                $contentColumns = mb_str_split($textContent, ceil($textLength / $cell->getColspan()));
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                                 foreach ($contentColumns as $position => $content) {
                                     $row[$i + $position] = $content;
                                 }

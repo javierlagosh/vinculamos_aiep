@@ -119,12 +119,24 @@ trait Test
      *
      * /!\ Use this method for unit tests only.
      *
+<<<<<<< HEAD
      * @param DateTimeInterface|Closure|static|string|false|null $testNow  real or mock Carbon instance
      * @param Closure|null                                       $callback
      *
      * @return mixed
      */
     public static function withTestNow($testNow = null, $callback = null)
+=======
+     * @template T
+     *
+     * @param DateTimeInterface|Closure|static|string|false|null $testNow  real or mock Carbon instance
+     * @param Closure(): T                                       $callback
+     *
+     * @return mixed
+     * @phpstan-return T
+     */
+    public static function withTestNow($testNow, $callback)
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     {
         static::setTestNow($testNow);
 

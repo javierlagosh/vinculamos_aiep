@@ -6,6 +6,10 @@ namespace League\CommonMark\Xml;
 
 use League\CommonMark\Environment\EnvironmentInterface;
 use League\CommonMark\Event\DocumentPreRenderEvent;
+<<<<<<< HEAD
+=======
+use League\CommonMark\Exception\InvalidArgumentException;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use League\CommonMark\Node\Block\Document;
 use League\CommonMark\Node\Node;
 use League\CommonMark\Node\StringContainerInterface;
@@ -112,7 +116,11 @@ final class XmlRenderer implements DocumentRendererInterface
         }
 
         // @phpstan-ignore-next-line
+<<<<<<< HEAD
         throw new \InvalidArgumentException('$value must be a string, int, float, or bool');
+=======
+        throw new InvalidArgumentException('$value must be a string, int, float, or bool');
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 
     private function findXmlRenderer(Node $node): XmlNodeRendererInterface

@@ -49,6 +49,10 @@ return array(
     'Carbon\\CarbonInterface' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterface.php',
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
     'Carbon\\CarbonPeriod' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonPeriod.php',
+<<<<<<< HEAD
+=======
+    'Carbon\\CarbonPeriodImmutable' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonPeriodImmutable.php',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'Carbon\\CarbonTimeZone' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonTimeZone.php',
     'Carbon\\Cli\\Invoker' => $vendorDir . '/nesbot/carbon/src/Carbon/Cli/Invoker.php',
     'Carbon\\Doctrine\\CarbonDoctrineType' => $vendorDir . '/nesbot/carbon/src/Carbon/Doctrine/CarbonDoctrineType.php',
@@ -91,6 +95,10 @@ return array(
     'Carbon\\FactoryImmutable' => $vendorDir . '/nesbot/carbon/src/Carbon/FactoryImmutable.php',
     'Carbon\\Language' => $vendorDir . '/nesbot/carbon/src/Carbon/Language.php',
     'Carbon\\Laravel\\ServiceProvider' => $vendorDir . '/nesbot/carbon/src/Carbon/Laravel/ServiceProvider.php',
+<<<<<<< HEAD
+=======
+    'Carbon\\MessageFormatter\\MessageFormatterMapper' => $vendorDir . '/nesbot/carbon/src/Carbon/MessageFormatter/MessageFormatterMapper.php',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'Carbon\\PHPStan\\AbstractMacro' => $vendorDir . '/nesbot/carbon/src/Carbon/PHPStan/AbstractMacro.php',
     'Carbon\\PHPStan\\Macro' => $vendorDir . '/nesbot/carbon/src/Carbon/PHPStan/Macro.php',
     'Carbon\\PHPStan\\MacroExtension' => $vendorDir . '/nesbot/carbon/src/Carbon/PHPStan/MacroExtension.php',
@@ -139,6 +147,10 @@ return array(
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
     'DeepCopy\\Exception\\CloneException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
     'DeepCopy\\Exception\\PropertyException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
+<<<<<<< HEAD
+=======
+    'DeepCopy\\Filter\\ChainableFilter' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Filter/ChainableFilter.php',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'DeepCopy\\Filter\\Doctrine\\DoctrineCollectionFilter' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineCollectionFilter.php',
     'DeepCopy\\Filter\\Doctrine\\DoctrineEmptyCollectionFilter' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineEmptyCollectionFilter.php',
     'DeepCopy\\Filter\\Doctrine\\DoctrineProxyFilter' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineProxyFilter.php',
@@ -854,6 +866,10 @@ return array(
     'Faker\\Provider\\nl_NL\\PhoneNumber' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/nl_NL/PhoneNumber.php',
     'Faker\\Provider\\nl_NL\\Text' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/nl_NL/Text.php',
     'Faker\\Provider\\pl_PL\\Address' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/pl_PL/Address.php',
+<<<<<<< HEAD
+=======
+    'Faker\\Provider\\pl_PL\\Color' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/pl_PL/Color.php',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'Faker\\Provider\\pl_PL\\Company' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/pl_PL/Company.php',
     'Faker\\Provider\\pl_PL\\Internet' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/pl_PL/Internet.php',
     'Faker\\Provider\\pl_PL\\LicensePlate' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/pl_PL/LicensePlate.php',
@@ -2207,6 +2223,10 @@ return array(
     'Laravel\\SerializableClosure\\Support\\ClosureStream' => $vendorDir . '/laravel/serializable-closure/src/Support/ClosureStream.php',
     'Laravel\\SerializableClosure\\Support\\ReflectionClosure' => $vendorDir . '/laravel/serializable-closure/src/Support/ReflectionClosure.php',
     'Laravel\\SerializableClosure\\Support\\SelfReference' => $vendorDir . '/laravel/serializable-closure/src/Support/SelfReference.php',
+<<<<<<< HEAD
+=======
+    'Laravel\\SerializableClosure\\UnsignedSerializableClosure' => $vendorDir . '/laravel/serializable-closure/src/UnsignedSerializableClosure.php',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'Laravel\\Tinker\\ClassAliasAutoloader' => $vendorDir . '/laravel/tinker/src/ClassAliasAutoloader.php',
     'Laravel\\Tinker\\Console\\TinkerCommand' => $vendorDir . '/laravel/tinker/src/Console/TinkerCommand.php',
     'Laravel\\Tinker\\TinkerCaster' => $vendorDir . '/laravel/tinker/src/TinkerCaster.php',
@@ -2231,6 +2251,15 @@ return array(
     'League\\CommonMark\\Event\\DocumentPreRenderEvent' => $vendorDir . '/league/commonmark/src/Event/DocumentPreRenderEvent.php',
     'League\\CommonMark\\Event\\DocumentRenderedEvent' => $vendorDir . '/league/commonmark/src/Event/DocumentRenderedEvent.php',
     'League\\CommonMark\\Event\\ListenerData' => $vendorDir . '/league/commonmark/src/Event/ListenerData.php',
+<<<<<<< HEAD
+=======
+    'League\\CommonMark\\Exception\\AlreadyInitializedException' => $vendorDir . '/league/commonmark/src/Exception/AlreadyInitializedException.php',
+    'League\\CommonMark\\Exception\\CommonMarkException' => $vendorDir . '/league/commonmark/src/Exception/CommonMarkException.php',
+    'League\\CommonMark\\Exception\\IOException' => $vendorDir . '/league/commonmark/src/Exception/IOException.php',
+    'League\\CommonMark\\Exception\\InvalidArgumentException' => $vendorDir . '/league/commonmark/src/Exception/InvalidArgumentException.php',
+    'League\\CommonMark\\Exception\\LogicException' => $vendorDir . '/league/commonmark/src/Exception/LogicException.php',
+    'League\\CommonMark\\Exception\\MissingDependencyException' => $vendorDir . '/league/commonmark/src/Exception/MissingDependencyException.php',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'League\\CommonMark\\Exception\\UnexpectedEncodingException' => $vendorDir . '/league/commonmark/src/Exception/UnexpectedEncodingException.php',
     'League\\CommonMark\\Extension\\Attributes\\AttributesExtension' => $vendorDir . '/league/commonmark/src/Extension/Attributes/AttributesExtension.php',
     'League\\CommonMark\\Extension\\Attributes\\Event\\AttributesListener' => $vendorDir . '/league/commonmark/src/Extension/Attributes/Event/AttributesListener.php',
@@ -2463,6 +2492,10 @@ return array(
     'League\\CommonMark\\Parser\\MarkdownParserInterface' => $vendorDir . '/league/commonmark/src/Parser/MarkdownParserInterface.php',
     'League\\CommonMark\\Parser\\MarkdownParserState' => $vendorDir . '/league/commonmark/src/Parser/MarkdownParserState.php',
     'League\\CommonMark\\Parser\\MarkdownParserStateInterface' => $vendorDir . '/league/commonmark/src/Parser/MarkdownParserStateInterface.php',
+<<<<<<< HEAD
+=======
+    'League\\CommonMark\\Parser\\ParserLogicException' => $vendorDir . '/league/commonmark/src/Parser/ParserLogicException.php',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'League\\CommonMark\\Reference\\Reference' => $vendorDir . '/league/commonmark/src/Reference/Reference.php',
     'League\\CommonMark\\Reference\\ReferenceInterface' => $vendorDir . '/league/commonmark/src/Reference/ReferenceInterface.php',
     'League\\CommonMark\\Reference\\ReferenceMap' => $vendorDir . '/league/commonmark/src/Reference/ReferenceMap.php',
@@ -2478,6 +2511,10 @@ return array(
     'League\\CommonMark\\Renderer\\Inline\\NewlineRenderer' => $vendorDir . '/league/commonmark/src/Renderer/Inline/NewlineRenderer.php',
     'League\\CommonMark\\Renderer\\Inline\\TextRenderer' => $vendorDir . '/league/commonmark/src/Renderer/Inline/TextRenderer.php',
     'League\\CommonMark\\Renderer\\MarkdownRendererInterface' => $vendorDir . '/league/commonmark/src/Renderer/MarkdownRendererInterface.php',
+<<<<<<< HEAD
+=======
+    'League\\CommonMark\\Renderer\\NoMatchingRendererException' => $vendorDir . '/league/commonmark/src/Renderer/NoMatchingRendererException.php',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'League\\CommonMark\\Renderer\\NodeRendererInterface' => $vendorDir . '/league/commonmark/src/Renderer/NodeRendererInterface.php',
     'League\\CommonMark\\Util\\ArrayCollection' => $vendorDir . '/league/commonmark/src/Util/ArrayCollection.php',
     'League\\CommonMark\\Util\\Html5EntityDecoder' => $vendorDir . '/league/commonmark/src/Util/Html5EntityDecoder.php',
@@ -2563,7 +2600,10 @@ return array(
     'League\\MimeTypeDetection\\GeneratedExtensionToMimeTypeMap' => $vendorDir . '/league/mime-type-detection/src/GeneratedExtensionToMimeTypeMap.php',
     'League\\MimeTypeDetection\\MimeTypeDetector' => $vendorDir . '/league/mime-type-detection/src/MimeTypeDetector.php',
     'League\\MimeTypeDetection\\OverridingExtensionToMimeTypeMap' => $vendorDir . '/league/mime-type-detection/src/OverridingExtensionToMimeTypeMap.php',
+<<<<<<< HEAD
     'Mockery' => $vendorDir . '/mockery/mockery/library/Mockery.php',
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegration' => $vendorDir . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegration.php',
     'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegrationAssertPostConditions' => $vendorDir . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegrationAssertPostConditions.php',
     'Mockery\\Adapter\\Phpunit\\MockeryTestCase' => $vendorDir . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryTestCase.php',
@@ -2584,6 +2624,10 @@ return array(
     'Mockery\\Exception\\InvalidArgumentException' => $vendorDir . '/mockery/mockery/library/Mockery/Exception/InvalidArgumentException.php',
     'Mockery\\Exception\\InvalidCountException' => $vendorDir . '/mockery/mockery/library/Mockery/Exception/InvalidCountException.php',
     'Mockery\\Exception\\InvalidOrderException' => $vendorDir . '/mockery/mockery/library/Mockery/Exception/InvalidOrderException.php',
+<<<<<<< HEAD
+=======
+    'Mockery\\Exception\\MockeryExceptionInterface' => $vendorDir . '/mockery/mockery/library/Mockery/Exception/MockeryExceptionInterface.php',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'Mockery\\Exception\\NoMatchingExpectationException' => $vendorDir . '/mockery/mockery/library/Mockery/Exception/NoMatchingExpectationException.php',
     'Mockery\\Exception\\RuntimeException' => $vendorDir . '/mockery/mockery/library/Mockery/Exception/RuntimeException.php',
     'Mockery\\Expectation' => $vendorDir . '/mockery/mockery/library/Mockery/Expectation.php',
@@ -2602,6 +2646,10 @@ return array(
     'Mockery\\Generator\\StringManipulationGenerator' => $vendorDir . '/mockery/mockery/library/Mockery/Generator/StringManipulationGenerator.php',
     'Mockery\\Generator\\StringManipulation\\Pass\\AvoidMethodClashPass' => $vendorDir . '/mockery/mockery/library/Mockery/Generator/StringManipulation/Pass/AvoidMethodClashPass.php',
     'Mockery\\Generator\\StringManipulation\\Pass\\CallTypeHintPass' => $vendorDir . '/mockery/mockery/library/Mockery/Generator/StringManipulation/Pass/CallTypeHintPass.php',
+<<<<<<< HEAD
+=======
+    'Mockery\\Generator\\StringManipulation\\Pass\\ClassAttributesPass' => $vendorDir . '/mockery/mockery/library/Mockery/Generator/StringManipulation/Pass/ClassAttributesPass.php',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'Mockery\\Generator\\StringManipulation\\Pass\\ClassNamePass' => $vendorDir . '/mockery/mockery/library/Mockery/Generator/StringManipulation/Pass/ClassNamePass.php',
     'Mockery\\Generator\\StringManipulation\\Pass\\ClassPass' => $vendorDir . '/mockery/mockery/library/Mockery/Generator/StringManipulation/Pass/ClassPass.php',
     'Mockery\\Generator\\StringManipulation\\Pass\\ConstantsPass' => $vendorDir . '/mockery/mockery/library/Mockery/Generator/StringManipulation/Pass/ConstantsPass.php',
@@ -2632,6 +2680,11 @@ return array(
     'Mockery\\Matcher\\Ducktype' => $vendorDir . '/mockery/mockery/library/Mockery/Matcher/Ducktype.php',
     'Mockery\\Matcher\\HasKey' => $vendorDir . '/mockery/mockery/library/Mockery/Matcher/HasKey.php',
     'Mockery\\Matcher\\HasValue' => $vendorDir . '/mockery/mockery/library/Mockery/Matcher/HasValue.php',
+<<<<<<< HEAD
+=======
+    'Mockery\\Matcher\\IsEqual' => $vendorDir . '/mockery/mockery/library/Mockery/Matcher/IsEqual.php',
+    'Mockery\\Matcher\\IsSame' => $vendorDir . '/mockery/mockery/library/Mockery/Matcher/IsSame.php',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'Mockery\\Matcher\\MatcherAbstract' => $vendorDir . '/mockery/mockery/library/Mockery/Matcher/MatcherAbstract.php',
     'Mockery\\Matcher\\MultiArgumentClosure' => $vendorDir . '/mockery/mockery/library/Mockery/Matcher/MultiArgumentClosure.php',
     'Mockery\\Matcher\\MustBe' => $vendorDir . '/mockery/mockery/library/Mockery/Matcher/MustBe.php',
@@ -3144,8 +3197,13 @@ return array(
     'PHPUnit\\TextUI\\XmlConfiguration\\Migrator' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/Migration/Migrator.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\MoveAttributesFromFilterWhitelistToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/Migration/Migrations/MoveAttributesFromFilterWhitelistToCoverage.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\MoveAttributesFromRootToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/Migration/Migrations/MoveAttributesFromRootToCoverage.php',
+<<<<<<< HEAD
     'PHPUnit\\TextUI\\XmlConfiguration\\MoveWhitelistDirectoriesToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/Migration/Migrations/MoveWhitelistDirectoriesToCoverage.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\MoveWhitelistExcludesToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/Migration/Migrations/MoveWhitelistExcludesToCoverage.php',
+=======
+    'PHPUnit\\TextUI\\XmlConfiguration\\MoveWhitelistExcludesToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/Migration/Migrations/MoveWhitelistExcludesToCoverage.php',
+    'PHPUnit\\TextUI\\XmlConfiguration\\MoveWhitelistIncludesToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/Migration/Migrations/MoveWhitelistIncludesToCoverage.php',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'PHPUnit\\TextUI\\XmlConfiguration\\PHPUnit' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/PHPUnit/PHPUnit.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\Php' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/PHP/Php.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\PhpHandler' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/PHP/PhpHandler.php',
@@ -3330,6 +3388,10 @@ return array(
     'PhpParser\\Lexer\\TokenEmulator\\MatchTokenEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/MatchTokenEmulator.php',
     'PhpParser\\Lexer\\TokenEmulator\\NullsafeTokenEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/NullsafeTokenEmulator.php',
     'PhpParser\\Lexer\\TokenEmulator\\NumericLiteralSeparatorEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/NumericLiteralSeparatorEmulator.php',
+<<<<<<< HEAD
+=======
+    'PhpParser\\Lexer\\TokenEmulator\\ReadonlyFunctionTokenEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/ReadonlyFunctionTokenEmulator.php',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'PhpParser\\Lexer\\TokenEmulator\\ReadonlyTokenEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/ReadonlyTokenEmulator.php',
     'PhpParser\\Lexer\\TokenEmulator\\ReverseEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/ReverseEmulator.php',
     'PhpParser\\Lexer\\TokenEmulator\\TokenEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/TokenEmulator.php',
@@ -3741,6 +3803,10 @@ return array(
     'Psy\\Sudo' => $vendorDir . '/psy/psysh/src/Sudo.php',
     'Psy\\Sudo\\SudoVisitor' => $vendorDir . '/psy/psysh/src/Sudo/SudoVisitor.php',
     'Psy\\SuperglobalsEnv' => $vendorDir . '/psy/psysh/src/SuperglobalsEnv.php',
+<<<<<<< HEAD
+=======
+    'Psy\\SystemEnv' => $vendorDir . '/psy/psysh/src/SystemEnv.php',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'Psy\\TabCompletion\\AutoCompleter' => $vendorDir . '/psy/psysh/src/TabCompletion/AutoCompleter.php',
     'Psy\\TabCompletion\\Matcher\\AbstractContextAwareMatcher' => $vendorDir . '/psy/psysh/src/TabCompletion/Matcher/AbstractContextAwareMatcher.php',
     'Psy\\TabCompletion\\Matcher\\AbstractDefaultParametersMatcher' => $vendorDir . '/psy/psysh/src/TabCompletion/Matcher/AbstractDefaultParametersMatcher.php',
@@ -4931,6 +4997,12 @@ return array(
     'Whoops\\Handler\\PlainTextHandler' => $vendorDir . '/filp/whoops/src/Whoops/Handler/PlainTextHandler.php',
     'Whoops\\Handler\\PrettyPageHandler' => $vendorDir . '/filp/whoops/src/Whoops/Handler/PrettyPageHandler.php',
     'Whoops\\Handler\\XmlResponseHandler' => $vendorDir . '/filp/whoops/src/Whoops/Handler/XmlResponseHandler.php',
+<<<<<<< HEAD
+=======
+    'Whoops\\Inspector\\InspectorFactory' => $vendorDir . '/filp/whoops/src/Whoops/Inspector/InspectorFactory.php',
+    'Whoops\\Inspector\\InspectorFactoryInterface' => $vendorDir . '/filp/whoops/src/Whoops/Inspector/InspectorFactoryInterface.php',
+    'Whoops\\Inspector\\InspectorInterface' => $vendorDir . '/filp/whoops/src/Whoops/Inspector/InspectorInterface.php',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'Whoops\\Run' => $vendorDir . '/filp/whoops/src/Whoops/Run.php',
     'Whoops\\RunInterface' => $vendorDir . '/filp/whoops/src/Whoops/RunInterface.php',
     'Whoops\\Util\\HtmlDumperOutput' => $vendorDir . '/filp/whoops/src/Whoops/Util/HtmlDumperOutput.php',

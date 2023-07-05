@@ -22,6 +22,10 @@ namespace League\CommonMark\Parser;
 use League\CommonMark\Environment\EnvironmentInterface;
 use League\CommonMark\Event\DocumentParsedEvent;
 use League\CommonMark\Event\DocumentPreParsedEvent;
+<<<<<<< HEAD
+=======
+use League\CommonMark\Exception\CommonMarkException;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use League\CommonMark\Input\MarkdownInput;
 use League\CommonMark\Node\Block\Document;
 use League\CommonMark\Node\Block\Paragraph;
@@ -81,7 +85,11 @@ final class MarkdownParser implements MarkdownParserInterface
     }
 
     /**
+<<<<<<< HEAD
      * @throws \RuntimeException
+=======
+     * @throws CommonMarkException
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function parse(string $input): Document
     {
@@ -293,11 +301,21 @@ final class MarkdownParser implements MarkdownParserInterface
         $this->activeBlockParsers[] = $blockParser;
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @throws ParserLogicException
+     */
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     private function deactivateBlockParser(): BlockContinueParserInterface
     {
         $popped = \array_pop($this->activeBlockParsers);
         if ($popped === null) {
+<<<<<<< HEAD
             throw new \RuntimeException('The last block parser should not be deactivated');
+=======
+            throw new ParserLogicException('The last block parser should not be deactivated');
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         return $popped;
@@ -327,11 +345,21 @@ final class MarkdownParser implements MarkdownParserInterface
         }
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @throws ParserLogicException
+     */
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     public function getActiveBlockParser(): BlockContinueParserInterface
     {
         $active = \end($this->activeBlockParsers);
         if ($active === false) {
+<<<<<<< HEAD
             throw new \RuntimeException('No active block parsers are available');
+=======
+            throw new ParserLogicException('No active block parsers are available');
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         return $active;

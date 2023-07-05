@@ -34,8 +34,13 @@ final class SchemaFinder
             throw new Exception(
                 sprintf(
                     'Schema for PHPUnit %s is not available',
+<<<<<<< HEAD
                     $version
                 )
+=======
+                    $version,
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

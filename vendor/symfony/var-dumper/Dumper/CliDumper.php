@@ -198,6 +198,12 @@ class CliDumper extends AbstractDumper
         }
         if ('' === $str) {
             $this->line .= '""';
+<<<<<<< HEAD
+=======
+            if ($cut) {
+                $this->line .= '…'.$cut;
+            }
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             $this->endValue($cursor);
         } else {
             $attr += [
@@ -445,7 +451,12 @@ class CliDumper extends AbstractDumper
 
         if (null === $this->handlesHrefGracefully) {
             $this->handlesHrefGracefully = 'JetBrains-JediTerm' !== getenv('TERMINAL_EMULATOR')
+<<<<<<< HEAD
                 && (!getenv('KONSOLE_VERSION') || (int) getenv('KONSOLE_VERSION') > 201100);
+=======
+                && (!getenv('KONSOLE_VERSION') || (int) getenv('KONSOLE_VERSION') > 201100)
+                && !isset($_SERVER['IDEA_INITIAL_DIRECTORY']);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         if (isset($attr['ellipsis'], $attr['ellipsis-type'])) {

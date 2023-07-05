@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -27,7 +31,11 @@ class Sudo
      */
     public static function fetchProperty($object, string $property)
     {
+<<<<<<< HEAD
         $prop = static::getProperty(new \ReflectionObject($object), $property);
+=======
+        $prop = self::getProperty(new \ReflectionObject($object), $property);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
         return $prop->getValue($object);
     }
@@ -43,7 +51,11 @@ class Sudo
      */
     public static function assignProperty($object, string $property, $value)
     {
+<<<<<<< HEAD
         $prop = static::getProperty(new \ReflectionObject($object), $property);
+=======
+        $prop = self::getProperty(new \ReflectionObject($object), $property);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         $prop->setValue($object, $value);
 
         return $value;
@@ -77,7 +89,11 @@ class Sudo
      */
     public static function fetchStaticProperty($class, string $property)
     {
+<<<<<<< HEAD
         $prop = static::getProperty(new \ReflectionClass($class), $property);
+=======
+        $prop = self::getProperty(new \ReflectionClass($class), $property);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         $prop->setAccessible(true);
 
         return $prop->getValue();
@@ -94,7 +110,11 @@ class Sudo
      */
     public static function assignStaticProperty($class, string $property, $value)
     {
+<<<<<<< HEAD
         $prop = static::getProperty(new \ReflectionClass($class), $property);
+=======
+        $prop = self::getProperty(new \ReflectionClass($class), $property);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         $prop->setValue($value);
 
         return $value;

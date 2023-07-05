@@ -21,7 +21,11 @@ final class UpdateSchemaLocationTo93 implements Migration
         $document->documentElement->setAttributeNS(
             'http://www.w3.org/2001/XMLSchema-instance',
             'xsi:noNamespaceSchemaLocation',
+<<<<<<< HEAD
             'https://schema.phpunit.de/9.3/phpunit.xsd'
+=======
+            'https://schema.phpunit.de/9.3/phpunit.xsd',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

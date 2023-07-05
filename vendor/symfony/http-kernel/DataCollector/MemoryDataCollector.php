@@ -100,11 +100,19 @@ class MemoryDataCollector extends DataCollector implements LateDataCollectorInte
 
         switch (substr($memoryLimit, -1)) {
             case 't': $max *= 1024;
+<<<<<<< HEAD
             // no break
             case 'g': $max *= 1024;
             // no break
             case 'm': $max *= 1024;
             // no break
+=======
+                // no break
+            case 'g': $max *= 1024;
+                // no break
+            case 'm': $max *= 1024;
+                // no break
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             case 'k': $max *= 1024;
         }
 

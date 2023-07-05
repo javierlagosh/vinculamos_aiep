@@ -63,15 +63,25 @@ final class LogicalNot extends UnaryOperator
                 preg_replace(
                     $positives,
                     $negatives,
+<<<<<<< HEAD
                     $nonInput
                 ),
                 $string
+=======
+                    $nonInput,
+                ),
+                $string,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         } else {
             $negatedString = preg_replace(
                 $positives,
                 $negatives,
+<<<<<<< HEAD
                 $string
+=======
+                $string,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

@@ -35,7 +35,11 @@ final class TextTestListRenderer
                 $name = sprintf(
                     '%s::%s',
                     get_class($test),
+<<<<<<< HEAD
                     str_replace(' with data set ', '', $test->getName())
+=======
+                    str_replace(' with data set ', '', $test->getName()),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             } elseif ($test instanceof PhptTestCase) {
                 $name = $test->getName();
@@ -45,7 +49,11 @@ final class TextTestListRenderer
 
             $buffer .= sprintf(
                 ' - %s' . PHP_EOL,
+<<<<<<< HEAD
                 $name
+=======
+                $name,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

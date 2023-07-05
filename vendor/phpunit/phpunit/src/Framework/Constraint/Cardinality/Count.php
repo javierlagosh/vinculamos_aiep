@@ -40,7 +40,11 @@ class Count extends Constraint
     {
         return sprintf(
             'count matches %d',
+<<<<<<< HEAD
             $this->expectedCount
+=======
+            $this->expectedCount,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -76,7 +80,11 @@ class Count extends Constraint
                     throw new Exception(
                         $e->getMessage(),
                         $e->getCode(),
+<<<<<<< HEAD
                         $e
+=======
+                        $e,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
                 }
             }
@@ -136,7 +144,11 @@ class Count extends Constraint
         return sprintf(
             'actual size %d matches expected size %d',
             (int) $this->getCountOf($other),
+<<<<<<< HEAD
             $this->expectedCount
+=======
+            $this->expectedCount,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

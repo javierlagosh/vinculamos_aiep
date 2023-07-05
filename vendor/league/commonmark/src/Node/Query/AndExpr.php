@@ -31,7 +31,11 @@ final class AndExpr implements ExpressionInterface
      */
     public function __construct(callable ...$expressions)
     {
+<<<<<<< HEAD
         $this->conditions = $expressions;
+=======
+        $this->conditions = \array_values($expressions);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 
     /**

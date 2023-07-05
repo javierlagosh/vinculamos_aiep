@@ -22,16 +22,34 @@ final class UrlAutolinkParser implements InlineParserInterface
 {
     private const ALLOWED_AFTER = [null, ' ', "\t", "\n", "\x0b", "\x0c", "\x0d", '*', '_', '~', '('];
 
+<<<<<<< HEAD
     // RegEx adapted from https://github.com/symfony/symfony/blob/4.2/src/Symfony/Component/Validator/Constraints/UrlValidator.php
+=======
+    // RegEx adapted from https://github.com/symfony/symfony/blob/6.3/src/Symfony/Component/Validator/Constraints/UrlValidator.php
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     private const REGEX = '~
         (
             # Must start with a supported scheme + auth, or "www"
             (?:
+<<<<<<< HEAD
                 (?:%s)://                                 # protocol
                 (?:([\.\pL\pN-]+:)?([\.\pL\pN-]+)@)?      # basic auth
             |www\.)
             (?:
                 (?:[\pL\pN\pS\-\.])+(?:\.?(?:[\pL\pN]|xn\-\-[\pL\pN-]+)+\.?) # a domain name
+=======
+                (?:%s)://                                                                            # protocol
+                (?:(?:(?:[\_\.\pL\pN-]|%%[0-9A-Fa-f]{2})+:)?((?:[\_\.\pL\pN-]|%%[0-9A-Fa-f]{2})+)@)? # basic auth
+            |www\.)
+            (?:
+                (?:
+                    (?:xn--[a-z0-9-]++\.)*+xn--[a-z0-9-]++            # a domain name using punycode
+                        |
+                    (?:[\pL\pN\pS\pM\-\_]++\.)+[\pL\pN\pM]++          # a multi-level domain name
+                        |
+                    [a-z0-9\-\_]++                                    # a single-level domain name
+                )\.?
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     |                                                 # or
                 \d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}                    # an IP address
                     |                                                 # or
@@ -40,9 +58,15 @@ final class UrlAutolinkParser implements InlineParserInterface
                 \]  # an IPv6 address
             )
             (?::[0-9]+)?                              # a port (optional)
+<<<<<<< HEAD
             (?:/ (?:[\pL\pN\-._\~!$&\'()*+,;=:@]|%%[0-9A-Fa-f]{2})* )*      # a path
             (?:\? (?:[\pL\pN\-._\~!$&\'()*+,;=:@/?]|%%[0-9A-Fa-f]{2})* )?   # a query (optional)
             (?:\# (?:[\pL\pN\-._\~!$&\'()*+,;=:@/?]|%%[0-9A-Fa-f]{2})* )?   # a fragment (optional)
+=======
+            (?:/ (?:[\pL\pN\-._\~!$&\'()*+,;=:@]|%%[0-9A-Fa-f]{2})* )*        # a path
+            (?:\? (?:[\pL\pN\-._\~!$&\'\[\]()*+,;=:@/?]|%%[0-9A-Fa-f]{2})* )? # a query (optional)
+            (?:\# (?:[\pL\pN\-._\~!$&\'()*+,;=:@/?]|%%[0-9A-Fa-f]{2})* )?     # a fragment (optional)
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         )~ixu';
 
     /**

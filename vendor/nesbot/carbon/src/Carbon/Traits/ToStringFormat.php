@@ -38,16 +38,26 @@ trait ToStringFormat
     }
 
     /**
+<<<<<<< HEAD
      * @param string|Closure|null $format
      *
      * @return void
      *
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      * @deprecated To avoid conflict between different third-party libraries, static setters should not be used.
      *             You should rather let Carbon object being cast to string with DEFAULT_TO_STRING_FORMAT, and
      *             use other method or custom format passed to format() method if you need to dump another string
      *             format.
      *
      * Set the default format used when type juggling a Carbon instance to a string.
+<<<<<<< HEAD
+=======
+     *
+     * @param string|Closure|null $format
+     *
+     * @return void
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public static function setToStringFormat($format)
     {

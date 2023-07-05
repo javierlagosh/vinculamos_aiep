@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -63,7 +67,11 @@ class Presenter
         $this->cloner = new Cloner();
         $this->cloner->addCasters(['*' => function ($obj, array $a, Stub $stub, $isNested, $filter = 0) {
             if ($filter || $isNested) {
+<<<<<<< HEAD
                 if ($obj instanceof \Exception) {
+=======
+                if ($obj instanceof \Throwable) {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     $a = Caster::filter($a, Caster::EXCLUDE_NOT_IMPORTANT | Caster::EXCLUDE_EMPTY, $this->exceptionsImportants);
                 } else {
                     $a = Caster::filter($a, Caster::EXCLUDE_PROTECTED | Caster::EXCLUDE_PRIVATE);
@@ -90,8 +98,11 @@ class Presenter
      * Present a reference to the value.
      *
      * @param mixed $value
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function presentRef($value): string
     {
@@ -106,8 +117,11 @@ class Presenter
      * @param mixed $value
      * @param int   $depth   (default: null)
      * @param int   $options One of Presenter constants
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function present($value, int $depth = null, int $options = 0): string
     {

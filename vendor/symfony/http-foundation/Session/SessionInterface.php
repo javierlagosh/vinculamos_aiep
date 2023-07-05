@@ -59,10 +59,17 @@ interface SessionInterface
      * Clears all session attributes and flashes and regenerates the
      * session and deletes the old session from persistence.
      *
+<<<<<<< HEAD
      * @param int $lifetime Sets the cookie lifetime for the session cookie. A null value
      *                      will leave the system settings unchanged, 0 sets the cookie
      *                      to expire with browser session. Time is in seconds, and is
      *                      not a Unix timestamp.
+=======
+     * @param int|null $lifetime Sets the cookie lifetime for the session cookie. A null value
+     *                           will leave the system settings unchanged, 0 sets the cookie
+     *                           to expire with browser session. Time is in seconds, and is
+     *                           not a Unix timestamp.
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      *
      * @return bool
      */
@@ -72,11 +79,19 @@ interface SessionInterface
      * Migrates the current session to a new session id while maintaining all
      * session attributes.
      *
+<<<<<<< HEAD
      * @param bool $destroy  Whether to delete the old session or leave it to garbage collection
      * @param int  $lifetime Sets the cookie lifetime for the session cookie. A null value
      *                       will leave the system settings unchanged, 0 sets the cookie
      *                       to expire with browser session. Time is in seconds, and is
      *                       not a Unix timestamp.
+=======
+     * @param bool     $destroy  Whether to delete the old session or leave it to garbage collection
+     * @param int|null $lifetime Sets the cookie lifetime for the session cookie. A null value
+     *                           will leave the system settings unchanged, 0 sets the cookie
+     *                           to expire with browser session. Time is in seconds, and is
+     *                           not a Unix timestamp.
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      *
      * @return bool
      */

@@ -19,6 +19,11 @@ class Param implements PhpParser\Builder
 
     protected $variadic = false;
 
+<<<<<<< HEAD
+=======
+    protected $flags = 0;
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     /** @var Node\AttributeGroup[] */
     protected $attributeGroups = [];
 
@@ -96,6 +101,53 @@ class Param implements PhpParser\Builder
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Makes the (promoted) parameter public.
+     *
+     * @return $this The builder instance (for fluid interface)
+     */
+    public function makePublic() {
+        $this->flags = BuilderHelpers::addModifier($this->flags, Node\Stmt\Class_::MODIFIER_PUBLIC);
+
+        return $this;
+    }
+
+    /**
+     * Makes the (promoted) parameter protected.
+     *
+     * @return $this The builder instance (for fluid interface)
+     */
+    public function makeProtected() {
+        $this->flags = BuilderHelpers::addModifier($this->flags, Node\Stmt\Class_::MODIFIER_PROTECTED);
+
+        return $this;
+    }
+
+    /**
+     * Makes the (promoted) parameter private.
+     *
+     * @return $this The builder instance (for fluid interface)
+     */
+    public function makePrivate() {
+        $this->flags = BuilderHelpers::addModifier($this->flags, Node\Stmt\Class_::MODIFIER_PRIVATE);
+
+        return $this;
+    }
+
+    /**
+     * Makes the (promoted) parameter readonly.
+     *
+     * @return $this The builder instance (for fluid interface)
+     */
+    public function makeReadonly() {
+        $this->flags = BuilderHelpers::addModifier($this->flags, Node\Stmt\Class_::MODIFIER_READONLY);
+
+        return $this;
+    }
+
+    /**
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      * Adds an attribute group.
      *
      * @param Node\Attribute|Node\AttributeGroup $attribute
@@ -116,7 +168,11 @@ class Param implements PhpParser\Builder
     public function getNode() : Node {
         return new Node\Param(
             new Node\Expr\Variable($this->name),
+<<<<<<< HEAD
             $this->default, $this->type, $this->byRef, $this->variadic, [], 0, $this->attributeGroups
+=======
+            $this->default, $this->type, $this->byRef, $this->variadic, [], $this->flags, $this->attributeGroups
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

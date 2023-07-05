@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -162,8 +166,11 @@ HELP
      * Get (or create) the Parser instance.
      *
      * @param string|null $kind One of Psy\ParserFactory constants (only for PHP parser 2.0 and above)
+<<<<<<< HEAD
      *
      * @return Parser
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private function getParser(string $kind = null): Parser
     {

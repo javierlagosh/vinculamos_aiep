@@ -21,6 +21,11 @@ use PHPUnit\Framework\MockObject\Invocation as BaseInvocation;
 
 /**
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
+<<<<<<< HEAD
+=======
+ *
+ * @deprecated
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  */
 final class ConsecutiveParameters implements ParametersRule
 {
@@ -45,8 +50,13 @@ final class ConsecutiveParameters implements ParametersRule
                     sprintf(
                         'Parameter group #%d must be an array or Traversable, got %s',
                         $index,
+<<<<<<< HEAD
                         gettype($parameters)
                     )
+=======
+                        gettype($parameters),
+                    ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
 
@@ -109,8 +119,13 @@ final class ConsecutiveParameters implements ParametersRule
             throw new ExpectationFailedException(
                 sprintf(
                     'Parameter count for invocation %s is too low.',
+<<<<<<< HEAD
                     $invocation->toString()
                 )
+=======
+                    $invocation->toString(),
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -122,8 +137,13 @@ final class ConsecutiveParameters implements ParametersRule
                     'value.',
                     $i,
                     $callIndex,
+<<<<<<< HEAD
                     $invocation->toString()
                 )
+=======
+                    $invocation->toString(),
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
     }

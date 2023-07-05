@@ -60,8 +60,13 @@ final class XmlTestListRenderer
                         str_replace(
                             ' with data set ',
                             '',
+<<<<<<< HEAD
                             $test->getDataSetAsString(false)
                         )
+=======
+                            $test->getDataSetAsString(false),
+                        ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
                 }
 

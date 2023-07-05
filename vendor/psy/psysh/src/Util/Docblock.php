@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -74,7 +78,14 @@ class Docblock
     public function __construct(\Reflector $reflector)
     {
         $this->reflector = $reflector;
+<<<<<<< HEAD
         $this->setComment($reflector->getDocComment());
+=======
+
+        if ($reflector instanceof \ReflectionClass || $reflector instanceof \ReflectionClassConstant || $reflector instanceof \ReflectionFunctionAbstract || $reflector instanceof \ReflectionProperty) {
+            $this->setComment($reflector->getDocComment());
+        }
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 
     /**
@@ -198,8 +209,11 @@ class Docblock
      * Whether or not a docblock contains a given @tag.
      *
      * @param string $tag The name of the @tag to check for
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function hasTag(string $tag): bool
     {
@@ -211,10 +225,19 @@ class Docblock
      *
      * @param string $tag
      *
+<<<<<<< HEAD
      * @return array
      */
     public function tag(string $tag): array
     {
+=======
+     * @return array|null
+     */
+    public function tag(string $tag)
+    {
+        // TODO: Add proper null-type return values once the lowest PHP version supported is 7.1
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         return $this->hasTag($tag) ? $this->tags[$tag] : null;
     }
 
@@ -222,8 +245,11 @@ class Docblock
      * Whether or not a string begins with a @tag.
      *
      * @param string $str
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public static function isTagged(string $str): bool
     {

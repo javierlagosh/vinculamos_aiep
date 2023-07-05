@@ -33,8 +33,13 @@ final class StringMatchesFormatDescription extends RegularExpression
     {
         parent::__construct(
             $this->createPatternFromFormat(
+<<<<<<< HEAD
                 $this->convertNewlines($string)
             )
+=======
+                $this->convertNewlines($string),
+            ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $this->string = $string;
@@ -49,7 +54,11 @@ final class StringMatchesFormatDescription extends RegularExpression
     protected function matches($other): bool
     {
         return parent::matches(
+<<<<<<< HEAD
             $this->convertNewlines($other)
+=======
+            $this->convertNewlines($other),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -96,7 +105,11 @@ final class StringMatchesFormatDescription extends RegularExpression
                 '%x' => '[0-9a-fA-F]+',
                 '%f' => '[+-]?\.?\d+\.?\d*(?:[Ee][+-]?\d+)?',
                 '%c' => '.',
+<<<<<<< HEAD
             ]
+=======
+            ],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         return '/^' . $string . '$/s';

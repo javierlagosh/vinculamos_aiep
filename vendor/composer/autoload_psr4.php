@@ -51,6 +51,10 @@ return array(
     'Opis\\Closure\\' => array($vendorDir . '/opis/closure/src'),
     'NunoMaduro\\Collision\\' => array($vendorDir . '/nunomaduro/collision/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
+<<<<<<< HEAD
+=======
+    'Mockery\\' => array($vendorDir . '/mockery/mockery/library/Mockery'),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'League\\MimeTypeDetection\\' => array($vendorDir . '/league/mime-type-detection/src'),
     'League\\Flysystem\\' => array($vendorDir . '/league/flysystem/src'),
     'League\\Config\\' => array($vendorDir . '/league/config/src'),

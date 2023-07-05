@@ -39,8 +39,13 @@ final class Factory
             throw new Exception(
                 sprintf(
                     'Class "%s" does not extend RecursiveFilterIterator',
+<<<<<<< HEAD
                     $filter->name
                 )
+=======
+                    $filter->name,
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

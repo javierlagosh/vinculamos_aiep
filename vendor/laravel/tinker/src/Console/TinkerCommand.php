@@ -131,6 +131,13 @@ class TinkerCommand extends Command
             $casters['Illuminate\Database\Eloquent\Model'] = 'Laravel\Tinker\TinkerCaster::castModel';
         }
 
+<<<<<<< HEAD
+=======
+        if (class_exists('Illuminate\Process\ProcessResult')) {
+            $casters['Illuminate\Process\ProcessResult'] = 'Laravel\Tinker\TinkerCaster::castProcessResult';
+        }
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         if (class_exists('Illuminate\Foundation\Application')) {
             $casters['Illuminate\Foundation\Application'] = 'Laravel\Tinker\TinkerCaster::castApplication';
         }

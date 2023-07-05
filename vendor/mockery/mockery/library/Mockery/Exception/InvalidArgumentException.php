@@ -20,6 +20,10 @@
 
 namespace Mockery\Exception;
 
+<<<<<<< HEAD
 class InvalidArgumentException extends \InvalidArgumentException
+=======
+class InvalidArgumentException extends \InvalidArgumentException implements MockeryExceptionInterface
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 {
 }

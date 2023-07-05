@@ -23,12 +23,17 @@ use DeepCopy\DeepCopy;
 use Doctrine\Instantiator\Instantiator;
 use PharIo\Manifest\Manifest;
 use PharIo\Version\Version as PharIoVersion;
+<<<<<<< HEAD
 use phpDocumentor\Reflection\DocBlock;
 use phpDocumentor\Reflection\Project;
 use phpDocumentor\Reflection\Type;
 use PhpParser\Parser;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Prophet;
+=======
+use PhpParser\Parser;
+use PHPUnit\Framework\TestCase;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use ReflectionClass;
 use SebastianBergmann\CliParser\Parser as CliParser;
 use SebastianBergmann\CodeCoverage\CodeCoverage;
@@ -51,7 +56,10 @@ use SebastianBergmann\Timer\Timer;
 use SebastianBergmann\Type\TypeName;
 use SebastianBergmann\Version;
 use TheSeer\Tokenizer\Tokenizer;
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
 /**
  * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -80,6 +88,7 @@ final class ExcludeList
         // phar-io/version
         PharIoVersion::class => 1,
 
+<<<<<<< HEAD
         // phpdocumentor/reflection-common
         Project::class => 1,
 
@@ -92,6 +101,11 @@ final class ExcludeList
         // phpspec/prophecy
         Prophet::class => 1,
 
+=======
+        // phpdocumentor/type-resolver
+        Type::class => 1,
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         // phpunit/phpunit
         TestCase::class => 2,
 
@@ -157,9 +171,12 @@ final class ExcludeList
 
         // theseer/tokenizer
         Tokenizer::class => 1,
+<<<<<<< HEAD
 
         // webmozart/assert
         Assert::class => 1,
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     ];
 
     /**
@@ -178,8 +195,13 @@ final class ExcludeList
             throw new Exception(
                 sprintf(
                     '"%s" is not a directory',
+<<<<<<< HEAD
                     $directory
                 )
+=======
+                    $directory,
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

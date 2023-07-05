@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -57,6 +61,7 @@ class Theme
         'default'   => [null],
 
         // Types
+<<<<<<< HEAD
         'number'   => ['magenta'],
         'integer'  => ['magenta'],
         'float'    => ['yellow'],
@@ -66,12 +71,28 @@ class Theme
         'comment'  => ['blue'],
         'object'   => ['blue'],
         'resource' => ['yellow'],
+=======
+        'number'       => ['magenta'],
+        'integer'      => ['magenta'],
+        'float'        => ['yellow'],
+        'string'       => ['green'],
+        'bool'         => ['cyan'],
+        'keyword'      => ['yellow'],
+        'comment'      => ['blue'],
+        'code_comment' => ['gray'],
+        'object'       => ['blue'],
+        'resource'     => ['yellow'],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
         // Code-specific formatting
         'inline_html' => ['cyan'],
     ];
 
+<<<<<<< HEAD
     const ERROR_STYLES = ['info', 'warning', 'error', 'whisper'];
+=======
+    const ERROR_STYLES = ['info', 'warning', 'error', 'whisper', 'class'];
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     private $compact = false;
 
@@ -95,7 +116,11 @@ class Theme
                     $config = static::MODERN_THEME;
                     break;
 
+<<<<<<< HEAD
                     case 'compact':
+=======
+                case 'compact':
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     $config = static::COMPACT_THEME;
                     break;
 
@@ -139,10 +164,13 @@ class Theme
                 case 'grayFallback':
                     $this->setGrayFallback($value);
                     break;
+<<<<<<< HEAD
 
                 case 'compact':
                     $this->setCompact($value);
                     break;
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             }
         }
 

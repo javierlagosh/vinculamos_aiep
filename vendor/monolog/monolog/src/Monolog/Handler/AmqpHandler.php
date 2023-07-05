@@ -151,6 +151,7 @@ class AmqpHandler extends AbstractProcessingHandler
 
     private function createAmqpMessage(string $data): AMQPMessage
     {
+<<<<<<< HEAD
         return new AMQPMessage(
             $data,
             [
@@ -158,6 +159,16 @@ class AmqpHandler extends AbstractProcessingHandler
                 'content_type' => 'application/json',
             ]
         );
+=======
+        $attributes = [
+            'delivery_mode' => 2,
+            'content_type' => 'application/json',
+        ];
+        if ($this->extraAttributes) {
+            $attributes = array_merge($attributes, $this->extraAttributes);
+        }
+        return new AMQPMessage($data, $attributes);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 
     /**

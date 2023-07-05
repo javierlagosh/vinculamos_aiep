@@ -102,7 +102,11 @@ final class InvocationHandler
         return new InvocationMocker(
             $this,
             $matcher,
+<<<<<<< HEAD
             ...$this->configurableMethods
+=======
+            ...$this->configurableMethods,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 

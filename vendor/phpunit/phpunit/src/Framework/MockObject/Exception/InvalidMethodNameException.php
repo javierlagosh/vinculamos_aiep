@@ -21,8 +21,13 @@ final class InvalidMethodNameException extends \PHPUnit\Framework\Exception impl
         parent::__construct(
             sprintf(
                 'Cannot double method with invalid name "%s"',
+<<<<<<< HEAD
                 $method
             )
+=======
+                $method,
+            ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

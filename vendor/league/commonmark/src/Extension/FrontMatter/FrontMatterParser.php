@@ -14,6 +14,10 @@ declare(strict_types=1);
 namespace League\CommonMark\Extension\FrontMatter;
 
 use League\CommonMark\Extension\FrontMatter\Data\FrontMatterDataParserInterface;
+<<<<<<< HEAD
+=======
+use League\CommonMark\Extension\FrontMatter\Exception\InvalidFrontMatterException;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use League\CommonMark\Extension\FrontMatter\Input\MarkdownInputWithFrontMatter;
 use League\CommonMark\Parser\Cursor;
 
@@ -29,6 +33,12 @@ final class FrontMatterParser implements FrontMatterParserInterface
         $this->frontMatterParser = $frontMatterParser;
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @throws InvalidFrontMatterException if the front matter cannot be parsed
+     */
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     public function parse(string $markdownContent): MarkdownInputWithFrontMatter
     {
         $cursor = new Cursor($markdownContent);

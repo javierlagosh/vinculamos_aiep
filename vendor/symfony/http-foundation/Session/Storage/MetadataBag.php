@@ -95,10 +95,17 @@ class MetadataBag implements SessionBagInterface
     /**
      * Stamps a new session's metadata.
      *
+<<<<<<< HEAD
      * @param int $lifetime Sets the cookie lifetime for the session cookie. A null value
      *                      will leave the system settings unchanged, 0 sets the cookie
      *                      to expire with browser session. Time is in seconds, and is
      *                      not a Unix timestamp.
+=======
+     * @param int|null $lifetime Sets the cookie lifetime for the session cookie. A null value
+     *                           will leave the system settings unchanged, 0 sets the cookie
+     *                           to expire with browser session. Time is in seconds, and is
+     *                           not a Unix timestamp.
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function stampNew(int $lifetime = null)
     {

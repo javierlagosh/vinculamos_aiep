@@ -2,7 +2,11 @@
     "name": "symfony/console",
     "type": "library",
     "description": "Eases the creation of beautiful and testable command line interfaces",
+<<<<<<< HEAD
     "keywords": ["console", "cli", "command line", "terminal"],
+=======
+    "keywords": ["console", "cli", "command-line", "terminal"],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     "homepage": "https://symfony.com",
     "license": "MIT",
     "authors": [

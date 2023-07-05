@@ -11,6 +11,10 @@
 
 namespace Carbon;
 
+<<<<<<< HEAD
+=======
+use Carbon\MessageFormatter\MessageFormatterMapper;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use Closure;
 use ReflectionException;
 use ReflectionFunction;
@@ -51,7 +55,11 @@ abstract class AbstractTranslator extends Translation\Translator
     /**
      * List of locales aliases.
      *
+<<<<<<< HEAD
      * @var string[]
+=======
+     * @var array<string, string>
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     protected $aliases = [
         'me' => 'sr_Latn_ME',
@@ -83,7 +91,11 @@ abstract class AbstractTranslator extends Translation\Translator
         $this->initializing = true;
         $this->directories = [__DIR__.'/Lang'];
         $this->addLoader('array', new ArrayLoader());
+<<<<<<< HEAD
         parent::__construct($locale, $formatter, $cacheDir, $debug);
+=======
+        parent::__construct($locale, new MessageFormatterMapper($formatter), $cacheDir, $debug);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         $this->initializing = false;
     }
 

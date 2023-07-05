@@ -32,6 +32,17 @@ interface TargetClassInterface
      */
     public static function factory($name);
 
+<<<<<<< HEAD
+=======
+
+    /**
+     * Returns the targetClass's attributes.
+     *
+     * @return array
+     */
+    public function getAttributes();
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     /**
      * Returns the targetClass's name.
      *

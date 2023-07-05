@@ -105,6 +105,10 @@
         "phpcs": "php-cs-fixer fix -v --diff --dry-run",
         "phpdoc": "php phpdoc.php",
         "phpmd": "phpmd src text /phpmd.xml",
+<<<<<<< HEAD
+=======
+        "phpmd-test": "phpmd tests text /tests/phpmd-test.xml",
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         "phpstan": "phpstan analyse --configuration phpstan.neon",
         "phpunit": "phpunit --verbose",
         "style-check": [
@@ -115,6 +119,11 @@
         "test": [
             "@phpunit",
             "@style-check"
+<<<<<<< HEAD
         ]
+=======
+        ],
+        "sponsors": "php sponsors.php"
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 }

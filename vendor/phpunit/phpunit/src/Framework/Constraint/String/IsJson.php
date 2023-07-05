@@ -65,13 +65,21 @@ final class IsJson extends Constraint
 
         json_decode($other);
         $error = (string) JsonMatchesErrorMessageProvider::determineJsonError(
+<<<<<<< HEAD
             (string) json_last_error()
+=======
+            (string) json_last_error(),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         return sprintf(
             '%s is valid JSON (%s)',
             $this->exporter()->shortenedExport($other),
+<<<<<<< HEAD
             $error
+=======
+            $error,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

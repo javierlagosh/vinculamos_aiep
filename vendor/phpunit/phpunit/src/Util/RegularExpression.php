@@ -25,7 +25,11 @@ final class RegularExpression
             static function () use ($pattern, $subject)
             {
                 return preg_match($pattern, $subject);
+<<<<<<< HEAD
             }
+=======
+            },
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

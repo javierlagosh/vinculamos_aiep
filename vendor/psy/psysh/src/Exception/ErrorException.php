@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -21,6 +25,7 @@ class ErrorException extends \ErrorException implements Exception
     /**
      * Construct a Psy ErrorException.
      *
+<<<<<<< HEAD
      * @param string         $message  (default: "")
      * @param int            $code     (default: 0)
      * @param int            $severity (default: 1)
@@ -29,6 +34,16 @@ class ErrorException extends \ErrorException implements Exception
      * @param Exception|null $previous (default: null)
      */
     public function __construct($message = '', $code = 0, $severity = 1, $filename = null, $lineno = null, $previous = null)
+=======
+     * @param string          $message  (default: "")
+     * @param int             $code     (default: 0)
+     * @param int             $severity (default: 1)
+     * @param string|null     $filename (default: null)
+     * @param int|null        $lineno   (default: null)
+     * @param \Throwable|null $previous (default: null)
+     */
+    public function __construct($message = '', $code = 0, $severity = 1, $filename = null, $lineno = null, \Throwable $previous = null)
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     {
         $this->rawMessage = $message;
 
@@ -73,8 +88,11 @@ class ErrorException extends \ErrorException implements Exception
 
     /**
      * Get the raw (unformatted) message for this error.
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getRawMessage(): string
     {
@@ -103,9 +121,15 @@ class ErrorException extends \ErrorException implements Exception
     /**
      * Create an ErrorException from an Error.
      *
+<<<<<<< HEAD
      * @param \Error $e
      *
      * @return self
+=======
+     * @deprecated PsySH no longer wraps Errors
+     *
+     * @param \Error $e
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public static function fromError(\Error $e): self
     {

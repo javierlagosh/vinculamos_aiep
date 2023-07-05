@@ -38,8 +38,13 @@ final class Loader
             throw new Exception(
                 sprintf(
                     'Could not read "%s".',
+<<<<<<< HEAD
                     $filename
                 )
+=======
+                    $filename,
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -100,8 +105,13 @@ final class Loader
                     sprintf(
                         'Could not load "%s".%s',
                         $filename,
+<<<<<<< HEAD
                         $message !== '' ? "\n" . $message : ''
                     )
+=======
+                        $message !== '' ? "\n" . $message : '',
+                    ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
 

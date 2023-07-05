@@ -17,6 +17,10 @@ namespace Symfony\Component\Finder\Iterator;
  * @author Fabien Potencier <fabien@symfony.com>
  *
  * @extends \FilterIterator<string, \SplFileInfo>
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  * @implements \RecursiveIterator<string, \SplFileInfo>
  */
 class ExcludeDirectoryFilterIterator extends \FilterIterator implements \RecursiveIterator

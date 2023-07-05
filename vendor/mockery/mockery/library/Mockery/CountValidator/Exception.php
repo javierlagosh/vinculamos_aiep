@@ -20,6 +20,12 @@
 
 namespace Mockery\CountValidator;
 
+<<<<<<< HEAD
 class Exception extends \OutOfBoundsException
+=======
+use Mockery\Exception\MockeryExceptionInterface;
+
+class Exception extends \OutOfBoundsException implements MockeryExceptionInterface
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 {
 }

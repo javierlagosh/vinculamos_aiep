@@ -150,7 +150,11 @@ final class CodeCoverage
     {
         if (!$this->hasCacheDirectory()) {
             throw new Exception(
+<<<<<<< HEAD
                 'No cache directory has been configured'
+=======
+                'No cache directory has been configured',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -222,7 +226,11 @@ final class CodeCoverage
     {
         if (!$this->hasClover()) {
             throw new Exception(
+<<<<<<< HEAD
                 'Code Coverage report "Clover XML" has not been configured'
+=======
+                'Code Coverage report "Clover XML" has not been configured',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -244,7 +252,11 @@ final class CodeCoverage
     {
         if (!$this->hasCobertura()) {
             throw new Exception(
+<<<<<<< HEAD
                 'Code Coverage report "Cobertura XML" has not been configured'
+=======
+                'Code Coverage report "Cobertura XML" has not been configured',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -266,7 +278,11 @@ final class CodeCoverage
     {
         if (!$this->hasCrap4j()) {
             throw new Exception(
+<<<<<<< HEAD
                 'Code Coverage report "Crap4J" has not been configured'
+=======
+                'Code Coverage report "Crap4J" has not been configured',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -288,7 +304,11 @@ final class CodeCoverage
     {
         if (!$this->hasHtml()) {
             throw new Exception(
+<<<<<<< HEAD
                 'Code Coverage report "HTML" has not been configured'
+=======
+                'Code Coverage report "HTML" has not been configured',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -310,7 +330,11 @@ final class CodeCoverage
     {
         if (!$this->hasPhp()) {
             throw new Exception(
+<<<<<<< HEAD
                 'Code Coverage report "PHP" has not been configured'
+=======
+                'Code Coverage report "PHP" has not been configured',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -332,7 +356,11 @@ final class CodeCoverage
     {
         if (!$this->hasText()) {
             throw new Exception(
+<<<<<<< HEAD
                 'Code Coverage report "Text" has not been configured'
+=======
+                'Code Coverage report "Text" has not been configured',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -354,7 +382,11 @@ final class CodeCoverage
     {
         if (!$this->hasXml()) {
             throw new Exception(
+<<<<<<< HEAD
                 'Code Coverage report "XML" has not been configured'
+=======
+                'Code Coverage report "XML" has not been configured',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

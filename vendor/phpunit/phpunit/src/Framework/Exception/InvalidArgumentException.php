@@ -34,8 +34,13 @@ final class InvalidArgumentException extends Exception
                 $argument,
                 $function,
                 in_array(lcfirst($type)[0], ['a', 'e', 'i', 'o', 'u'], true) ? 'an' : 'a',
+<<<<<<< HEAD
                 $type
             )
+=======
+                $type,
+            ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 

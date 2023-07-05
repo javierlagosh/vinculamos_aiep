@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -86,7 +90,11 @@ abstract class Command extends BaseCommand
     /**
      * These arguments will be excluded from help output.
      *
+<<<<<<< HEAD
      * @return array
+=======
+     * @return string[]
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     protected function getHiddenArguments(): array
     {
@@ -108,7 +116,11 @@ abstract class Command extends BaseCommand
     /**
      * These options will be excluded from help output.
      *
+<<<<<<< HEAD
      * @return array
+=======
+     * @return string[]
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     protected function getHiddenOptions(): array
     {
@@ -117,8 +129,11 @@ abstract class Command extends BaseCommand
 
     /**
      * Format command aliases as text..
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private function aliasesAsText(): string
     {
@@ -127,8 +142,11 @@ abstract class Command extends BaseCommand
 
     /**
      * Format command arguments as text.
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private function argumentsAsText(): string
     {
@@ -158,8 +176,11 @@ abstract class Command extends BaseCommand
 
     /**
      * Format options as text.
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private function optionsAsText(): string
     {
@@ -199,8 +220,11 @@ abstract class Command extends BaseCommand
 
     /**
      * Calculate the maximum padding width for a set of lines.
+<<<<<<< HEAD
      *
      * @return int
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private function getMaxWidth(): int
     {
@@ -226,8 +250,11 @@ abstract class Command extends BaseCommand
      * Format an option default as text.
      *
      * @param mixed $default
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private function formatDefaultValue($default): string
     {
@@ -273,8 +300,11 @@ abstract class Command extends BaseCommand
 
     /**
      * Legacy fallback for getTable.
+<<<<<<< HEAD
      *
      * @return TableHelper
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     protected function getTableHelper(): TableHelper
     {

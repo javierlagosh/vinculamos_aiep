@@ -14,7 +14,11 @@ This library provides a way of avoiding usage of constructors when instantiating
 The suggested installation method is via [composer](https://getcomposer.org/):
 
 ```sh
+<<<<<<< HEAD
 php composer.phar require "doctrine/instantiator:~1.0.3"
+=======
+composer require doctrine/instantiator
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 ```
 
 ## Usage

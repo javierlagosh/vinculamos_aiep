@@ -124,7 +124,11 @@ final class NamePrettifier
     {
         $annotations = Test::parseTestMethodAnnotations(
             get_class($test),
+<<<<<<< HEAD
             $test->getName(false)
+=======
+            $test->getName(false),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $annotationWithPlaceholders = false;
@@ -243,7 +247,11 @@ final class NamePrettifier
             throw new UtilException(
                 $e->getMessage(),
                 $e->getCode(),
+<<<<<<< HEAD
                 $e
+=======
+                $e,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
         // @codeCoverageIgnoreEnd
@@ -263,7 +271,11 @@ final class NamePrettifier
                     throw new UtilException(
                         $e->getMessage(),
                         $e->getCode(),
+<<<<<<< HEAD
                         $e
+=======
+                        $e,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
                 }
                 // @codeCoverageIgnoreEnd

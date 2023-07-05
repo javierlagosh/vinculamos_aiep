@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -28,6 +32,11 @@ class AbstractClassPass extends CodeCleanerPass
      * @throws FatalErrorException if the node is an abstract function with a body
      *
      * @param Node $node
+<<<<<<< HEAD
+=======
+     *
+     * @return int|Node|null Replacement node (or special return value)
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function enterNode(Node $node)
     {
@@ -51,6 +60,11 @@ class AbstractClassPass extends CodeCleanerPass
      * @throws FatalErrorException if the node is a non-abstract class with abstract methods
      *
      * @param Node $node
+<<<<<<< HEAD
+=======
+     *
+     * @return int|Node|Node[]|null Replacement node (or special return value)
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function leaveNode(Node $node)
     {

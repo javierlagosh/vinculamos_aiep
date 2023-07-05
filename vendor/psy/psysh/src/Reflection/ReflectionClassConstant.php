@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -70,8 +74,11 @@ class ReflectionClassConstant implements \Reflector
 
     /**
      * Gets the declaring class.
+<<<<<<< HEAD
      *
      * @return \ReflectionClass
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getDeclaringClass(): \ReflectionClass
     {
@@ -106,8 +113,11 @@ class ReflectionClassConstant implements \Reflector
      * Since this is only used for PHP < 7.1, we can just return "public". All
      * the fancier modifiers are only available on PHP versions which have their
      * own ReflectionClassConstant class :)
+<<<<<<< HEAD
      *
      * @return int
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getModifiers(): int
     {
@@ -116,8 +126,11 @@ class ReflectionClassConstant implements \Reflector
 
     /**
      * Gets the constant name.
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getName(): string
     {
@@ -166,8 +179,11 @@ class ReflectionClassConstant implements \Reflector
 
     /**
      * To string.
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function __toString(): string
     {

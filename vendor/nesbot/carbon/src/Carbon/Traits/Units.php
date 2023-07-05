@@ -17,6 +17,10 @@ use Carbon\CarbonInterval;
 use Carbon\Exceptions\UnitException;
 use Closure;
 use DateInterval;
+<<<<<<< HEAD
+=======
+use DateMalformedStringException;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use ReturnTypeWillChange;
 
 /**
@@ -304,12 +308,26 @@ trait Units
             $unit = 'second';
             $value = $second;
         }
+<<<<<<< HEAD
         $date = $date->modify("$value $unit");
 
         if (isset($timeString)) {
             $date = $date->setTimeFromTimeString($timeString);
         } elseif (isset($canOverflow, $day) && $canOverflow && $day !== $date->day) {
             $date = $date->modify('last day of previous month');
+=======
+
+        try {
+            $date = $date->modify("$value $unit");
+
+            if (isset($timeString)) {
+                $date = $date->setTimeFromTimeString($timeString);
+            } elseif (isset($canOverflow, $day) && $canOverflow && $day !== $date->day) {
+                $date = $date->modify('last day of previous month');
+            }
+        } catch (DateMalformedStringException $ignoredException) { // @codeCoverageIgnore
+            $date = null; // @codeCoverageIgnore
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         if (!$date) {

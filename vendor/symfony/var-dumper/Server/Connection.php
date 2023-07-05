@@ -91,7 +91,11 @@ class Connection
     {
         set_error_handler([self::class, 'nullErrorHandler']);
         try {
+<<<<<<< HEAD
             return stream_socket_client($this->host, $errno, $errstr, 3, \STREAM_CLIENT_CONNECT | \STREAM_CLIENT_ASYNC_CONNECT);
+=======
+            return stream_socket_client($this->host, $errno, $errstr, 3);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         } finally {
             restore_error_handler();
         }

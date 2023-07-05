@@ -2,6 +2,15 @@
 
 All notable changes in `sebastianbergmann/environment` are documented in this file using the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+<<<<<<< HEAD
+=======
+## [5.1.5] - 2023-02-03
+
+### Fixed
+
+* [#59](https://github.com/sebastianbergmann/environment/issues/59): Wrong usage of `stream_isatty()`, `fstat()` used without checking whether the function is available
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 ## [5.1.4] - 2022-04-03
 
 ### Fixed
@@ -151,6 +160,10 @@ All notable changes in `sebastianbergmann/environment` are documented in this fi
 
 * This component is no longer supported on PHP 5.6
 
+<<<<<<< HEAD
+=======
+[5.1.5]: https://github.com/sebastianbergmann/environment/compare/5.1.4...5.1.5
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 [5.1.4]: https://github.com/sebastianbergmann/environment/compare/5.1.3...5.1.4
 [5.1.3]: https://github.com/sebastianbergmann/environment/compare/5.1.2...5.1.3
 [5.1.2]: https://github.com/sebastianbergmann/environment/compare/5.1.1...5.1.2

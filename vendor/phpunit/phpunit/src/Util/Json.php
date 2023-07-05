@@ -37,7 +37,11 @@ final class Json
 
         if (json_last_error()) {
             throw new Exception(
+<<<<<<< HEAD
                 'Cannot prettify invalid json'
+=======
+                'Cannot prettify invalid json',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

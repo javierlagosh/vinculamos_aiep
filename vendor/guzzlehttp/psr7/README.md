@@ -8,6 +8,15 @@ functionality like query string parsing.
 ![Static analysis](https://github.com/guzzle/psr7/workflows/Static%20analysis/badge.svg)
 
 
+<<<<<<< HEAD
+=======
+# Installation
+
+```shell
+composer require guzzlehttp/psr7
+```
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 # Stream implementation
 
 This package comes with a number of stream implementations and stream
@@ -245,6 +254,11 @@ class EofCallbackStream implements StreamInterface
 
     private $callback;
 
+<<<<<<< HEAD
+=======
+    private $stream;
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     public function __construct(StreamInterface $stream, callable $cb)
     {
         $this->stream = $stream;

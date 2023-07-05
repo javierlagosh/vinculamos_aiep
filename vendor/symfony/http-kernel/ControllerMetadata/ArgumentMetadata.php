@@ -107,9 +107,15 @@ class ArgumentMetadata
     /**
      * Returns the default value of the argument.
      *
+<<<<<<< HEAD
      * @throws \LogicException if no default value is present; {@see self::hasDefaultValue()}
      *
      * @return mixed
+=======
+     * @return mixed
+     *
+     * @throws \LogicException if no default value is present; {@see self::hasDefaultValue()}
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function getDefaultValue()
     {

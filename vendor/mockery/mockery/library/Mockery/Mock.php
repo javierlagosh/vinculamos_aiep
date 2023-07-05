@@ -27,6 +27,10 @@ use Mockery\LegacyMockInterface;
 use Mockery\MockInterface;
 use Mockery\Reflector;
 
+<<<<<<< HEAD
+=======
+#[\AllowDynamicProperties]
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 class Mock implements MockInterface
 {
     /**
@@ -729,6 +733,11 @@ class Mock implements MockInterface
             case 'int':    return 0;
             case 'float':  return 0.0;
             case 'bool':   return false;
+<<<<<<< HEAD
+=======
+            case 'true':   return true;
+            case 'false':   return false;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
             case 'array':
             case 'iterable':

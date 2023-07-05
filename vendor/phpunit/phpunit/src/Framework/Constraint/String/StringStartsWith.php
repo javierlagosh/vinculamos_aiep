@@ -9,7 +9,10 @@
  */
 namespace PHPUnit\Framework\Constraint;
 
+<<<<<<< HEAD
 use function strlen;
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use function strpos;
 use PHPUnit\Framework\InvalidArgumentException;
 
@@ -25,7 +28,11 @@ final class StringStartsWith extends Constraint
 
     public function __construct(string $prefix)
     {
+<<<<<<< HEAD
         if (strlen($prefix) === 0) {
+=======
+        if ($prefix === '') {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             throw InvalidArgumentException::create(1, 'non-empty string');
         }
 

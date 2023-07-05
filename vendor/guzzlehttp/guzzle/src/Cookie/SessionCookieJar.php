@@ -71,7 +71,11 @@ class SessionCookieJar extends CookieJar
                 $this->setCookie(new SetCookie($cookie));
             }
         } elseif (\strlen($data)) {
+<<<<<<< HEAD
             throw new \RuntimeException("Invalid cookie data");
+=======
+            throw new \RuntimeException('Invalid cookie data');
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
     }
 }

@@ -1,10 +1,20 @@
 <?php
 
+<<<<<<< HEAD
+=======
+declare(strict_types=1);
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 namespace GuzzleHttp\Promise;
 
 /**
  * Represents a promise that iterates over many promises and invokes
  * side-effect functions in the process.
+<<<<<<< HEAD
+=======
+ *
+ * @final
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  */
 class EachPromise implements PromisorInterface
 {
@@ -69,7 +79,11 @@ class EachPromise implements PromisorInterface
     }
 
     /** @psalm-suppress InvalidNullableReturnType */
+<<<<<<< HEAD
     public function promise()
+=======
+    public function promise(): PromiseInterface
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     {
         if ($this->aggregate) {
             return $this->aggregate;
@@ -82,21 +96,34 @@ class EachPromise implements PromisorInterface
             $this->refillPending();
         } catch (\Throwable $e) {
             $this->aggregate->reject($e);
+<<<<<<< HEAD
         } catch (\Exception $e) {
             $this->aggregate->reject($e);
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         /**
          * @psalm-suppress NullableReturnStatement
+<<<<<<< HEAD
          * @phpstan-ignore-next-line
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
          */
         return $this->aggregate;
     }
 
+<<<<<<< HEAD
     private function createPromise()
     {
         $this->mutex = false;
         $this->aggregate = new Promise(function () {
+=======
+    private function createPromise(): void
+    {
+        $this->mutex = false;
+        $this->aggregate = new Promise(function (): void {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             if ($this->checkIfFinished()) {
                 return;
             }
@@ -113,7 +140,11 @@ class EachPromise implements PromisorInterface
         });
 
         // Clear the references when the promise is resolved.
+<<<<<<< HEAD
         $clearFn = function () {
+=======
+        $clearFn = function (): void {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             $this->iterable = $this->concurrency = $this->pending = null;
             $this->onFulfilled = $this->onRejected = null;
             $this->nextPendingIndex = 0;
@@ -122,11 +153,21 @@ class EachPromise implements PromisorInterface
         $this->aggregate->then($clearFn, $clearFn);
     }
 
+<<<<<<< HEAD
     private function refillPending()
     {
         if (!$this->concurrency) {
             // Add all pending promises.
             while ($this->addPending() && $this->advanceIterator());
+=======
+    private function refillPending(): void
+    {
+        if (!$this->concurrency) {
+            // Add all pending promises.
+            while ($this->addPending() && $this->advanceIterator()) {
+            }
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             return;
         }
 
@@ -147,10 +188,18 @@ class EachPromise implements PromisorInterface
         // next value to yield until promise callbacks are called.
         while (--$concurrency
             && $this->advanceIterator()
+<<<<<<< HEAD
             && $this->addPending());
     }
 
     private function addPending()
+=======
+            && $this->addPending()) {
+        }
+    }
+
+    private function addPending(): bool
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     {
         if (!$this->iterable || !$this->iterable->valid()) {
             return false;
@@ -164,7 +213,11 @@ class EachPromise implements PromisorInterface
         $idx = $this->nextPendingIndex++;
 
         $this->pending[$idx] = $promise->then(
+<<<<<<< HEAD
             function ($value) use ($idx, $key) {
+=======
+            function ($value) use ($idx, $key): void {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 if ($this->onFulfilled) {
                     call_user_func(
                         $this->onFulfilled,
@@ -175,7 +228,11 @@ class EachPromise implements PromisorInterface
                 }
                 $this->step($idx);
             },
+<<<<<<< HEAD
             function ($reason) use ($idx, $key) {
+=======
+            function ($reason) use ($idx, $key): void {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 if ($this->onRejected) {
                     call_user_func(
                         $this->onRejected,
@@ -191,7 +248,11 @@ class EachPromise implements PromisorInterface
         return true;
     }
 
+<<<<<<< HEAD
     private function advanceIterator()
+=======
+    private function advanceIterator(): bool
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     {
         // Place a lock on the iterator so that we ensure to not recurse,
         // preventing fatal generator errors.
@@ -204,19 +265,31 @@ class EachPromise implements PromisorInterface
         try {
             $this->iterable->next();
             $this->mutex = false;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             return true;
         } catch (\Throwable $e) {
             $this->aggregate->reject($e);
             $this->mutex = false;
+<<<<<<< HEAD
             return false;
         } catch (\Exception $e) {
             $this->aggregate->reject($e);
             $this->mutex = false;
+=======
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             return false;
         }
     }
 
+<<<<<<< HEAD
     private function step($idx)
+=======
+    private function step(int $idx): void
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     {
         // If the promise was already resolved, then ignore this step.
         if (Is::settled($this->aggregate)) {
@@ -234,11 +307,19 @@ class EachPromise implements PromisorInterface
         }
     }
 
+<<<<<<< HEAD
     private function checkIfFinished()
+=======
+    private function checkIfFinished(): bool
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     {
         if (!$this->pending && !$this->iterable->valid()) {
             // Resolve the promise if there's nothing left to do.
             $this->aggregate->resolve(null);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             return true;
         }
 

@@ -282,7 +282,11 @@ class PlainTextHandler extends Handler
             return '';
         }
         $inspector = $this->getInspector();
+<<<<<<< HEAD
         $frames = $inspector->getFrames();
+=======
+        $frames = $inspector->getFrames($this->getRun()->getFrameFilters());
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
         $response = "\nStack trace:";
 

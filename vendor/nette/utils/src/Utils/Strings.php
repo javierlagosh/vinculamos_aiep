@@ -9,6 +9,10 @@ declare(strict_types=1);
 
 namespace Nette\Utils;
 
+<<<<<<< HEAD
+=======
+use JetBrains\PhpStorm\Language;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use Nette;
 use function is_array, is_object, strlen;
 
@@ -485,7 +489,16 @@ class Strings
 	 * Splits a string into array by the regular expression. Parenthesized expression in the delimiter are captured.
 	 * Parameter $flags can be any combination of PREG_SPLIT_NO_EMPTY and PREG_OFFSET_CAPTURE flags.
 	 */
+<<<<<<< HEAD
 	public static function split(string $subject, string $pattern, int $flags = 0): array
+=======
+	public static function split(
+		string $subject,
+		#[Language('RegExp')]
+		string $pattern,
+		int $flags = 0
+	): array
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 	{
 		return self::pcre('preg_split', [$pattern, $subject, -1, $flags | PREG_SPLIT_DELIM_CAPTURE]);
 	}
@@ -495,7 +508,17 @@ class Strings
 	 * Checks if given string matches a regular expression pattern and returns an array with first found match and each subpattern.
 	 * Parameter $flags can be any combination of PREG_OFFSET_CAPTURE and PREG_UNMATCHED_AS_NULL flags.
 	 */
+<<<<<<< HEAD
 	public static function match(string $subject, string $pattern, int $flags = 0, int $offset = 0): ?array
+=======
+	public static function match(
+		string $subject,
+		#[Language('RegExp')]
+		string $pattern,
+		int $flags = 0,
+		int $offset = 0
+	): ?array
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 	{
 		if ($offset > strlen($subject)) {
 			return null;
@@ -511,7 +534,17 @@ class Strings
 	 * Finds all occurrences matching regular expression pattern and returns a two-dimensional array. Result is array of matches (ie uses by default PREG_SET_ORDER).
 	 * Parameter $flags can be any combination of PREG_OFFSET_CAPTURE, PREG_UNMATCHED_AS_NULL and PREG_PATTERN_ORDER flags.
 	 */
+<<<<<<< HEAD
 	public static function matchAll(string $subject, string $pattern, int $flags = 0, int $offset = 0): array
+=======
+	public static function matchAll(
+		string $subject,
+		#[Language('RegExp')]
+		string $pattern,
+		int $flags = 0,
+		int $offset = 0
+	): array
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 	{
 		if ($offset > strlen($subject)) {
 			return [];
@@ -531,7 +564,17 @@ class Strings
 	 * @param  string|array  $pattern
 	 * @param  string|callable  $replacement
 	 */
+<<<<<<< HEAD
 	public static function replace(string $subject, $pattern, $replacement = '', int $limit = -1): string
+=======
+	public static function replace(
+		string $subject,
+		#[Language('RegExp')]
+		$pattern,
+		$replacement = '',
+		int $limit = -1
+	): string
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 	{
 		if (is_object($replacement) || is_array($replacement)) {
 			if (!is_callable($replacement, false, $textual)) {

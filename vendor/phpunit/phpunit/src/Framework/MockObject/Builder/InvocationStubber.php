@@ -20,46 +20,76 @@ interface InvocationStubber
     public function will(Stub $stub): Identity;
 
     /** @return self */
+<<<<<<< HEAD
     public function willReturn($value, ...$nextValues)/*: self */;
+=======
+    public function willReturn($value, ...$nextValues)/* : self */;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * @param mixed $reference
      *
      * @return self
      */
+<<<<<<< HEAD
     public function willReturnReference(&$reference)/*: self */;
+=======
+    public function willReturnReference(&$reference)/* : self */;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * @param array<int, array<int, mixed>> $valueMap
      *
      * @return self
      */
+<<<<<<< HEAD
     public function willReturnMap(array $valueMap)/*: self */;
+=======
+    public function willReturnMap(array $valueMap)/* : self */;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * @param int $argumentIndex
      *
      * @return self
      */
+<<<<<<< HEAD
     public function willReturnArgument($argumentIndex)/*: self */;
+=======
+    public function willReturnArgument($argumentIndex)/* : self */;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * @param callable $callback
      *
      * @return self
      */
+<<<<<<< HEAD
     public function willReturnCallback($callback)/*: self */;
 
     /** @return self */
     public function willReturnSelf()/*: self */;
+=======
+    public function willReturnCallback($callback)/* : self */;
+
+    /** @return self */
+    public function willReturnSelf()/* : self */;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * @param mixed $values
      *
      * @return self
      */
+<<<<<<< HEAD
     public function willReturnOnConsecutiveCalls(...$values)/*: self */;
 
     /** @return self */
     public function willThrowException(Throwable $exception)/*: self */;
+=======
+    public function willReturnOnConsecutiveCalls(...$values)/* : self */;
+
+    /** @return self */
+    public function willThrowException(Throwable $exception)/* : self */;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 }

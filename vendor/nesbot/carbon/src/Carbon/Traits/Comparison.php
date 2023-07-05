@@ -563,12 +563,26 @@ trait Comparison
     }
 
     /**
+<<<<<<< HEAD
      * Determines if the instance is a long year
      *
      * @example
      * ```
      * Carbon::parse('2015-01-01')->isLongYear(); // true
      * Carbon::parse('2016-01-01')->isLongYear(); // false
+=======
+     * Determines if the instance is a long year (using calendar year).
+     *
+     * ⚠️ This method completely ignores month and day to use the numeric year number,
+     * it's not correct if the exact date matters. For instance as `2019-12-30` is already
+     * in the first week of the 2020 year, if you want to know from this date if ISO week
+     * year 2020 is a long year, use `isLongIsoYear` instead.
+     *
+     * @example
+     * ```
+     * Carbon::create(2015)->isLongYear(); // true
+     * Carbon::create(2016)->isLongYear(); // false
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      * ```
      *
      * @see https://en.wikipedia.org/wiki/ISO_8601#Week_dates
@@ -581,6 +595,30 @@ trait Comparison
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Determines if the instance is a long year (using ISO 8601 year).
+     *
+     * @example
+     * ```
+     * Carbon::parse('2015-01-01')->isLongIsoYear(); // true
+     * Carbon::parse('2016-01-01')->isLongIsoYear(); // true
+     * Carbon::parse('2016-01-03')->isLongIsoYear(); // false
+     * Carbon::parse('2019-12-29')->isLongIsoYear(); // false
+     * Carbon::parse('2019-12-30')->isLongIsoYear(); // true
+     * ```
+     *
+     * @see https://en.wikipedia.org/wiki/ISO_8601#Week_dates
+     *
+     * @return bool
+     */
+    public function isLongIsoYear()
+    {
+        return static::create($this->isoWeekYear, 12, 28, 0, 0, 0, $this->tz)->weekOfYear === 53;
+    }
+
+    /**
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      * Compares the formatted values of the two dates.
      *
      * @example
@@ -996,12 +1034,20 @@ trait Comparison
             return $current->startOfMinute()->eq($other);
         }
 
+<<<<<<< HEAD
         if (preg_match('/\d(h|am|pm)$/', $tester)) {
+=======
+        if (preg_match('/\d(?:h|am|pm)$/', $tester)) {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             return $current->startOfHour()->eq($other);
         }
 
         if (preg_match(
+<<<<<<< HEAD
             '/^(january|february|march|april|may|june|july|august|september|october|november|december)\s+\d+$/i',
+=======
+            '/^(?:january|february|march|april|may|june|july|august|september|october|november|december)(?:\s+\d+)?$/i',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             $tester
         )) {
             return $current->startOfMonth()->eq($other->startOfMonth());

@@ -80,7 +80,11 @@
                 "name": "github/gfm",
                 "version": "0.29.0",
                 "dist": {
+<<<<<<< HEAD
                     "url": "https://github.com/github/cmark-gfm/archive/0.29.0.gfm.0.zip",
+=======
+                    "url": "https://github.com/github/cmark-gfm/archive/0.29.0.gfm.9.zip",
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     "type": "zip"
                 }
             }
@@ -112,7 +116,11 @@
     },
     "extra": {
         "branch-alias": {
+<<<<<<< HEAD
             "dev-main": "2.4-dev"
+=======
+            "dev-main": "2.5-dev"
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
     },
     "config": {

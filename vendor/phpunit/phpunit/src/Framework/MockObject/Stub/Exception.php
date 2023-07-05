@@ -40,7 +40,11 @@ final class Exception implements Stub
 
         return sprintf(
             'raise user-specified exception %s',
+<<<<<<< HEAD
             $exporter->export($this->exception)
+=======
+            $exporter->export($this->exception),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

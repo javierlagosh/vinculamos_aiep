@@ -197,7 +197,11 @@ class ReflectionCaster
         self::addMap($a, $c, [
             'returnsReference' => 'returnsReference',
             'returnType' => 'getReturnType',
+<<<<<<< HEAD
             'class' => 'getClosureScopeClass',
+=======
+            'class' => \PHP_VERSION_ID >= 80111 ? 'getClosureCalledClass' : 'getClosureScopeClass',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             'this' => 'getClosureThis',
         ]);
 
@@ -292,7 +296,11 @@ class ReflectionCaster
         if ($c->isOptional()) {
             try {
                 $a[$prefix.'default'] = $v = $c->getDefaultValue();
+<<<<<<< HEAD
                 if ($c->isDefaultValueConstant()) {
+=======
+                if ($c->isDefaultValueConstant() && !\is_object($v)) {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     $a[$prefix.'default'] = new ConstStub($c->getDefaultValueConstantName(), $v);
                 }
                 if (null === $v) {

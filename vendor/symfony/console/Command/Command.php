@@ -429,9 +429,15 @@ class Command
      * @param int|null $mode    The argument mode: InputArgument::REQUIRED or InputArgument::OPTIONAL
      * @param mixed    $default The default value (for InputArgument::OPTIONAL mode only)
      *
+<<<<<<< HEAD
      * @throws InvalidArgumentException When argument mode is not valid
      *
      * @return $this
+=======
+     * @return $this
+     *
+     * @throws InvalidArgumentException When argument mode is not valid
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function addArgument(string $name, int $mode = null, string $description = '', $default = null)
     {
@@ -450,9 +456,15 @@ class Command
      * @param int|null          $mode     The option mode: One of the InputOption::VALUE_* constants
      * @param mixed             $default  The default value (must be null for InputOption::VALUE_NONE)
      *
+<<<<<<< HEAD
      * @throws InvalidArgumentException If option mode is invalid or incompatible
      *
      * @return $this
+=======
+     * @return $this
+     *
+     * @throws InvalidArgumentException If option mode is invalid or incompatible
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function addOption(string $name, $shortcut = null, int $mode = null, string $description = '', $default = null)
     {

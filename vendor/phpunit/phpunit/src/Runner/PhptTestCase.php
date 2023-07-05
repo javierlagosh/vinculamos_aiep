@@ -91,8 +91,13 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
             throw new Exception(
                 sprintf(
                     'File "%s" does not exist.',
+<<<<<<< HEAD
                     $filename
                 )
+=======
+                    $filename,
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -223,7 +228,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
                     $trace[0]['file'],
                     $trace[0]['line'],
                     $trace,
+<<<<<<< HEAD
                     $comparisonFailure ? $diff : ''
+=======
+                    $comparisonFailure ? $diff : '',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
 
@@ -408,7 +417,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
             $result->addFailure(
                 $this,
                 new SyntheticSkippedError($message, 0, $trace[0]['file'], $trace[0]['line'], $trace),
+<<<<<<< HEAD
                 0
+=======
+                0,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
             $result->endTest($this, 0);
 
@@ -489,7 +502,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
         foreach ($unsupportedSections as $section) {
             if (isset($sections[$section])) {
                 throw new Exception(
+<<<<<<< HEAD
                     "PHPUnit does not support PHPT {$section} sections"
+=======
+                    "PHPUnit does not support PHPT {$section} sections",
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
         }
@@ -520,8 +537,13 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
                         sprintf(
                             'Could not load --%s-- %s for PHPT file',
                             $section . '_EXTERNAL',
+<<<<<<< HEAD
                             $testDirectory . $externalFilename
                         )
+=======
+                            $testDirectory . $externalFilename,
+                        ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
                 }
 
@@ -579,7 +601,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
                 "'" . dirname($this->filename) . "'",
                 "'" . $this->filename . "'",
             ],
+<<<<<<< HEAD
             $code
+=======
+            $code,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -599,7 +625,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
         $files = $this->getCoverageFiles();
 
         $template = new Template(
+<<<<<<< HEAD
             __DIR__ . '/../Util/PHP/Template/PhptTestCase.tpl'
+=======
+            __DIR__ . '/../Util/PHP/Template/PhptTestCase.tpl',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $composerAutoload = '\'\'';
@@ -619,7 +649,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
         if (!empty($GLOBALS['__PHPUNIT_BOOTSTRAP'])) {
             $globals = '$GLOBALS[\'__PHPUNIT_BOOTSTRAP\'] = ' . var_export(
                 $GLOBALS['__PHPUNIT_BOOTSTRAP'],
+<<<<<<< HEAD
                 true
+=======
+                true,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             ) . ";\n";
         }
 
@@ -638,7 +672,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
                 'coverageFile'               => $files['coverage'],
                 'driverMethod'               => $pathCoverage ? 'forLineAndPathCoverage' : 'forLineCoverage',
                 'codeCoverageCacheDirectory' => $codeCoverageCacheDirectory,
+<<<<<<< HEAD
             ]
+=======
+            ],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         file_put_contents($files['job'], $job);

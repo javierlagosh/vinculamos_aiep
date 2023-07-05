@@ -2927,7 +2927,11 @@ if (!function_exists('PHPUnit\Framework\atLeast')) {
     function atLeast(int $requiredInvocations): InvokedAtLeastCountMatcher
     {
         return new InvokedAtLeastCountMatcher(
+<<<<<<< HEAD
             $requiredInvocations
+=======
+            $requiredInvocations,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

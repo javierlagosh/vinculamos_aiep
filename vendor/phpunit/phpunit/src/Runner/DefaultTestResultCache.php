@@ -107,7 +107,11 @@ final class DefaultTestResultCache implements TestResultCache
 
         $data = json_decode(
             file_get_contents($this->cacheFilename),
+<<<<<<< HEAD
             true
+=======
+            true,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         if ($data === null) {
@@ -138,8 +142,13 @@ final class DefaultTestResultCache implements TestResultCache
             throw new Exception(
                 sprintf(
                     'Cannot create directory "%s" for result cache file',
+<<<<<<< HEAD
                     $this->cacheFilename
                 )
+=======
+                    $this->cacheFilename,
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -150,9 +159,15 @@ final class DefaultTestResultCache implements TestResultCache
                     'version' => self::VERSION,
                     'defects' => $this->defects,
                     'times'   => $this->times,
+<<<<<<< HEAD
                 ]
             ),
             LOCK_EX
+=======
+                ],
+            ),
+            LOCK_EX,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

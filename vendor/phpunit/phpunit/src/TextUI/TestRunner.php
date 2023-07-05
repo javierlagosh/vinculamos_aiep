@@ -27,6 +27,10 @@ use function is_string;
 use function mt_srand;
 use function range;
 use function realpath;
+<<<<<<< HEAD
+=======
+use function sort;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use function sprintf;
 use function time;
 use PHPUnit\Framework\Exception;
@@ -87,10 +91,15 @@ use SebastianBergmann\Timer\Timer;
  */
 final class TestRunner extends BaseTestRunner
 {
+<<<<<<< HEAD
     public const SUCCESS_EXIT = 0;
 
     public const FAILURE_EXIT = 1;
 
+=======
+    public const SUCCESS_EXIT   = 0;
+    public const FAILURE_EXIT   = 1;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     public const EXCEPTION_EXIT = 2;
 
     /**
@@ -308,7 +317,11 @@ final class TestRunner extends BaseTestRunner
                         throw new Exception(
                             $e->getMessage(),
                             $e->getCode(),
+<<<<<<< HEAD
                             $e
+=======
+                            $e,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                         );
                     }
                     // @codeCoverageIgnoreEnd
@@ -342,8 +355,13 @@ final class TestRunner extends BaseTestRunner
                 new HtmlResultPrinter(
                     $arguments['testdoxHTMLFile'],
                     $arguments['testdoxGroups'],
+<<<<<<< HEAD
                     $arguments['testdoxExcludeGroups']
                 )
+=======
+                    $arguments['testdoxExcludeGroups'],
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -352,22 +370,36 @@ final class TestRunner extends BaseTestRunner
                 new TextResultPrinter(
                     $arguments['testdoxTextFile'],
                     $arguments['testdoxGroups'],
+<<<<<<< HEAD
                     $arguments['testdoxExcludeGroups']
                 )
+=======
+                    $arguments['testdoxExcludeGroups'],
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
         if (isset($arguments['testdoxXMLFile'])) {
             $result->addListener(
                 new XmlResultPrinter(
+<<<<<<< HEAD
                     $arguments['testdoxXMLFile']
                 )
+=======
+                    $arguments['testdoxXMLFile'],
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
         if (isset($arguments['teamcityLogfile'])) {
             $result->addListener(
+<<<<<<< HEAD
                 new TeamCity($arguments['teamcityLogfile'])
+=======
+                new TeamCity($arguments['teamcityLogfile']),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -375,8 +407,13 @@ final class TestRunner extends BaseTestRunner
             $result->addListener(
                 new JUnit(
                     $arguments['junitLogfile'],
+<<<<<<< HEAD
                     $arguments['reportUselessTests']
                 )
+=======
+                    $arguments['reportUselessTests'],
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -433,7 +470,11 @@ final class TestRunner extends BaseTestRunner
 
                     (new FilterMapper)->map(
                         $this->codeCoverageFilter,
+<<<<<<< HEAD
                         $codeCoverageConfiguration
+=======
+                        $codeCoverageConfiguration,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
                 }
             }
@@ -450,7 +491,11 @@ final class TestRunner extends BaseTestRunner
 
                 $codeCoverage = new CodeCoverage(
                     $codeCoverageDriver,
+<<<<<<< HEAD
                     $this->codeCoverageFilter
+=======
+                    $this->codeCoverageFilter,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
 
                 if (isset($codeCoverageConfiguration) && $codeCoverageConfiguration->hasCacheDirectory()) {
@@ -533,21 +578,33 @@ final class TestRunner extends BaseTestRunner
 
                 $this->writeMessage(
                     'Configuration',
+<<<<<<< HEAD
                     $arguments['configurationObject']->filename()
+=======
+                    $arguments['configurationObject']->filename(),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
 
             foreach ($arguments['loadedExtensions'] as $extension) {
                 $this->writeMessage(
                     'Extension',
+<<<<<<< HEAD
                     $extension
+=======
+                    $extension,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
 
             foreach ($arguments['notLoadedExtensions'] as $extension) {
                 $this->writeMessage(
                     'Extension',
+<<<<<<< HEAD
                     $extension
+=======
+                    $extension,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
         }
@@ -555,7 +612,11 @@ final class TestRunner extends BaseTestRunner
         if ($arguments['executionOrder'] === TestSuiteSorter::ORDER_RANDOMIZED) {
             $this->writeMessage(
                 'Random Seed',
+<<<<<<< HEAD
                 (string) $arguments['randomOrderSeed']
+=======
+                (string) $arguments['randomOrderSeed'],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -571,6 +632,12 @@ final class TestRunner extends BaseTestRunner
             $warnings[] = 'Directives printerClass and testdox are mutually exclusive';
         }
 
+<<<<<<< HEAD
+=======
+        $warnings = array_merge($warnings, $suite->warnings());
+        sort($warnings);
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         foreach ($warnings as $warning) {
             $this->writeMessage('Warning', $warning);
         }
@@ -584,7 +651,11 @@ final class TestRunner extends BaseTestRunner
                     $this->writeMessage('Suggestion', 'Migrate your XML configuration using "--migrate-configuration"!');
                 } else {
                     $this->write(
+<<<<<<< HEAD
                         "\n  Warning - The configuration file did not pass validation!\n  The following problems have been detected:\n"
+=======
+                        "\n  Warning - The configuration file did not pass validation!\n  The following problems have been detected:\n",
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
 
                     $this->write($arguments['configurationObject']->validationErrors());
@@ -646,6 +717,7 @@ final class TestRunner extends BaseTestRunner
             }
         }
 
+<<<<<<< HEAD
         $testSuiteWarningsPrinted = false;
 
         foreach ($suite->warnings() as $warning) {
@@ -658,6 +730,8 @@ final class TestRunner extends BaseTestRunner
             $this->write(PHP_EOL);
         }
 
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         $suite->run($result);
 
         foreach ($this->extensions as $extension) {
@@ -724,8 +798,13 @@ final class TestRunner extends BaseTestRunner
                         $arguments['reportHighLowerBound'],
                         sprintf(
                             ' and <a href="https://phpunit.de/">PHPUnit %s</a>',
+<<<<<<< HEAD
                             Version::id()
                         )
+=======
+                            Version::id(),
+                        ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
 
                     $writer->process($codeCoverage, $arguments['coverageHtml']);
@@ -766,11 +845,19 @@ final class TestRunner extends BaseTestRunner
                     $arguments['reportLowUpperBound'],
                     $arguments['reportHighLowerBound'],
                     $arguments['coverageTextShowUncoveredFiles'],
+<<<<<<< HEAD
                     $arguments['coverageTextShowOnlySummary']
                 );
 
                 $outputStream->write(
                     $processor->process($codeCoverage, $colors)
+=======
+                    $arguments['coverageTextShowOnlySummary'],
+                );
+
+                $outputStream->write(
+                    $processor->process($codeCoverage, $colors),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
 
@@ -1016,6 +1103,7 @@ final class TestRunner extends BaseTestRunner
                 $arguments['excludeGroups'] = array_diff($groupConfiguration->exclude()->asArrayOfStrings(), $groupCliArgs);
             }
 
+<<<<<<< HEAD
             $extensionHandler = new ExtensionHandler;
 
             foreach ($arguments['configurationObject']->extensions() as $extension) {
@@ -1032,6 +1120,26 @@ final class TestRunner extends BaseTestRunner
                 $arguments['warnings'][] = sprintf(
                     'Extension "%s" is not available',
                     $extension
+=======
+            if (!isset($this->arguments['noExtensions'])) {
+                $extensionHandler = new ExtensionHandler;
+
+                foreach ($arguments['configurationObject']->extensions() as $extension) {
+                    $extensionHandler->registerExtension($extension, $this);
+                }
+
+                foreach ($arguments['configurationObject']->listeners() as $listener) {
+                    $arguments['listeners'][] = $extensionHandler->createTestListenerInstance($listener);
+                }
+
+                unset($extensionHandler);
+            }
+
+            foreach ($arguments['unavailableExtensions'] as $extension) {
+                $arguments['warnings'][] = sprintf(
+                    'Extension "%s" is not available',
+                    $extension,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
 
@@ -1041,7 +1149,11 @@ final class TestRunner extends BaseTestRunner
                 if ($loggingConfiguration->hasText()) {
                     $arguments['listeners'][] = new DefaultResultPrinter(
                         $loggingConfiguration->text()->target()->path(),
+<<<<<<< HEAD
                         true
+=======
+                        true,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
                 }
 
@@ -1155,14 +1267,22 @@ final class TestRunner extends BaseTestRunner
         if (!empty($arguments['excludeGroups'])) {
             $filterFactory->addFilter(
                 new ReflectionClass(ExcludeGroupFilterIterator::class),
+<<<<<<< HEAD
                 $arguments['excludeGroups']
+=======
+                $arguments['excludeGroups'],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
         if (!empty($arguments['groups'])) {
             $filterFactory->addFilter(
                 new ReflectionClass(IncludeGroupFilterIterator::class),
+<<<<<<< HEAD
                 $arguments['groups']
+=======
+                $arguments['groups'],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -1174,8 +1294,13 @@ final class TestRunner extends BaseTestRunner
                     {
                         return '__phpunit_covers_' . $name;
                     },
+<<<<<<< HEAD
                     $arguments['testsCovering']
                 )
+=======
+                    $arguments['testsCovering'],
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -1187,15 +1312,24 @@ final class TestRunner extends BaseTestRunner
                     {
                         return '__phpunit_uses_' . $name;
                     },
+<<<<<<< HEAD
                     $arguments['testsUsing']
                 )
+=======
+                    $arguments['testsUsing'],
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
         if ($arguments['filter']) {
             $filterFactory->addFilter(
                 new ReflectionClass(NameFilterIterator::class),
+<<<<<<< HEAD
                 $arguments['filter']
+=======
+                $arguments['filter'],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -1212,8 +1346,13 @@ final class TestRunner extends BaseTestRunner
             sprintf(
                 "%-15s%s\n",
                 $type . ':',
+<<<<<<< HEAD
                 $message
             )
+=======
+                $message,
+            ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $this->messagePrinted = true;
@@ -1227,7 +1366,11 @@ final class TestRunner extends BaseTestRunner
             $arguments['colors'],
             $arguments['debug'],
             $arguments['columns'],
+<<<<<<< HEAD
             $arguments['reverseList']
+=======
+            $arguments['reverseList'],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         assert($object instanceof ResultPrinter);
@@ -1240,8 +1383,13 @@ final class TestRunner extends BaseTestRunner
         $this->write(
             sprintf(
                 "\nGenerating code coverage report in %s format ... ",
+<<<<<<< HEAD
                 $format
             )
+=======
+                $format,
+            ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $this->timer->start();
@@ -1252,8 +1400,13 @@ final class TestRunner extends BaseTestRunner
         $this->write(
             sprintf(
                 "done [%s]\n",
+<<<<<<< HEAD
                 $this->timer->stop()->asString()
             )
+=======
+                $this->timer->stop()->asString(),
+            ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -1263,8 +1416,13 @@ final class TestRunner extends BaseTestRunner
             sprintf(
                 "failed [%s]\n%s\n",
                 $this->timer->stop()->asString(),
+<<<<<<< HEAD
                 $e->getMessage()
             )
+=======
+                $e->getMessage(),
+            ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

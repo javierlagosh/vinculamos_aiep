@@ -77,8 +77,13 @@ final class ExecutionOrderDependency
                 static function (self $d)
                 {
                     return $d->isValid();
+<<<<<<< HEAD
                 }
             )
+=======
+                },
+            ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -95,7 +100,11 @@ final class ExecutionOrderDependency
             {
                 return $dependency->getTarget();
             },
+<<<<<<< HEAD
             $existing
+=======
+            $existing,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         foreach ($additional as $dependency) {
@@ -132,7 +141,11 @@ final class ExecutionOrderDependency
             {
                 return $dependency->getTarget();
             },
+<<<<<<< HEAD
             $right
+=======
+            $right,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         foreach ($left as $dependency) {

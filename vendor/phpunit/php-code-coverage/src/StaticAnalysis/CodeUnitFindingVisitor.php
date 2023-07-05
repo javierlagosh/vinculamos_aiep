@@ -26,6 +26,10 @@ use PhpParser\Node\Stmt\Function_;
 use PhpParser\Node\Stmt\Interface_;
 use PhpParser\Node\Stmt\Trait_;
 use PhpParser\Node\UnionType;
+<<<<<<< HEAD
+=======
+use PhpParser\NodeAbstract;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitorAbstract;
 use SebastianBergmann\Complexity\CyclomaticComplexityCalculatingVisitor;
@@ -180,8 +184,17 @@ final class CodeUnitFindingVisitor extends NodeVisitorAbstract
             return '?' . $type->type;
         }
 
+<<<<<<< HEAD
         if ($type instanceof UnionType || $type instanceof IntersectionType) {
             return $this->unionOrIntersectionAsString($type);
+=======
+        if ($type instanceof UnionType) {
+            return $this->unionTypeAsString($type);
+        }
+
+        if ($type instanceof IntersectionType) {
+            return $this->intersectionTypeAsString($type);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         return $type->toString();
@@ -298,6 +311,7 @@ final class CodeUnitFindingVisitor extends NodeVisitorAbstract
         return trim(rtrim($namespacedName, $name), '\\');
     }
 
+<<<<<<< HEAD
     /**
      * @psalm-param UnionType|IntersectionType $type
      */
@@ -322,5 +336,45 @@ final class CodeUnitFindingVisitor extends NodeVisitorAbstract
         }
 
         return implode($separator, $types);
+=======
+    private function unionTypeAsString(UnionType $node): string
+    {
+        $types = [];
+
+        foreach ($node->types as $type) {
+            if ($type instanceof IntersectionType) {
+                $types[] = '(' . $this->intersectionTypeAsString($type) . ')';
+
+                continue;
+            }
+
+            $types[] = $this->typeAsString($type);
+        }
+
+        return implode('|', $types);
+    }
+
+    private function intersectionTypeAsString(IntersectionType $node): string
+    {
+        $types = [];
+
+        foreach ($node->types as $type) {
+            $types[] = $this->typeAsString($type);
+        }
+
+        return implode('&', $types);
+    }
+
+    /**
+     * @psalm-param Identifier|Name $node $node
+     */
+    private function typeAsString(NodeAbstract $node): string
+    {
+        if ($node instanceof Name) {
+            return $node->toCodeString();
+        }
+
+        return $node->toString();
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 }

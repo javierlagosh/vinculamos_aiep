@@ -6,5 +6,8 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+<<<<<<< HEAD
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 );

@@ -1,6 +1,10 @@
 Recursion Context
 
+<<<<<<< HEAD
 Copyright (c) 2002-2020, Sebastian Bergmann <sebastian@phpunit.de>.
+=======
+Copyright (c) 2002-2022, Sebastian Bergmann <sebastian@phpunit.de>.
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

@@ -44,10 +44,15 @@ class Set extends AbstractSet
      * The type of elements stored in this set
      *
      * A set's type is immutable. For this reason, this property is private.
+<<<<<<< HEAD
      *
      * @var string
      */
     private $setType;
+=======
+     */
+    private string $setType;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * Constructs a set object of the specified type, optionally with the

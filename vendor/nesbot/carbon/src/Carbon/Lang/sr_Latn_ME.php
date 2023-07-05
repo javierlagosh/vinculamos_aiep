@@ -16,6 +16,18 @@
  */
 
 use Carbon\CarbonInterface;
+<<<<<<< HEAD
+=======
+use Symfony\Component\Translation\PluralizationRules;
+
+// @codeCoverageIgnoreStart
+if (class_exists(PluralizationRules::class)) {
+    PluralizationRules::set(static function ($number) {
+        return PluralizationRules::get($number, 'sr');
+    }, 'sr_Latn_ME');
+}
+// @codeCoverageIgnoreEnd
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
 return array_replace_recursive(require __DIR__.'/sr.php', [
     'month' => ':count mjesec|:count mjeseca|:count mjeseci',
@@ -27,6 +39,10 @@ return array_replace_recursive(require __DIR__.'/sr.php', [
     'before' => ':time prije',
     'week_from_now' => ':count nedjelju|:count nedjelje|:count nedjelja',
     'week_ago' => ':count nedjelju|:count nedjelje|:count nedjelja',
+<<<<<<< HEAD
+=======
+    'second_ago' => ':count sekund|:count sekunde|:count sekundi',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     'diff_tomorrow' => 'sjutra',
     'calendar' => [
         'nextDay' => '[sjutra u] LT',

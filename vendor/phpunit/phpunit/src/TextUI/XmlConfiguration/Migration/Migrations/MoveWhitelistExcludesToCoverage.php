@@ -47,7 +47,11 @@ final class MoveWhitelistExcludesToCoverage implements Migration
 
         if ($targetExclude === null) {
             $targetExclude = $coverage->appendChild(
+<<<<<<< HEAD
                 $document->createElement('exclude')
+=======
+                $document->createElement('exclude'),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

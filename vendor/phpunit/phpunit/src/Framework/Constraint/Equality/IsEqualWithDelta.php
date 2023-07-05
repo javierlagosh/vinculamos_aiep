@@ -62,13 +62,21 @@ final class IsEqualWithDelta extends Constraint
         try {
             $comparator = $comparatorFactory->getComparatorFor(
                 $this->value,
+<<<<<<< HEAD
                 $other
+=======
+                $other,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
 
             $comparator->assertEquals(
                 $this->value,
                 $other,
+<<<<<<< HEAD
                 $this->delta
+=======
+                $this->delta,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         } catch (ComparisonFailure $f) {
             if ($returnResult) {
@@ -77,7 +85,11 @@ final class IsEqualWithDelta extends Constraint
 
             throw new ExpectationFailedException(
                 trim($description . "\n" . $f->getMessage()),
+<<<<<<< HEAD
                 $f
+=======
+                $f,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -92,9 +104,15 @@ final class IsEqualWithDelta extends Constraint
     public function toString(): string
     {
         return sprintf(
+<<<<<<< HEAD
             'is equal to %s with delta <%F>>',
             $this->exporter()->export($this->value),
             $this->delta
+=======
+            'is equal to %s with delta <%F>',
+            $this->exporter()->export($this->value),
+            $this->delta,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

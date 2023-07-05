@@ -25,12 +25,28 @@ final class TableExtension implements ConfigurableExtensionInterface
 {
     public function configureSchema(ConfigurationBuilderInterface $builder): void
     {
+<<<<<<< HEAD
+=======
+        $attributeArraySchema = Expect::arrayOf(
+            Expect::type('string|string[]|bool'), // attribute value(s)
+            'string' // attribute name
+        )->mergeDefaults(false);
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         $builder->addSchema('table', Expect::structure([
             'wrap' => Expect::structure([
                 'enabled' => Expect::bool()->default(false),
                 'tag' => Expect::string()->default('div'),
                 'attributes' => Expect::arrayOf(Expect::string()),
             ]),
+<<<<<<< HEAD
+=======
+            'alignment_attributes' => Expect::structure([
+                'left' => (clone $attributeArraySchema)->default(['align' => 'left']),
+                'center' => (clone $attributeArraySchema)->default(['align' => 'center']),
+                'right' => (clone $attributeArraySchema)->default(['align' => 'right']),
+            ]),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         ]));
     }
 
@@ -47,6 +63,10 @@ final class TableExtension implements ConfigurableExtensionInterface
             ->addRenderer(Table::class, $tableRenderer)
             ->addRenderer(TableSection::class, new TableSectionRenderer())
             ->addRenderer(TableRow::class, new TableRowRenderer())
+<<<<<<< HEAD
             ->addRenderer(TableCell::class, new TableCellRenderer());
+=======
+            ->addRenderer(TableCell::class, new TableCellRenderer($environment->getConfiguration()->get('table/alignment_attributes')));
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 }

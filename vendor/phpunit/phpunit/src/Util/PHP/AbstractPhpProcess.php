@@ -184,7 +184,11 @@ abstract class AbstractPhpProcess
             $test,
             $result,
             $_result['stdout'],
+<<<<<<< HEAD
             $_result['stderr']
+=======
+            $_result['stderr'],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -199,15 +203,25 @@ abstract class AbstractPhpProcess
             $settings = array_merge(
                 $settings,
                 $this->runtime->getCurrentSettings(
+<<<<<<< HEAD
                     array_keys(ini_get_all('pcov'))
                 )
+=======
+                    array_keys(ini_get_all('pcov')),
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         } elseif ($this->runtime->hasXdebug()) {
             $settings = array_merge(
                 $settings,
                 $this->runtime->getCurrentSettings(
+<<<<<<< HEAD
                     array_keys(ini_get_all('xdebug'))
                 )
+=======
+                    array_keys(ini_get_all('xdebug')),
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -268,7 +282,11 @@ abstract class AbstractPhpProcess
             $result->addError(
                 $test,
                 new Exception(trim($stderr)),
+<<<<<<< HEAD
                 $time
+=======
+                $time,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         } else {
             set_error_handler(
@@ -278,7 +296,11 @@ abstract class AbstractPhpProcess
                 static function ($errno, $errstr, $errfile, $errline): void
                 {
                     throw new ErrorException($errstr, $errno, $errno, $errfile, $errline);
+<<<<<<< HEAD
                 }
+=======
+                },
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
 
             try {
@@ -293,7 +315,11 @@ abstract class AbstractPhpProcess
                     $result->addFailure(
                         $test,
                         new AssertionFailedError('Test was run in child process and ended unexpectedly'),
+<<<<<<< HEAD
                         $time
+=======
+                        $time,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
                 }
             } catch (ErrorException $e) {
@@ -303,7 +329,11 @@ abstract class AbstractPhpProcess
                 $result->addError(
                     $test,
                     new Exception(trim($stdout), 0, $e),
+<<<<<<< HEAD
                     $time
+=======
+                    $time,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
 
@@ -322,7 +352,11 @@ abstract class AbstractPhpProcess
 
                 if ($result->getCollectCodeCoverageInformation()) {
                     $result->getCodeCoverage()->merge(
+<<<<<<< HEAD
                         $childResult->getCodeCoverage()
+=======
+                        $childResult->getCodeCoverage(),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
                 }
 
@@ -338,37 +372,61 @@ abstract class AbstractPhpProcess
                     $result->addError(
                         $test,
                         $this->getException($notImplemented[0]),
+<<<<<<< HEAD
                         $time
+=======
+                        $time,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
                 } elseif (!empty($risky)) {
                     $result->addError(
                         $test,
                         $this->getException($risky[0]),
+<<<<<<< HEAD
                         $time
+=======
+                        $time,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
                 } elseif (!empty($skipped)) {
                     $result->addError(
                         $test,
                         $this->getException($skipped[0]),
+<<<<<<< HEAD
                         $time
+=======
+                        $time,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
                 } elseif (!empty($errors)) {
                     $result->addError(
                         $test,
                         $this->getException($errors[0]),
+<<<<<<< HEAD
                         $time
+=======
+                        $time,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
                 } elseif (!empty($warnings)) {
                     $result->addWarning(
                         $test,
                         $this->getException($warnings[0]),
+<<<<<<< HEAD
                         $time
+=======
+                        $time,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
                 } elseif (!empty($failures)) {
                     $result->addFailure(
                         $test,
                         $this->getException($failures[0]),
+<<<<<<< HEAD
                         $time
+=======
+                        $time,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
                 }
             }
@@ -402,12 +460,20 @@ abstract class AbstractPhpProcess
                 sprintf(
                     '%s: %s',
                     $exceptionArray['_PHP_Incomplete_Class_Name'],
+<<<<<<< HEAD
                     $exceptionArray['message']
+=======
+                    $exceptionArray['message'],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 ),
                 $exceptionArray['code'],
                 $exceptionArray['file'],
                 $exceptionArray['line'],
+<<<<<<< HEAD
                 $exceptionArray['trace']
+=======
+                $exceptionArray['trace'],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

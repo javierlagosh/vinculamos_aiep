@@ -88,21 +88,47 @@ final class ExecutableLinesFindingVisitor extends NodeVisitorAbstract
             return;
         }
 
+<<<<<<< HEAD
         if ($node instanceof Node\Stmt\Declare_ ||
             $node instanceof Node\Stmt\DeclareDeclare ||
             $node instanceof Node\Stmt\Else_ ||
             $node instanceof Node\Stmt\Finally_ ||
             $node instanceof Node\Stmt\Interface_ ||
+=======
+        if ($node instanceof Node\Stmt\Interface_) {
+            foreach (range($node->getStartLine(), $node->getEndLine()) as $line) {
+                $this->unsets[$line] = true;
+            }
+
+            return;
+        }
+
+        if ($node instanceof Node\Stmt\Declare_ ||
+            $node instanceof Node\Stmt\DeclareDeclare ||
+            $node instanceof Node\Stmt\Else_ ||
+            $node instanceof Node\Stmt\EnumCase ||
+            $node instanceof Node\Stmt\Finally_ ||
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             $node instanceof Node\Stmt\Label ||
             $node instanceof Node\Stmt\Namespace_ ||
             $node instanceof Node\Stmt\Nop ||
             $node instanceof Node\Stmt\Switch_ ||
+<<<<<<< HEAD
             $node instanceof Node\Stmt\Throw_ ||
             $node instanceof Node\Stmt\TryCatch ||
             $node instanceof Node\Stmt\Use_ ||
             $node instanceof Node\Stmt\UseUse ||
             $node instanceof Node\Expr\Match_ ||
             $node instanceof Node\Expr\Variable ||
+=======
+            $node instanceof Node\Stmt\TryCatch ||
+            $node instanceof Node\Stmt\Use_ ||
+            $node instanceof Node\Stmt\UseUse ||
+            $node instanceof Node\Expr\ConstFetch ||
+            $node instanceof Node\Expr\Match_ ||
+            $node instanceof Node\Expr\Variable ||
+            $node instanceof Node\ComplexType ||
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             $node instanceof Node\Const_ ||
             $node instanceof Node\Identifier ||
             $node instanceof Node\Name ||
@@ -111,12 +137,27 @@ final class ExecutableLinesFindingVisitor extends NodeVisitorAbstract
             return;
         }
 
+<<<<<<< HEAD
         if ($node instanceof Node\Stmt\Function_ ||
+=======
+        if ($node instanceof Node\Stmt\Throw_) {
+            $this->setLineBranch($node->expr->getEndLine(), $node->expr->getEndLine(), ++$this->nextBranch);
+
+            return;
+        }
+
+        if ($node instanceof Node\Stmt\Enum_ ||
+            $node instanceof Node\Stmt\Function_ ||
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             $node instanceof Node\Stmt\Class_ ||
             $node instanceof Node\Stmt\ClassMethod ||
             $node instanceof Node\Expr\Closure ||
             $node instanceof Node\Stmt\Trait_) {
+<<<<<<< HEAD
             $isConcreteClassLike = $node instanceof Node\Stmt\Class_ || $node instanceof Node\Stmt\Trait_;
+=======
+            $isConcreteClassLike = $node instanceof Node\Stmt\Enum_ || $node instanceof Node\Stmt\Class_ || $node instanceof Node\Stmt\Trait_;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
             if (null !== $node->stmts) {
                 foreach ($node->stmts as $stmt) {

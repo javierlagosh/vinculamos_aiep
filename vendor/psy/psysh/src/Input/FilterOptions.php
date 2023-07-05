@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -73,8 +77,11 @@ class FilterOptions
 
     /**
      * Check whether the bound input has filter options.
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function hasFilter(): bool
     {
@@ -86,8 +93,11 @@ class FilterOptions
      *
      * @param string $string
      * @param array  $matches
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function match(string $string, array &$matches = null): bool
     {
@@ -116,8 +126,11 @@ class FilterOptions
      * Check whether a string appears to be a regular expression.
      *
      * @param string $string
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private function stringIsRegex(string $string): bool
     {

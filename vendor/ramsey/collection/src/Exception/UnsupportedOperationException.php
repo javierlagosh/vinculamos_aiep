@@ -14,9 +14,18 @@ declare(strict_types=1);
 
 namespace Ramsey\Collection\Exception;
 
+<<<<<<< HEAD
 /**
  * Thrown to indicate that the requested operation is not supported.
  */
 class UnsupportedOperationException extends \RuntimeException
+=======
+use RuntimeException;
+
+/**
+ * Thrown to indicate that the requested operation is not supported.
+ */
+class UnsupportedOperationException extends RuntimeException
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 {
 }

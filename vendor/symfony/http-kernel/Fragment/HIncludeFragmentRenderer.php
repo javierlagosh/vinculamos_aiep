@@ -30,7 +30,11 @@ class HIncludeFragmentRenderer extends RoutableFragmentRenderer
     private $charset;
 
     /**
+<<<<<<< HEAD
      * @param string $globalDefaultTemplate The global default content (it can be a template name or the content)
+=======
+     * @param string|null $globalDefaultTemplate The global default content (it can be a template name or the content)
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function __construct(Environment $twig = null, UriSigner $signer = null, string $globalDefaultTemplate = null, string $charset = 'utf-8')
     {

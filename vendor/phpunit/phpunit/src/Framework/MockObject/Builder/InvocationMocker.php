@@ -194,6 +194,11 @@ final class InvocationMocker implements InvocationStubber, MethodNameMatch
      * @throws MethodParametersAlreadyConfiguredException
      *
      * @return $this
+<<<<<<< HEAD
+=======
+     *
+     * @deprecated
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function withConsecutive(...$arguments): self
     {
@@ -239,7 +244,11 @@ final class InvocationMocker implements InvocationStubber, MethodNameMatch
             {
                 return strtolower($configurable->getName());
             },
+<<<<<<< HEAD
             $this->configurableMethods
+=======
+            $this->configurableMethods,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         if (is_string($constraint) && !in_array(strtolower($constraint), $configurableMethodNames, true)) {
@@ -298,7 +307,11 @@ final class InvocationMocker implements InvocationStubber, MethodNameMatch
             if (!$configuredMethod->mayReturn($value)) {
                 throw new IncompatibleReturnValueException(
                     $configuredMethod,
+<<<<<<< HEAD
                     $value
+=======
+                    $value,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
         }

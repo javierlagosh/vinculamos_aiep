@@ -183,7 +183,11 @@ final class Invocation implements SelfDescribing
                     throw new RuntimeException(
                         $t->getMessage(),
                         (int) $t->getCode(),
+<<<<<<< HEAD
                         $t
+=======
+                        $t,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
                 }
             }
@@ -221,7 +225,11 @@ final class Invocation implements SelfDescribing
                     throw new RuntimeException(
                         $t->getMessage(),
                         (int) $t->getCode(),
+<<<<<<< HEAD
                         $t
+=======
+                        $t,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
                 }
             }
@@ -256,8 +264,13 @@ final class Invocation implements SelfDescribing
                 'Return value for %s::%s() cannot be generated%s, please configure a return value for this method',
                 $this->className,
                 $this->methodName,
+<<<<<<< HEAD
                 $reason
             )
+=======
+                $reason,
+            ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -273,10 +286,17 @@ final class Invocation implements SelfDescribing
                 ', ',
                 array_map(
                     [$exporter, 'shortenedExport'],
+<<<<<<< HEAD
                     $this->parameters
                 )
             ),
             $this->returnType ? sprintf(': %s', $this->returnType) : ''
+=======
+                    $this->parameters,
+                ),
+            ),
+            $this->returnType ? sprintf(': %s', $this->returnType) : '',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 

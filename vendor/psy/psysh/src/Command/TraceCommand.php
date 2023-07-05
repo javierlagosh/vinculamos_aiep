@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -68,6 +72,11 @@ HELP
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
+=======
+     *
+     * @return int 0 if everything went fine, or an exit code
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
@@ -79,18 +88,30 @@ HELP
     }
 
     /**
+<<<<<<< HEAD
      * Get a backtrace for an exception.
+=======
+     * Get a backtrace for an exception or error.
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      *
      * Optionally limit the number of rows to include with $count, and exclude
      * Psy from the trace.
      *
+<<<<<<< HEAD
      * @param \Exception $e          The exception with a backtrace
+=======
+     * @param \Throwable $e          The exception or error with a backtrace
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      * @param int        $count      (default: PHP_INT_MAX)
      * @param bool       $includePsy (default: true)
      *
      * @return array Formatted stacktrace lines
      */
+<<<<<<< HEAD
     protected function getBacktrace(\Exception $e, int $count = null, bool $includePsy = true): array
+=======
+    protected function getBacktrace(\Throwable $e, int $count = null, bool $includePsy = true): array
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     {
         return TraceFormatter::formatTrace($e, $this->filter, $count, $includePsy);
     }

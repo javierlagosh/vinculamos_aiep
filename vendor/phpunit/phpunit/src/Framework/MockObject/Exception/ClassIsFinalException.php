@@ -21,8 +21,13 @@ final class ClassIsFinalException extends \PHPUnit\Framework\Exception implement
         parent::__construct(
             sprintf(
                 'Class "%s" is declared "final" and cannot be doubled',
+<<<<<<< HEAD
                 $className
             )
+=======
+                $className,
+            ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

@@ -167,9 +167,15 @@ var refStyle = doc.createElement('style'),
     };
 
 refStyle.innerHTML = 'pre.sf-dump .sf-dump-compact, .sf-dump-str-collapse .sf-dump-str-collapse, .sf-dump-str-expand .sf-dump-str-expand { display: none; }';
+<<<<<<< HEAD
 (doc.documentElement.firstElementChild || doc.documentElement.children[0]).appendChild(refStyle);
 refStyle = doc.createElement('style');
 (doc.documentElement.firstElementChild || doc.documentElement.children[0]).appendChild(refStyle);
+=======
+doc.head.appendChild(refStyle);
+refStyle = doc.createElement('style');
+doc.head.appendChild(refStyle);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
 if (!doc.addEventListener) {
     addEventListener = function (element, eventName, callback) {

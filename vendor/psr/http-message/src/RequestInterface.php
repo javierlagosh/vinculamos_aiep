@@ -39,7 +39,11 @@ interface RequestInterface extends MessageInterface
      *
      * @return string
      */
+<<<<<<< HEAD
     public function getRequestTarget();
+=======
+    public function getRequestTarget(): string;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * Return an instance with the specific request-target.
@@ -55,17 +59,29 @@ interface RequestInterface extends MessageInterface
      *
      * @link http://tools.ietf.org/html/rfc7230#section-5.3 (for the various
      *     request-target forms allowed in request messages)
+<<<<<<< HEAD
      * @param mixed $requestTarget
      * @return static
      */
     public function withRequestTarget($requestTarget);
+=======
+     * @param string $requestTarget
+     * @return static
+     */
+    public function withRequestTarget(string $requestTarget): RequestInterface;
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * Retrieves the HTTP method of the request.
      *
      * @return string Returns the request method.
      */
+<<<<<<< HEAD
     public function getMethod();
+=======
+    public function getMethod(): string;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * Return an instance with the provided HTTP method.
@@ -82,7 +98,11 @@ interface RequestInterface extends MessageInterface
      * @return static
      * @throws \InvalidArgumentException for invalid HTTP methods.
      */
+<<<<<<< HEAD
     public function withMethod($method);
+=======
+    public function withMethod(string $method): RequestInterface;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * Retrieves the URI instance.
@@ -93,7 +113,11 @@ interface RequestInterface extends MessageInterface
      * @return UriInterface Returns a UriInterface instance
      *     representing the URI of the request.
      */
+<<<<<<< HEAD
     public function getUri();
+=======
+    public function getUri(): UriInterface;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * Returns an instance with the provided URI.
@@ -125,5 +149,9 @@ interface RequestInterface extends MessageInterface
      * @param bool $preserveHost Preserve the original state of the Host header.
      * @return static
      */
+<<<<<<< HEAD
     public function withUri(UriInterface $uri, $preserveHost = false);
+=======
+    public function withUri(UriInterface $uri, bool $preserveHost = false): RequestInterface;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 }

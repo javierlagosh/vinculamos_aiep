@@ -28,6 +28,10 @@ use Carbon\Traits\Options;
 use Carbon\Traits\ToStringFormat;
 use Closure;
 use DateInterval;
+<<<<<<< HEAD
+=======
+use DateMalformedIntervalStringException;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use DateTimeInterface;
 use DateTimeZone;
 use Exception;
@@ -48,7 +52,11 @@ use Throwable;
  * @property int $minutes Total minutes of the current interval.
  * @property int $seconds Total seconds of the current interval.
  * @property int $microseconds Total microseconds of the current interval.
+<<<<<<< HEAD
  * @property int $milliseconds Total microseconds of the current interval.
+=======
+ * @property int $milliseconds Total milliseconds of the current interval.
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  * @property int $microExcludeMilli Remaining microseconds without the milliseconds.
  * @property int $dayzExcludeWeeks Total days remaining in the final week of the current instance (days % 7).
  * @property int $daysExcludeWeeks alias of dayzExcludeWeeks
@@ -298,7 +306,16 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
      */
     public static function getCascadeFactors()
     {
+<<<<<<< HEAD
         return static::$cascadeFactors ?: [
+=======
+        return static::$cascadeFactors ?: static::getDefaultCascadeFactors();
+    }
+
+    protected static function getDefaultCascadeFactors(): array
+    {
+        return [
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             'milliseconds' => [Carbon::MICROSECONDS_PER_MILLISECOND, 'microseconds'],
             'seconds' => [Carbon::MILLISECONDS_PER_SECOND, 'milliseconds'],
             'minutes' => [Carbon::SECONDS_PER_MINUTE, 'seconds'],
@@ -999,8 +1016,19 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
             return static::fromString($interval);
         }
 
+<<<<<<< HEAD
         /** @var static $interval */
         $interval = static::createFromDateString($interval);
+=======
+        // @codeCoverageIgnoreStart
+        try {
+            /** @var static $interval */
+            $interval = static::createFromDateString($interval);
+        } catch (DateMalformedIntervalStringException $e) {
+            return null;
+        }
+        // @codeCoverageIgnoreEnd
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
         return !$interval || $interval->isEmpty() ? null : $interval;
     }
@@ -1883,7 +1911,11 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
     /**
      * Invert the interval.
      *
+<<<<<<< HEAD
      * @param bool|int $inverted if a parameter is passed, the passed value casted as 1 or 0 is used
+=======
+     * @param bool|int $inverted if a parameter is passed, the passed value cast as 1 or 0 is used
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      *                           as the new value of the ->invert property.
      *
      * @return $this
@@ -2720,6 +2752,18 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
      */
     public function roundUnit($unit, $precision = 1, $function = 'round')
     {
+<<<<<<< HEAD
+=======
+        if (static::getCascadeFactors() !== static::getDefaultCascadeFactors()) {
+            $value = $function($this->total($unit) / $precision) * $precision;
+            $inverted = $value < 0;
+
+            return $this->copyProperties(self::fromString(
+                number_format(abs($value), 12, '.', '').' '.$unit
+            )->invert($inverted)->cascade());
+        }
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         $base = CarbonImmutable::parse('2000-01-01 00:00:00', 'UTC')
             ->roundUnit($unit, $precision, $function);
         $next = $base->add($this);

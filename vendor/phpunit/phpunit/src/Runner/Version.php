@@ -41,7 +41,11 @@ final class Version
         }
 
         if (self::$version === '') {
+<<<<<<< HEAD
             self::$version = (new VersionId('9.5.27', dirname(__DIR__, 2)))->getVersion();
+=======
+            self::$version = (new VersionId('9.6.9', dirname(__DIR__, 2)))->getVersion();
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         return self::$version;

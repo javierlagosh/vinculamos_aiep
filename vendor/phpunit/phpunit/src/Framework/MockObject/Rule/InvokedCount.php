@@ -62,8 +62,13 @@ final class InvokedCount extends InvocationOrder
                     'Method was expected to be called %d times, ' .
                     'actually called %d times.',
                     $this->expectedCount,
+<<<<<<< HEAD
                     $count
                 )
+=======
+                    $count,
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
     }
@@ -92,7 +97,11 @@ final class InvokedCount extends InvocationOrder
                 default:
                     $message .= sprintf(
                         'was not expected to be called more than %d times.',
+<<<<<<< HEAD
                         $this->expectedCount
+=======
+                        $this->expectedCount,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     );
             }
 

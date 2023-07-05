@@ -143,6 +143,13 @@ final class CallableType extends Type
             return false;
         }
 
+<<<<<<< HEAD
+=======
+        if (!isset($type->value()[0], $type->value()[1])) {
+            return false;
+        }
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         if (!is_object($type->value()[0]) || !is_string($type->value()[1])) {
             return false;
         }
@@ -171,6 +178,13 @@ final class CallableType extends Type
                 return false;
             }
 
+<<<<<<< HEAD
+=======
+            if (!isset($type->value()[0], $type->value()[1])) {
+                return false;
+            }
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             if (!is_string($type->value()[0]) || !is_string($type->value()[1])) {
                 return false;
             }

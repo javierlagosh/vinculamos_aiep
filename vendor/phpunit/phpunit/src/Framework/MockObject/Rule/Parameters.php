@@ -47,7 +47,11 @@ final class Parameters implements ParametersRule
         foreach ($parameters as $parameter) {
             if (!($parameter instanceof Constraint)) {
                 $parameter = new IsEqual(
+<<<<<<< HEAD
                     $parameter
+=======
+                    $parameter,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
 
@@ -127,7 +131,11 @@ final class Parameters implements ParametersRule
             }
 
             throw new ExpectationFailedException(
+<<<<<<< HEAD
                 sprintf($message, $this->invocation->toString())
+=======
+                sprintf($message, $this->invocation->toString()),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -138,8 +146,13 @@ final class Parameters implements ParametersRule
                     'Parameter %s for invocation %s does not match expected ' .
                     'value.',
                     $i,
+<<<<<<< HEAD
                     $this->invocation->toString()
                 )
+=======
+                    $this->invocation->toString(),
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

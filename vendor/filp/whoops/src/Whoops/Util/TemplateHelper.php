@@ -232,7 +232,10 @@ class TemplateHelper
      * passed to the template.
      *
      * @param string $template
+<<<<<<< HEAD
      * @param array  $additionalVariables
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function render($template, array $additionalVariables = null)
     {
@@ -254,8 +257,11 @@ class TemplateHelper
     /**
      * Sets the variables to be passed to all templates rendered
      * by this template helper.
+<<<<<<< HEAD
      *
      * @param array $variables
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function setVariables(array $variables)
     {

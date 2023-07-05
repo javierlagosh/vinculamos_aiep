@@ -119,7 +119,11 @@ final class Test
     {
         $annotations = self::parseTestMethodAnnotations(
             $className,
+<<<<<<< HEAD
             $methodName
+=======
+            $methodName,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         if (!self::shouldCoversAnnotationBeUsed($annotations)) {
@@ -145,7 +149,11 @@ final class Test
     {
         $annotations = self::parseTestMethodAnnotations(
             get_class($test),
+<<<<<<< HEAD
             $test->getName(false)
+=======
+            $test->getName(false),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         // If there is no @covers annotation but a @coversNothing annotation on
@@ -182,7 +190,11 @@ final class Test
     {
         return self::mergeArraysRecursively(
             Registry::getInstance()->forClassName($className)->requirements(),
+<<<<<<< HEAD
             Registry::getInstance()->forMethod($className, $methodName)->requirements()
+=======
+            Registry::getInstance()->forMethod($className, $methodName)->requirements(),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -213,7 +225,11 @@ final class Test
             if (!$required['PHP_constraint']['constraint']->complies($version)) {
                 $missing[] = sprintf(
                     'PHP version does not match the required constraint %s.',
+<<<<<<< HEAD
                     $required['PHP_constraint']['constraint']->asString()
+=======
+                    $required['PHP_constraint']['constraint']->asString(),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
 
                 $hint = 'PHP_constraint';
@@ -235,7 +251,11 @@ final class Test
             if (!$required['PHPUnit_constraint']['constraint']->complies($phpunitVersion)) {
                 $missing[] = sprintf(
                     'PHPUnit version does not match the required constraint %s.',
+<<<<<<< HEAD
                     $required['PHPUnit_constraint']['constraint']->asString()
+=======
+                    $required['PHPUnit_constraint']['constraint']->asString(),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
 
                 $hint = $hint ?? 'PHPUnit_constraint';
@@ -331,7 +351,11 @@ final class Test
     /**
      * @psalm-param class-string $className
      */
+<<<<<<< HEAD
     public static function parseTestMethodAnnotations(string $className, ?string $methodName = ''): array
+=======
+    public static function parseTestMethodAnnotations(string $className, ?string $methodName = null): array
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     {
         $registry = Registry::getInstance();
 
@@ -367,12 +391,20 @@ final class Test
             'backupGlobals' => self::getBooleanAnnotationSetting(
                 $className,
                 $methodName,
+<<<<<<< HEAD
                 'backupGlobals'
+=======
+                'backupGlobals',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             ),
             'backupStaticAttributes' => self::getBooleanAnnotationSetting(
                 $className,
                 $methodName,
+<<<<<<< HEAD
                 'backupStaticAttributes'
+=======
+                'backupStaticAttributes',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             ),
         ];
     }
@@ -386,7 +418,11 @@ final class Test
     {
         $annotations = self::parseTestMethodAnnotations(
             $className,
+<<<<<<< HEAD
             $methodName
+=======
+            $methodName,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $dependsAnnotations = $annotations['class']['depends'] ?? [];
@@ -394,7 +430,11 @@ final class Test
         if (isset($annotations['method']['depends'])) {
             $dependsAnnotations = array_merge(
                 $dependsAnnotations,
+<<<<<<< HEAD
                 $annotations['method']['depends']
+=======
+                $annotations['method']['depends'],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -413,7 +453,11 @@ final class Test
     {
         $annotations = self::parseTestMethodAnnotations(
             $className,
+<<<<<<< HEAD
             $methodName
+=======
+            $methodName,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $groups = [];
@@ -492,7 +536,11 @@ final class Test
     {
         $annotations = self::parseTestMethodAnnotations(
             $className,
+<<<<<<< HEAD
             $methodName
+=======
+            $methodName,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         return isset($annotations['class']['runTestsInSeparateProcesses']) || isset($annotations['method']['runInSeparateProcess']);
@@ -503,7 +551,11 @@ final class Test
     {
         $annotations = self::parseTestMethodAnnotations(
             $className,
+<<<<<<< HEAD
             $methodName
+=======
+            $methodName,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         return isset($annotations['class']['runClassInSeparateProcess']);
@@ -515,7 +567,11 @@ final class Test
         return self::getBooleanAnnotationSetting(
             $className,
             $methodName,
+<<<<<<< HEAD
             'preserveGlobalState'
+=======
+            'preserveGlobalState',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -537,7 +593,11 @@ final class Test
                         if ($docBlock->isHookToBeExecutedBeforeClass()) {
                             array_unshift(
                                 self::$hookMethods[$className]['beforeClass'],
+<<<<<<< HEAD
                                 $method->getName()
+=======
+                                $method->getName(),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                             );
                         }
 
@@ -549,14 +609,22 @@ final class Test
                     if ($docBlock->isToBeExecutedBeforeTest()) {
                         array_unshift(
                             self::$hookMethods[$className]['before'],
+<<<<<<< HEAD
                             $method->getName()
+=======
+                            $method->getName(),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                         );
                     }
 
                     if ($docBlock->isToBeExecutedAsPreCondition()) {
                         array_unshift(
                             self::$hookMethods[$className]['preCondition'],
+<<<<<<< HEAD
                             $method->getName()
+=======
+                            $method->getName(),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                         );
                     }
 
@@ -589,9 +657,15 @@ final class Test
             'test',
             Registry::getInstance()->forMethod(
                 $method->getDeclaringClass()->getName(),
+<<<<<<< HEAD
                 $method->getName()
             )
             ->symbolAnnotations()
+=======
+                $method->getName(),
+            )
+                ->symbolAnnotations(),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -604,7 +678,11 @@ final class Test
     {
         $annotations = self::parseTestMethodAnnotations(
             $className,
+<<<<<<< HEAD
             $methodName
+=======
+            $methodName,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $classShortcut = null;
@@ -615,8 +693,13 @@ final class Test
                     sprintf(
                         'More than one @%sClass annotation in class or interface "%s".',
                         $mode,
+<<<<<<< HEAD
                         $className
                     )
+=======
+                        $className,
+                    ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
 
@@ -645,8 +728,13 @@ final class Test
                 throw new InvalidCoversTargetException(
                     sprintf(
                         'Trying to @cover interface "%s".',
+<<<<<<< HEAD
                         $element
                     )
+=======
+                        $element,
+                    ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
 
@@ -657,10 +745,17 @@ final class Test
                     sprintf(
                         '"@%s %s" is invalid',
                         $mode,
+<<<<<<< HEAD
                         $element
                     ),
                     $e->getCode(),
                     $e
+=======
+                        $element,
+                    ),
+                    $e->getCode(),
+                    $e,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
         }
@@ -685,7 +780,11 @@ final class Test
     {
         $annotations = self::parseTestMethodAnnotations(
             $className,
+<<<<<<< HEAD
             $methodName
+=======
+            $methodName,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         if (isset($annotations['method'][$settingName])) {
@@ -720,7 +819,11 @@ final class Test
         return preg_replace(
             '/^(\d+\.\d+(?:.\d+)?).*$/',
             '$1',
+<<<<<<< HEAD
             $version
+=======
+            $version,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 

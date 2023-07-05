@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,6 +15,10 @@
 
 namespace Psy\CodeCleaner;
 
+<<<<<<< HEAD
+=======
+use PhpParser\Node;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 use PhpParser\Node\Identifier;
 use PhpParser\Node\Scalar\LNumber;
 use PhpParser\Node\Stmt\Declare_;
@@ -42,6 +50,11 @@ class StrictTypesPass extends CodeCleanerPass
      * @throws FatalErrorException if an invalid `strict_types` declaration is found
      *
      * @param array $nodes
+<<<<<<< HEAD
+=======
+     *
+     * @return Node[]|null Array of nodes
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function beforeTraverse(array $nodes)
     {

@@ -68,8 +68,13 @@ final class Xml
             '',
             htmlspecialchars(
                 self::convertToUtf8($string),
+<<<<<<< HEAD
                 ENT_QUOTES
             )
+=======
+                ENT_QUOTES,
+            ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -127,7 +132,11 @@ final class Xml
                         throw new Exception(
                             $e->getMessage(),
                             $e->getCode(),
+<<<<<<< HEAD
                             $e
+=======
+                            $e,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                         );
                     }
                     // @codeCoverageIgnoreEnd

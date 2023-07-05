@@ -36,7 +36,11 @@ final class TraversableContainsOnly extends Constraint
             $this->constraint = new IsType($type);
         } else {
             $this->constraint = new IsInstanceOf(
+<<<<<<< HEAD
                 $type
+=======
+                $type,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

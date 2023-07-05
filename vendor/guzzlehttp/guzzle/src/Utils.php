@@ -23,9 +23,15 @@ final class Utils
     {
         switch (\gettype($input)) {
             case 'object':
+<<<<<<< HEAD
                 return 'object(' . \get_class($input) . ')';
             case 'array':
                 return 'array(' . \count($input) . ')';
+=======
+                return 'object('.\get_class($input).')';
+            case 'array':
+                return 'array('.\count($input).')';
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             default:
                 \ob_start();
                 \var_dump($input);
@@ -79,9 +85,15 @@ final class Utils
      *
      * The returned handler is not wrapped by any default middlewares.
      *
+<<<<<<< HEAD
      * @throws \RuntimeException if no viable Handler is available.
      *
      * @return callable(\Psr\Http\Message\RequestInterface, array): \GuzzleHttp\Promise\PromiseInterface Returns the best handler for the given system.
+=======
+     * @return callable(\Psr\Http\Message\RequestInterface, array): \GuzzleHttp\Promise\PromiseInterface Returns the best handler for the given system.
+     *
+     * @throws \RuntimeException if no viable Handler is available.
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public static function chooseHandler(): callable
     {
@@ -247,8 +259,13 @@ EOT
             }
             // Special match if the area when prefixed with ".". Remove any
             // existing leading "." and add a new leading ".".
+<<<<<<< HEAD
             $area = '.' . \ltrim($area, '.');
             if (\substr($host, -(\strlen($area))) === $area) {
+=======
+            $area = '.'.\ltrim($area, '.');
+            if (\substr($host, -\strlen($area)) === $area) {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 return true;
             }
         }
@@ -269,13 +286,21 @@ EOT
      *
      * @throws InvalidArgumentException if the JSON cannot be decoded.
      *
+<<<<<<< HEAD
      * @link https://www.php.net/manual/en/function.json-decode.php
+=======
+     * @see https://www.php.net/manual/en/function.json-decode.php
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public static function jsonDecode(string $json, bool $assoc = false, int $depth = 512, int $options = 0)
     {
         $data = \json_decode($json, $assoc, $depth, $options);
         if (\JSON_ERROR_NONE !== \json_last_error()) {
+<<<<<<< HEAD
             throw new InvalidArgumentException('json_decode error: ' . \json_last_error_msg());
+=======
+            throw new InvalidArgumentException('json_decode error: '.\json_last_error_msg());
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         return $data;
@@ -290,13 +315,21 @@ EOT
      *
      * @throws InvalidArgumentException if the JSON cannot be encoded.
      *
+<<<<<<< HEAD
      * @link https://www.php.net/manual/en/function.json-encode.php
+=======
+     * @see https://www.php.net/manual/en/function.json-encode.php
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public static function jsonEncode($value, int $options = 0, int $depth = 512): string
     {
         $json = \json_encode($value, $options, $depth);
         if (\JSON_ERROR_NONE !== \json_last_error()) {
+<<<<<<< HEAD
             throw new InvalidArgumentException('json_encode error: ' . \json_last_error_msg());
+=======
+            throw new InvalidArgumentException('json_encode error: '.\json_last_error_msg());
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         /** @var string */
@@ -341,7 +374,11 @@ EOT
 
                 $errorMessage = 'IDN conversion failed';
                 if ($errors) {
+<<<<<<< HEAD
                     $errorMessage .= ' (errors: ' . implode(', ', $errors) . ')';
+=======
+                    $errorMessage .= ' (errors: '.implode(', ', $errors).')';
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 }
 
                 throw new InvalidArgumentException($errorMessage);

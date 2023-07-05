@@ -96,7 +96,12 @@ class OutputFormatterStyle implements OutputFormatterStyleInterface
     {
         if (null === $this->handlesHrefGracefully) {
             $this->handlesHrefGracefully = 'JetBrains-JediTerm' !== getenv('TERMINAL_EMULATOR')
+<<<<<<< HEAD
                 && (!getenv('KONSOLE_VERSION') || (int) getenv('KONSOLE_VERSION') > 201100);
+=======
+                && (!getenv('KONSOLE_VERSION') || (int) getenv('KONSOLE_VERSION') > 201100)
+                && !isset($_SERVER['IDEA_INITIAL_DIRECTORY']);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         if (null !== $this->href && $this->handlesHrefGracefully) {

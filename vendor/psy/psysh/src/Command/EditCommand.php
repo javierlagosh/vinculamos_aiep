@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -74,6 +78,11 @@ class EditCommand extends Command implements ContextAware
      * @param InputInterface  $input
      * @param OutputInterface $output
      *
+<<<<<<< HEAD
+=======
+     * @return int 0 if everything went fine, or an exit code
+     *
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      * @throws \InvalidArgumentException when both exec and no-exec flags are given or if a given variable is not found in the current context
      * @throws \UnexpectedValueException if file_get_contents on the edited file returns false instead of a string
      */
@@ -112,8 +121,11 @@ class EditCommand extends Command implements ContextAware
      * @param bool        $execOption
      * @param bool        $noExecOption
      * @param string|null $filePath
+<<<<<<< HEAD
      *
      * @return bool
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private function shouldExecuteFile(bool $execOption, bool $noExecOption, string $filePath = null): bool
     {
@@ -152,8 +164,11 @@ class EditCommand extends Command implements ContextAware
      * @param string $filePath
      * @param bool   $shouldRemoveFile
      *
+<<<<<<< HEAD
      * @return string
      *
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      * @throws \UnexpectedValueException if file_get_contents on $filePath returns false instead of a string
      */
     private function editFile(string $filePath, bool $shouldRemoveFile): string

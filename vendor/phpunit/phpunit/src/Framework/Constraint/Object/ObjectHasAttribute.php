@@ -13,6 +13,11 @@ use ReflectionObject;
 
 /**
  * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+<<<<<<< HEAD
+=======
+ *
+ * @deprecated https://github.com/sebastianbergmann/phpunit/issues/4601
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  */
 final class ObjectHasAttribute extends ClassHasAttribute
 {

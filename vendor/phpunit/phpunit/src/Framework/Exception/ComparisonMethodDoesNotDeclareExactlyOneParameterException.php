@@ -23,10 +23,17 @@ final class ComparisonMethodDoesNotDeclareExactlyOneParameterException extends E
             sprintf(
                 'Comparison method %s::%s() does not declare exactly one parameter.',
                 $className,
+<<<<<<< HEAD
                 $methodName
             ),
             0,
             null
+=======
+                $methodName,
+            ),
+            0,
+            null,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 

@@ -20,6 +20,10 @@ use Ramsey\Collection\Exception\InvalidArgumentException;
 use function array_key_exists;
 use function array_keys;
 use function in_array;
+<<<<<<< HEAD
+=======
+use function var_export;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
 /**
  * This class provides a basic implementation of `MapInterface`, to minimize the
@@ -39,7 +43,11 @@ abstract class AbstractMap extends AbstractArray implements MapInterface
         if ($offset === null) {
             throw new InvalidArgumentException(
                 'Map elements are key/value pairs; a key must be provided for '
+<<<<<<< HEAD
                 . 'value ' . var_export($value, true)
+=======
+                . 'value ' . var_export($value, true),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

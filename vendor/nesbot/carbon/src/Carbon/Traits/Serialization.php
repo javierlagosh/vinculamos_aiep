@@ -120,6 +120,11 @@ trait Serialization
     /**
      * Returns the list of properties to dump on serialize() called on.
      *
+<<<<<<< HEAD
+=======
+     * Only used by PHP < 7.4.
+     *
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      * @return array
      */
     public function __sleep()
@@ -134,8 +139,21 @@ trait Serialization
         return $properties;
     }
 
+<<<<<<< HEAD
     public function __serialize(): array
     {
+=======
+    /**
+     * Returns the values to dump on serialize() called on.
+     *
+     * Only used by PHP >= 7.4.
+     *
+     * @return array
+     */
+    public function __serialize(): array
+    {
+        // @codeCoverageIgnoreStart
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         if (isset($this->timezone_type)) {
             return [
                 'date' => $this->date ?? null,
@@ -143,6 +161,10 @@ trait Serialization
                 'timezone' => $this->timezone ?? null,
             ];
         }
+<<<<<<< HEAD
+=======
+        // @codeCoverageIgnoreEnd
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
         $timezone = $this->getTimezone();
         $export = [
@@ -170,6 +192,11 @@ trait Serialization
     /**
      * Set locale if specified on unserialize() called.
      *
+<<<<<<< HEAD
+=======
+     * Only used by PHP < 7.4.
+     *
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      * @return void
      */
     #[ReturnTypeWillChange]
@@ -201,6 +228,16 @@ trait Serialization
         $this->cleanupDumpProperties();
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * Set locale if specified on unserialize() called.
+     *
+     * Only used by PHP >= 7.4.
+     *
+     * @return void
+     */
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     public function __unserialize(array $data): void
     {
         // @codeCoverageIgnoreStart
@@ -269,6 +306,10 @@ trait Serialization
      */
     public function cleanupDumpProperties()
     {
+<<<<<<< HEAD
+=======
+        // @codeCoverageIgnoreStart
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         if (PHP_VERSION < 8.2) {
             foreach ($this->dumpProperties as $property) {
                 if (isset($this->$property)) {
@@ -276,6 +317,10 @@ trait Serialization
                 }
             }
         }
+<<<<<<< HEAD
+=======
+        // @codeCoverageIgnoreEnd
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
         return $this;
     }

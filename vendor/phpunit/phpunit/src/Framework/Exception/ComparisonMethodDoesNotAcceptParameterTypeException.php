@@ -24,10 +24,17 @@ final class ComparisonMethodDoesNotAcceptParameterTypeException extends Exceptio
                 '%s is not an accepted argument type for comparison method %s::%s().',
                 $type,
                 $className,
+<<<<<<< HEAD
                 $methodName
             ),
             0,
             null
+=======
+                $methodName,
+            ),
+            0,
+            null,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 

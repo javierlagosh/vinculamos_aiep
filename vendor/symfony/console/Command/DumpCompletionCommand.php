@@ -85,7 +85,11 @@ EOH
         if ($input->getOption('debug')) {
             $this->tailDebugLog($commandName, $output);
 
+<<<<<<< HEAD
             return self::SUCCESS;
+=======
+            return 0;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         $shell = $input->getArgument('shell') ?? self::guessShell();
@@ -102,12 +106,20 @@ EOH
                 $output->writeln(sprintf('<error>Shell not detected, Symfony shell completion only supports "%s").</>', implode('", "', $supportedShells)));
             }
 
+<<<<<<< HEAD
             return self::INVALID;
+=======
+            return 2;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         $output->write(str_replace(['{{ COMMAND_NAME }}', '{{ VERSION }}'], [$commandName, $this->getApplication()->getVersion()], file_get_contents($completionFile)));
 
+<<<<<<< HEAD
         return self::SUCCESS;
+=======
+        return 0;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 
     private static function guessShell(): string
@@ -132,8 +144,20 @@ EOH
      */
     private function getSupportedShells(): array
     {
+<<<<<<< HEAD
         return array_map(function ($f) {
             return pathinfo($f, \PATHINFO_EXTENSION);
         }, glob(__DIR__.'/../Resources/completion.*'));
+=======
+        $shells = [];
+
+        foreach (new \DirectoryIterator(__DIR__.'/../Resources/') as $file) {
+            if (str_starts_with($file->getBasename(), 'completion.') && $file->isFile()) {
+                $shells[] = $file->getExtension();
+            }
+        }
+
+        return $shells;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 }

@@ -21,7 +21,11 @@
 namespace Mockery\Matcher;
 
 /**
+<<<<<<< HEAD
  * @deprecated 2.0 Due to ambiguity, use Hamcrest or PHPUnit equivalents
+=======
+ * @deprecated 2.0 Due to ambiguity, use PHPUnit equivalents
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  */
 class MustBe extends MatcherAbstract
 {

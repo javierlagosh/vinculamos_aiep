@@ -66,7 +66,10 @@ class CliTestDoxPrinter extends TestDoxPrinter
         " \e[36m◑\e[0m running tests",
         " \e[36m◒\e[0m running tests",
     ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     private const STATUS_STYLES = [
         BaseTestRunner::STATUS_PASSED => [
             'symbol' => '✔',
@@ -206,7 +209,11 @@ class CliTestDoxPrinter extends TestDoxPrinter
             ' %s %s%s' . PHP_EOL,
             $this->colorizeTextBox($style['color'], $style['symbol']),
             $testName,
+<<<<<<< HEAD
             $this->verbose ? ' ' . $this->formatRuntime($result['time'], $style['color']) : ''
+=======
+            $this->verbose ? ' ' . $this->formatRuntime($result['time'], $style['color']) : '',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $this->write($line);

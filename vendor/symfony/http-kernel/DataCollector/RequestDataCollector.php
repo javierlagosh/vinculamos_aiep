@@ -479,7 +479,11 @@ class RequestDataCollector extends DataCollector implements EventSubscriberInter
             }
             $controller['method'] = $r->name;
 
+<<<<<<< HEAD
             if ($class = $r->getClosureScopeClass()) {
+=======
+            if ($class = \PHP_VERSION_ID >= 80111 ? $r->getClosureCalledClass() : $r->getClosureScopeClass()) {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 $controller['class'] = $class->name;
             } else {
                 return $r->name;

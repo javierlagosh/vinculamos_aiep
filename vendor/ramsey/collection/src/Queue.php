@@ -37,6 +37,7 @@ class Queue extends AbstractArray implements QueueInterface
      *
      * A queue's type is immutable once it is set. For this reason, this
      * property is set private.
+<<<<<<< HEAD
      *
      * @var string
      */
@@ -48,6 +49,15 @@ class Queue extends AbstractArray implements QueueInterface
      * @var int
      */
     protected $index = 0;
+=======
+     */
+    private string $queueType;
+
+    /**
+     * The index of the head of the queue.
+     */
+    protected int $index = 0;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * Constructs a queue object of the specified type, optionally with the
@@ -68,13 +78,22 @@ class Queue extends AbstractArray implements QueueInterface
      * Since arbitrary offsets may not be manipulated in a queue, this method
      * serves only to fulfill the `ArrayAccess` interface requirements. It is
      * invoked by other operations when adding values to the queue.
+<<<<<<< HEAD
+=======
+     *
+     * @throws InvalidArgumentException if $value is of the wrong type
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function offsetSet($offset, $value): void
     {
         if ($this->checkType($this->getType(), $value) === false) {
             throw new InvalidArgumentException(
                 'Value must be of type ' . $this->getType() . '; value is '
+<<<<<<< HEAD
                 . $this->toolValueToString($value)
+=======
+                . $this->toolValueToString($value),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -82,6 +101,11 @@ class Queue extends AbstractArray implements QueueInterface
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * @throws InvalidArgumentException if $value is of the wrong type
+     *
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      * @inheritDoc
      */
     public function add($element): bool
@@ -100,7 +124,11 @@ class Queue extends AbstractArray implements QueueInterface
 
         if ($element === null) {
             throw new NoSuchElementException(
+<<<<<<< HEAD
                 'Can\'t return element from Queue. Queue is empty.'
+=======
+                'Can\'t return element from Queue. Queue is empty.',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

@@ -78,7 +78,11 @@ final class IsEqual extends Constraint
         try {
             $comparator = $comparatorFactory->getComparatorFor(
                 $this->value,
+<<<<<<< HEAD
                 $other
+=======
+                $other,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
 
             $comparator->assertEquals(
@@ -86,7 +90,11 @@ final class IsEqual extends Constraint
                 $other,
                 $this->delta,
                 $this->canonicalize,
+<<<<<<< HEAD
                 $this->ignoreCase
+=======
+                $this->ignoreCase,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         } catch (ComparisonFailure $f) {
             if ($returnResult) {
@@ -95,7 +103,11 @@ final class IsEqual extends Constraint
 
             throw new ExpectationFailedException(
                 trim($description . "\n" . $f->getMessage()),
+<<<<<<< HEAD
                 $f
+=======
+                $f,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -118,21 +130,33 @@ final class IsEqual extends Constraint
 
             return sprintf(
                 "is equal to '%s'",
+<<<<<<< HEAD
                 $this->value
+=======
+                $this->value,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
         if ($this->delta != 0) {
             $delta = sprintf(
                 ' with delta <%F>',
+<<<<<<< HEAD
                 $this->delta
+=======
+                $this->delta,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
         return sprintf(
             'is equal to %s%s',
             $this->exporter()->export($this->value),
+<<<<<<< HEAD
             $delta
+=======
+            $delta,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

@@ -75,7 +75,11 @@ trait Modifiers
      *
      * @param string|int|null $modifier
      *
+<<<<<<< HEAD
      * @return static
+=======
+     * @return static|false
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function next($modifier = null)
     {
@@ -157,7 +161,11 @@ trait Modifiers
      *
      * @param string|int|null $modifier
      *
+<<<<<<< HEAD
      * @return static
+=======
+     * @return static|false
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function previous($modifier = null)
     {
@@ -451,7 +459,11 @@ trait Modifiers
      *
      * @param string $modifier
      *
+<<<<<<< HEAD
      * @return static
+=======
+     * @return static|false
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public function change($modifier)
     {

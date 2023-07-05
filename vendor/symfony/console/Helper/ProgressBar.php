@@ -53,7 +53,10 @@ final class ProgressBar
     private $startTime;
     private $stepWidth;
     private $percent = 0.0;
+<<<<<<< HEAD
     private $formatLineCount;
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     private $messages = [];
     private $overwrite = true;
     private $terminal;
@@ -446,8 +449,11 @@ final class ProgressBar
         } else {
             $this->format = $format;
         }
+<<<<<<< HEAD
 
         $this->formatLineCount = substr_count($this->format, "\n");
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 
     /**
@@ -464,7 +470,11 @@ final class ProgressBar
         if ($this->overwrite) {
             if (null !== $this->previousMessage) {
                 if ($this->output instanceof ConsoleSectionOutput) {
+<<<<<<< HEAD
                     $messageLines = explode("\n", $message);
+=======
+                    $messageLines = explode("\n", $this->previousMessage);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     $lineCount = \count($messageLines);
                     foreach ($messageLines as $messageLine) {
                         $messageLineLength = Helper::width(Helper::removeDecoration($this->output->getFormatter(), $messageLine));
@@ -474,6 +484,7 @@ final class ProgressBar
                     }
                     $this->output->clear($lineCount);
                 } else {
+<<<<<<< HEAD
                     if ('' !== $this->previousMessage) {
                         // only clear upper lines when last call was not a clear
                         for ($i = 0; $i < $this->formatLineCount; ++$i) {
@@ -481,6 +492,13 @@ final class ProgressBar
                             $this->cursor->clearLine();
                             $this->cursor->moveUp();
                         }
+=======
+                    $lineCount = substr_count($this->previousMessage, "\n");
+                    for ($i = 0; $i < $lineCount; ++$i) {
+                        $this->cursor->moveToColumn(1);
+                        $this->cursor->clearLine();
+                        $this->cursor->moveUp();
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                     }
 
                     $this->cursor->moveToColumn(1);

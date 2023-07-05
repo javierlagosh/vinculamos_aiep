@@ -140,7 +140,11 @@ final class MockMethod
             $reference,
             $callOriginalMethod,
             $method->isStatic(),
+<<<<<<< HEAD
             $deprecation
+=======
+            $deprecation,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -157,7 +161,11 @@ final class MockMethod
             '',
             false,
             false,
+<<<<<<< HEAD
             null
+=======
+            null,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -191,12 +199,20 @@ final class MockMethod
         } elseif ($this->returnType->isNever() || $this->returnType->isVoid()) {
             $templateFile = sprintf(
                 '%s_method_never_or_void.tpl',
+<<<<<<< HEAD
                 $this->callOriginalMethod ? 'proxied' : 'mocked'
+=======
+                $this->callOriginalMethod ? 'proxied' : 'mocked',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         } else {
             $templateFile = sprintf(
                 '%s_method.tpl',
+<<<<<<< HEAD
                 $this->callOriginalMethod ? 'proxied' : 'mocked'
+=======
+                $this->callOriginalMethod ? 'proxied' : 'mocked',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -209,7 +225,11 @@ final class MockMethod
             $deprecationTemplate->setVar(
                 [
                     'deprecation' => var_export($deprecation, true),
+<<<<<<< HEAD
                 ]
+=======
+                ],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
 
             $deprecation = $deprecationTemplate->render();
@@ -230,7 +250,11 @@ final class MockMethod
                 'reference'          => $this->reference,
                 'clone_arguments'    => $this->cloneArguments ? 'true' : 'false',
                 'deprecation'        => $deprecation,
+<<<<<<< HEAD
             ]
+=======
+            ],
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         return $template->render();
@@ -255,7 +279,11 @@ final class MockMethod
                 throw new RuntimeException(
                     $e->getMessage(),
                     $e->getCode(),
+<<<<<<< HEAD
                     $e
+=======
+                    $e,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 );
             }
         }
@@ -361,18 +389,30 @@ final class MockMethod
                 substr(
                     substr(
                         $parameterAsString,
+<<<<<<< HEAD
                         strpos($parameterAsString, '<optional> ') + strlen('<optional> ')
                     ),
                     0,
                     -2
                 )
+=======
+                        strpos($parameterAsString, '<optional> ') + strlen('<optional> '),
+                    ),
+                    0,
+                    -2,
+                ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             )[1];
             // @codeCoverageIgnoreStart
         } catch (\ReflectionException $e) {
             throw new ReflectionException(
                 $e->getMessage(),
                 $e->getCode(),
+<<<<<<< HEAD
                 $e
+=======
+                $e,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
         // @codeCoverageIgnoreEnd

@@ -36,7 +36,11 @@ final class Exception extends Constraint
     {
         return sprintf(
             'exception of type "%s"',
+<<<<<<< HEAD
             $this->className
+=======
+            $this->className,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 
@@ -73,13 +77,21 @@ final class Exception extends Constraint
                 'exception of type "%s" matches expected exception "%s"%s',
                 get_class($other),
                 $this->className,
+<<<<<<< HEAD
                 $message
+=======
+                $message,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
         return sprintf(
             'exception of type "%s" is thrown',
+<<<<<<< HEAD
             $this->className
+=======
+            $this->className,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 }

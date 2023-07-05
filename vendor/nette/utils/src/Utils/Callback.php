@@ -157,7 +157,11 @@ final class Callback
 	 */
 	public static function isStatic(callable $callable): bool
 	{
+<<<<<<< HEAD
 		return is_array($callable) ? is_string($callable[0]) : is_string($callable);
+=======
+		return is_string(is_array($callable) ? $callable[0] : $callable);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 	}
 
 

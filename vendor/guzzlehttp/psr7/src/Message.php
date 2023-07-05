@@ -77,7 +77,11 @@ final class Message
 
         // Matches any printable character, including unicode characters:
         // letters, marks, numbers, punctuation, spacing, and separators.
+<<<<<<< HEAD
         if (preg_match('/[^\pL\pM\pN\pP\pS\pZ\n\r\t]/u', $summary)) {
+=======
+        if (preg_match('/[^\pL\pM\pN\pP\pS\pZ\n\r\t]/u', $summary) !== 0) {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             return null;
         }
 

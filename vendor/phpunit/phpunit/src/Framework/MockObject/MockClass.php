@@ -55,7 +55,11 @@ final class MockClass implements MockType
                     $this->mockName,
                     '__phpunit_initConfigurableMethods',
                 ],
+<<<<<<< HEAD
                 ...$this->configurableMethods
+=======
+                ...$this->configurableMethods,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

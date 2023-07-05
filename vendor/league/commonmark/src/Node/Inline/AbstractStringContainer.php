@@ -30,7 +30,13 @@ abstract class AbstractStringContainer extends AbstractInline implements StringC
         parent::__construct();
 
         $this->literal = $contents;
+<<<<<<< HEAD
         $this->data->import($data);
+=======
+        if (\count($data) > 0) {
+            $this->data->import($data);
+        }
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 
     public function getLiteral(): string

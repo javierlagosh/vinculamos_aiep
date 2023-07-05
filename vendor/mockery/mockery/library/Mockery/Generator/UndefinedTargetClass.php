@@ -20,6 +20,11 @@
 
 namespace Mockery\Generator;
 
+<<<<<<< HEAD
+=======
+use const PHP_VERSION_ID;
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 class UndefinedTargetClass implements TargetClassInterface
 {
     private $name;
@@ -34,6 +39,14 @@ class UndefinedTargetClass implements TargetClassInterface
         return new self($name);
     }
 
+<<<<<<< HEAD
+=======
+    public function getAttributes()
+    {
+        return [];
+    }
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     public function getName()
     {
         return $this->name;

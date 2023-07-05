@@ -34,7 +34,11 @@ class BinaryFileResponse extends Response
     protected $offset = 0;
     protected $maxlen = -1;
     protected $deleteFileAfterSend = false;
+<<<<<<< HEAD
     protected $chunkSize = 8 * 1024;
+=======
+    protected $chunkSize = 16 * 1024;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
     /**
      * @param \SplFileInfo|string $file               The file to stream
@@ -267,7 +271,11 @@ class BinaryFileResponse extends Response
                 $range = $request->headers->get('Range');
 
                 if (str_starts_with($range, 'bytes=')) {
+<<<<<<< HEAD
                     [$start, $end] = explode('-', substr($range, 6), 2) + [0];
+=======
+                    [$start, $end] = explode('-', substr($range, 6), 2) + [1 => 0];
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
 
                     $end = ('' === $end) ? $fileSize - 1 : (int) $end;
 
@@ -341,6 +349,7 @@ class BinaryFileResponse extends Response
 
             $length = $this->maxlen;
             while ($length && !feof($file)) {
+<<<<<<< HEAD
                 $read = ($length > $this->chunkSize) ? $this->chunkSize : $length;
                 $length -= $read;
 
@@ -349,6 +358,23 @@ class BinaryFileResponse extends Response
                 if (connection_aborted()) {
                     break;
                 }
+=======
+                $read = $length > $this->chunkSize || 0 > $length ? $this->chunkSize : $length;
+
+                if (false === $data = fread($file, $read)) {
+                    break;
+                }
+                while ('' !== $data) {
+                    $read = fwrite($out, $data);
+                    if (false === $read || connection_aborted()) {
+                        break 2;
+                    }
+                    if (0 < $length) {
+                        $length -= $read;
+                    }
+                    $data = substr($data, $read);
+                }
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             }
 
             fclose($out);

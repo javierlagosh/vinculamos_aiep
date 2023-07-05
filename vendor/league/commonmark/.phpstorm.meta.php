@@ -60,6 +60,11 @@ namespace PHPSTORM_META
         'footnote/footnote_class',
         'footnote/footnote_id_prefix',
         'heading_permalink',
+<<<<<<< HEAD
+=======
+        'heading_permalink/apply_id_to_heading',
+        'heading_permalink/heading_class',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         'heading_permalink/html_class',
         'heading_permalink/fragment_prefix',
         'heading_permalink/id_prefix',
@@ -83,6 +88,13 @@ namespace PHPSTORM_META
         'table/wrap/attributes',
         'table/wrap/enabled',
         'table/wrap/tag',
+<<<<<<< HEAD
+=======
+        'table/alignment_attributes',
+        'table/alignment_attributes/left',
+        'table/alignment_attributes/center',
+        'table/alignment_attributes/right',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         'table_of_contents',
         'table_of_contents/html_class',
         'table_of_contents/max_heading_level',

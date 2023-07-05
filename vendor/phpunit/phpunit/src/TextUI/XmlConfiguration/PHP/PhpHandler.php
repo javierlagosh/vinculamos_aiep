@@ -52,7 +52,11 @@ final class PhpHandler
                 'include_path',
                 implode(PATH_SEPARATOR, $includePathsAsStrings) .
                 PATH_SEPARATOR .
+<<<<<<< HEAD
                 ini_get('include_path')
+=======
+                ini_get('include_path'),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
     }

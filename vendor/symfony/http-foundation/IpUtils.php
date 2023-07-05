@@ -73,7 +73,11 @@ class IpUtils
             return false;
         }
 
+<<<<<<< HEAD
         $cacheKey = $requestIp.'-'.$ip;
+=======
+        $cacheKey = $requestIp.'-'.$ip.'-v4';
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         if (isset(self::$checkedIps[$cacheKey])) {
             return self::$checkedIps[$cacheKey];
         }
@@ -86,7 +90,11 @@ class IpUtils
             [$address, $netmask] = explode('/', $ip, 2);
 
             if ('0' === $netmask) {
+<<<<<<< HEAD
                 return self::$checkedIps[$cacheKey] = filter_var($address, \FILTER_VALIDATE_IP, \FILTER_FLAG_IPV4);
+=======
+                return self::$checkedIps[$cacheKey] = false !== filter_var($address, \FILTER_VALIDATE_IP, \FILTER_FLAG_IPV4);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             }
 
             if ($netmask < 0 || $netmask > 32) {
@@ -126,7 +134,11 @@ class IpUtils
             return false;
         }
 
+<<<<<<< HEAD
         $cacheKey = $requestIp.'-'.$ip;
+=======
+        $cacheKey = $requestIp.'-'.$ip.'-v6';
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         if (isset(self::$checkedIps[$cacheKey])) {
             return self::$checkedIps[$cacheKey];
         }
@@ -136,10 +148,13 @@ class IpUtils
         }
 
         // Check to see if we were given a IP4 $requestIp or $ip by mistake
+<<<<<<< HEAD
         if (str_contains($requestIp, '.') || str_contains($ip, '.')) {
             return self::$checkedIps[$cacheKey] = false;
         }
 
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         if (!filter_var($requestIp, \FILTER_VALIDATE_IP, \FILTER_FLAG_IPV6)) {
             return self::$checkedIps[$cacheKey] = false;
         }
@@ -147,6 +162,13 @@ class IpUtils
         if (str_contains($ip, '/')) {
             [$address, $netmask] = explode('/', $ip, 2);
 
+<<<<<<< HEAD
+=======
+            if (!filter_var($address, \FILTER_VALIDATE_IP, \FILTER_FLAG_IPV6)) {
+                return self::$checkedIps[$cacheKey] = false;
+            }
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             if ('0' === $netmask) {
                 return (bool) unpack('n*', @inet_pton($address));
             }
@@ -155,6 +177,13 @@ class IpUtils
                 return self::$checkedIps[$cacheKey] = false;
             }
         } else {
+<<<<<<< HEAD
+=======
+            if (!filter_var($ip, \FILTER_VALIDATE_IP, \FILTER_FLAG_IPV6)) {
+                return self::$checkedIps[$cacheKey] = false;
+            }
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             $address = $ip;
             $netmask = 128;
         }

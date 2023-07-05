@@ -138,7 +138,11 @@ final class MockBuilder
             $this->callOriginalMethods,
             $this->proxyTarget,
             $this->allowMockingUnknownTypes,
+<<<<<<< HEAD
             $this->returnValueGeneration
+=======
+            $this->returnValueGeneration,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $this->testCase->registerMockObject($object);
@@ -165,7 +169,11 @@ final class MockBuilder
             $this->originalClone,
             $this->autoload,
             $this->methods,
+<<<<<<< HEAD
             $this->cloneArguments
+=======
+            $this->cloneArguments,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $this->testCase->registerMockObject($object);
@@ -192,7 +200,11 @@ final class MockBuilder
             $this->originalClone,
             $this->autoload,
             $this->methods,
+<<<<<<< HEAD
             $this->cloneArguments
+=======
+            $this->cloneArguments,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         $this->testCase->registerMockObject($object);
@@ -243,7 +255,11 @@ final class MockBuilder
             throw new ReflectionException(
                 $e->getMessage(),
                 $e->getCode(),
+<<<<<<< HEAD
                 $e
+=======
+                $e,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
         // @codeCoverageIgnoreEnd
@@ -285,7 +301,11 @@ final class MockBuilder
             throw new ReflectionException(
                 $e->getMessage(),
                 $e->getCode(),
+<<<<<<< HEAD
                 $e
+=======
+                $e,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
         // @codeCoverageIgnoreEnd
@@ -313,8 +333,13 @@ final class MockBuilder
         return $this->setMethods(
             array_diff(
                 $this->generator->getClassMethods($this->type),
+<<<<<<< HEAD
                 $methods
             )
+=======
+                $methods,
+            ),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
     }
 

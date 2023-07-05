@@ -22,7 +22,11 @@ final class FilterMapper
             $filter->includeDirectory(
                 $directory->path(),
                 $directory->suffix(),
+<<<<<<< HEAD
                 $directory->prefix()
+=======
+                $directory->prefix(),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -34,7 +38,11 @@ final class FilterMapper
             $filter->excludeDirectory(
                 $directory->path(),
                 $directory->suffix(),
+<<<<<<< HEAD
                 $directory->prefix()
+=======
+                $directory->prefix(),
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 

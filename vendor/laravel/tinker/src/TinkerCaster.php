@@ -95,6 +95,25 @@ class TinkerCaster
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Get an array representing the properties of a process result.
+     *
+     * @param  \Illuminate\Process\ProcessResult  $result
+     * @return array
+     */
+    public static function castProcessResult($result)
+    {
+        return [
+            Caster::PREFIX_VIRTUAL.'output' => $result->output(),
+            Caster::PREFIX_VIRTUAL.'errorOutput' => $result->errorOutput(),
+            Caster::PREFIX_VIRTUAL.'exitCode' => $result->exitCode(),
+            Caster::PREFIX_VIRTUAL.'successful' => $result->successful(),
+        ];
+    }
+
+    /**
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      * Get an array representing the properties of a model.
      *
      * @param  \Illuminate\Database\Eloquent\Model  $model

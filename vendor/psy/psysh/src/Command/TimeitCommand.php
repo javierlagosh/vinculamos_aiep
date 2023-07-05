@@ -3,7 +3,11 @@
 /*
  * This file is part of Psy Shell.
  *
+<<<<<<< HEAD
  * (c) 2012-2022 Justin Hileman
+=======
+ * (c) 2012-2023 Justin Hileman
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -28,6 +32,11 @@ class TimeitCommand extends Command
     const RESULT_MSG = '<info>Command took %.6f seconds to complete.</info>';
     const AVG_RESULT_MSG = '<info>Command took %.6f seconds on average (%.6f median; %.6f total) to complete.</info>';
 
+<<<<<<< HEAD
+=======
+    // All times stored as nanoseconds!
+    private static $useHrtime;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     private static $start = null;
     private static $times = [];
 
@@ -40,6 +49,12 @@ class TimeitCommand extends Command
      */
     public function __construct($name = null)
     {
+<<<<<<< HEAD
+=======
+        // @todo Remove microtime use after we drop support for PHP < 7.3
+        self::$useHrtime = \function_exists('hrtime');
+
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         $parserFactory = new ParserFactory();
         $this->parser = $parserFactory->createParser();
 
@@ -76,6 +91,11 @@ HELP
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
+=======
+     *
+     * @return int 0 if everything went fine, or an exit code
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
@@ -98,13 +118,21 @@ HELP
         self::$times = [];
 
         if ($num === 1) {
+<<<<<<< HEAD
             $output->writeln(\sprintf(self::RESULT_MSG, $times[0]));
+=======
+            $output->writeln(\sprintf(self::RESULT_MSG, $times[0] / 1e+9));
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         } else {
             $total = \array_sum($times);
             \rsort($times);
             $median = $times[\round($num / 2)];
 
+<<<<<<< HEAD
             $output->writeln(\sprintf(self::AVG_RESULT_MSG, $total / $num, $median, $total));
+=======
+            $output->writeln(\sprintf(self::AVG_RESULT_MSG, ($total / $num) / 1e+9, $median / 1e+9, $total / 1e+9));
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         }
 
         return 0;
@@ -119,7 +147,11 @@ HELP
      */
     public static function markStart()
     {
+<<<<<<< HEAD
         self::$start = \microtime(true);
+=======
+        self::$start = self::$useHrtime ? \hrtime(true) : (\microtime(true) * 1e+6);
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
     }
 
     /**
@@ -138,7 +170,11 @@ HELP
      */
     public static function markEnd($ret = null)
     {
+<<<<<<< HEAD
         self::$times[] = \microtime(true) - self::$start;
+=======
+        self::$times[] = (self::$useHrtime ? \hrtime(true) : (\microtime(true) * 1e+6)) - self::$start;
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         self::$start = null;
 
         return $ret;
@@ -164,8 +200,11 @@ HELP
      * accurate times are recorded for just the code being executed.
      *
      * @param string $code
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     private function instrumentCode(string $code): string
     {

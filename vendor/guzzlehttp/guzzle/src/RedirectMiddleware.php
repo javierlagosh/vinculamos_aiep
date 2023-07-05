@@ -27,10 +27,17 @@ class RedirectMiddleware
      * @var array
      */
     public static $defaultSettings = [
+<<<<<<< HEAD
         'max'             => 5,
         'protocols'       => ['http', 'https'],
         'strict'          => false,
         'referer'         => false,
+=======
+        'max' => 5,
+        'protocols' => ['http', 'https'],
+        'strict' => false,
+        'referer' => false,
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         'track_redirects' => false,
     ];
 

@@ -123,7 +123,11 @@ final class TestSuiteSorter
 
         if (!in_array($order, $allowedOrders, true)) {
             throw new Exception(
+<<<<<<< HEAD
                 '$order must be one of TestSuiteSorter::ORDER_[DEFAULT|REVERSED|RANDOMIZED|DURATION|SIZE]'
+=======
+                '$order must be one of TestSuiteSorter::ORDER_[DEFAULT|REVERSED|RANDOMIZED|DURATION|SIZE]',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -134,7 +138,11 @@ final class TestSuiteSorter
 
         if (!in_array($orderDefects, $allowedOrderDefects, true)) {
             throw new Exception(
+<<<<<<< HEAD
                 '$orderDefects must be one of TestSuiteSorter::ORDER_DEFAULT, TestSuiteSorter::ORDER_DEFECTS_FIRST'
+=======
+                '$orderDefects must be one of TestSuiteSorter::ORDER_DEFAULT, TestSuiteSorter::ORDER_DEFECTS_FIRST',
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
             );
         }
 
@@ -240,7 +248,11 @@ final class TestSuiteSorter
             function ($left, $right)
             {
                 return $this->cmpDefectPriorityAndTime($left, $right);
+<<<<<<< HEAD
             }
+=======
+            },
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         return $tests;
@@ -256,7 +268,11 @@ final class TestSuiteSorter
             function ($left, $right)
             {
                 return $this->cmpDuration($left, $right);
+<<<<<<< HEAD
             }
+=======
+            },
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         return $tests;
@@ -272,7 +288,11 @@ final class TestSuiteSorter
             function ($left, $right)
             {
                 return $this->cmpSize($left, $right);
+<<<<<<< HEAD
             }
+=======
+            },
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
         );
 
         return $tests;

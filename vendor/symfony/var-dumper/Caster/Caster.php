@@ -47,7 +47,11 @@ class Caster
         if ($hasDebugInfo) {
             try {
                 $debugInfo = $obj->__debugInfo();
+<<<<<<< HEAD
             } catch (\Exception $e) {
+=======
+            } catch (\Throwable $e) {
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
                 // ignore failing __debugInfo()
                 $hasDebugInfo = false;
             }
@@ -115,7 +119,11 @@ class Caster
      * @param array    $a                The array containing the properties to filter
      * @param int      $filter           A bit field of Caster::EXCLUDE_* constants specifying which properties to filter out
      * @param string[] $listedProperties List of properties to exclude when Caster::EXCLUDE_VERBOSE is set, and to preserve when Caster::EXCLUDE_NOT_IMPORTANT is set
+<<<<<<< HEAD
      * @param int      &$count           Set to the number of removed properties
+=======
+     * @param int|null &$count           Set to the number of removed properties
+>>>>>>> f70250d9eaeafb7a42f9b666563f4cef7991e46c
      */
     public static function filter(array $a, int $filter, array $listedProperties = [], ?int &$count = 0): array
     {
