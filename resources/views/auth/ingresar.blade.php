@@ -11,25 +11,23 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="{{ asset('public/css/estilos.css') }}">
-    <link rel='shortcut icon' type='image/x-icon' href='{{ asset('public/img/camanchaca.png') }}' />
+    <link rel='shortcut icon' type='image/x-icon' href='{{ asset('public/img/aiep_chico.png') }}' />
 
 </head>
 
-<body style="background: url({{ asset('public/img/mar.jpg') }}); background-size:cover; background-repeat:no-repeat;">
-    <section class="ftco-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 col-lg-10">
-                    <div class="wrap d-md-flex">
-                        <div class="img" style="background-image: url({{ asset('public/img/camanchaca.png') }});">
-                        </div>
-                        <div class="login-wrap p-4 p-md-5">
-                            <div class="d-flex">
-                                <div class="w-100">
-                                    <h3 class="mb-4">INICIAR SESIÓN</h3>
-                                </div>
-                            </div>
-                            <form action="{{route('auth.ingresar')}}" class="signin-form" method="POST">
+<body style="background: url({{ asset('public/img/imagen1.jpg') }});background-size:cover; background-repeat:repeat;background-attachment: fixed;background-position: center;">
+    <section class="ftco-section" style="margin-right: 1%;">
+    <div class="container" style="background: rgba(255,255,255,0.50); width:50%; border-radius: 50px;"> 
+        <div class="row">
+            <div class="col-md-12">
+            <div class="text-center" style="border-radius: 50px; margin-top: 10%;">
+                <img src="public/img/logoaiep.png" alt="Imagen" class="img-fluid">
+            </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 offset-md-3" style="margin-top: 10%; margin-bottom: 10%;">
+            <form action="" class="signin-form" method="POST" >
                                 @csrf
 
                                 @if (Session::has('errorName'))
@@ -89,7 +87,7 @@
 
                                 <!-- Inicio del Formulario -->
                                 <div class="form-group mb-3">
-                                    <label class="label" for="nombre_usuario">Nombre de Usuario</label>
+                                    <label class="label" for="nombre_usuario" style="font-size: 18px;">Nombre de Usuario</label>
                                     <input type="text" class="form-control"
                                         placeholder="Ingrese su Nombre de Usuario"
                                         name="nombre_usuario" id="nombre_usuario" value="{{ old('nombre_usuario') }}" />
@@ -103,7 +101,7 @@
                                     @endif
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label class="label" for="clave">Contraseña</label>
+                                    <label class="label" for="clave" style="font-size: 18px;">Contraseña</label>
                                     <input type="password" class="form-control" placeholder="Ingrese su contraseña" required
                                         id="clave" name="clave">
                                     @if($errors->has('clave'))
@@ -119,10 +117,8 @@
                                     <button type="submit" class="form-control btn btn-primary rounded submit px-3">Ingresar</button>
                                 </div>
                             </form>
-                        </div>
-                    </div>
-                </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -132,5 +128,5 @@
     <script src="{{ asset('public/js/main.js') }}"></script>
 
 </body>
-
+                            
 </html>
