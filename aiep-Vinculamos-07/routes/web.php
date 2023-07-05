@@ -15,7 +15,7 @@ use App\Http\Controllers\AutenticacionController;
 */
 
 // inicio rutas ingreso al sistema
-Route::get('/', [AutenticationController::class, 'ingresar'])->name('ingresar.formulario')->middleware('verificar.sesion');
+Route::get('/')->viw('welcome');
 Route::get('ingresar', [AutenticationController::class, 'ingresar'])->name('ingresar.formulario')->middleware('verificar.sesion');
 Route::post('ingresar', [AutenticationController::class, 'validarIngreso'])->name('auth.ingresar');
 Route::get('salir', [AutenticationController::class, 'cerrarSesion'])->name('auth.cerrar');
