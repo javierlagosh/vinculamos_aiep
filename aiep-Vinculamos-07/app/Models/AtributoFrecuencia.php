@@ -14,7 +14,7 @@ class AtributoFrecuencia extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'ID',
+        'id',
         'nombre',
         'descripcion',
         'puntaje',
