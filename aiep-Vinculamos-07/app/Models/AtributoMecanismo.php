@@ -14,7 +14,7 @@ class AtributoMecanismo extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'id',
+        'ID',
         'nombre',
         'descripcion',
         'puntaje',
