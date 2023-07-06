@@ -9,13 +9,17 @@ class Comuna extends Model
 {
     use HasFactory;
 
-    protected $table = 'viga_geo_comuna';
+    protected $table = 'comunas';
 
     public $timestamps = false;
 
     protected $fillable = [
-        'id',
-        'id_region',
-        'nombre'
+        'comu_codigo',
+        'comu_nombre',
+        'regi_codigo',
+        'comu_creado',
+        'comu_actualizado',
+        'comu_rut_mod',
+        'comu_rol_mod'
     ];
 }

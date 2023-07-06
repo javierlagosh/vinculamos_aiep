@@ -9,12 +9,17 @@ class Pais extends Model
 {
     use HasFactory;
 
-    protected $table = 'viga_geo_pais';
+    protected $table = 'pais';
 
     public $timestamps = false;
 
     protected $fillable = [
-        'id',
-        'nombre'
+        'pais_codigo',
+        'pais_nombre',
+        'pais_creado',
+        'pais_actualizado',
+        'pais_rut_mod',
+        'pais_rol_mod',
+        'regionesregi_codigo'
     ];
 }

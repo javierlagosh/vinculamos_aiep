@@ -9,19 +9,20 @@ class Carreras extends Model
 {
     use HasFactory;
 
-    protected $table = 'viga_carreras';
+    protected $table = 'carreras';
 
     public $timestamps = false;
 
     protected $fillable = [
-        'id',
-        'nombre',
-        'descripcion',
-        'director',
-        'id_facultad',
-        'visible',
-        'institucion',
-        'autor',
-        'fecha_creacion'
+        'care_codigo',
+        'care_nombre',
+        'care_descripcion',
+        'care_director',
+        'care_visible',
+        'escu_codigo',
+        'care_creado',
+        'care_actualizado',
+        'care_rut_mod',
+        'care_rol_mod'
     ];
 }

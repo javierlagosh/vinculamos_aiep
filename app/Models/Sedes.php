@@ -9,18 +9,20 @@ class Sedes extends Model
 {
     use HasFactory;
 
-    protected $table = 'viga_sedes';
+    protected $table = 'sedes';
 
     public $timestamps = false;
 
     protected $fillable = [
-        'id',
-        'nombre',
-        'descripcion',
-        'director',
-        'visible',
-        'institucion',
-        'autor',
-        'fecha_creacion'
+        'sede_codigo',
+        'sede_nombre',
+        'sede_director',
+        'sede_institucion',
+        'sede_descripcion',
+        'sede_visible',
+        'sede_creado',
+        'sede_actualizado',
+        'sede_rut_mod',
+        'sede_rol_mod'
     ];
 }

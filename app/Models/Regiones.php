@@ -9,13 +9,17 @@ class Region extends Model
 {
     use HasFactory;
 
-    protected $table = 'viga_geo_region';
+    protected $table = 'regiones';
 
     public $timestamps = false;
 
     protected $fillable = [
-        'id',
-        'id_pais',
-        'nombre'
+        'regi_codigo',
+        'regi_nombre',
+        'pais_codigo',
+        'regi_creado',
+        'regi_actualizado',
+        'regi_rut_mod',
+        'regi_rol_mod'
     ];
 }
