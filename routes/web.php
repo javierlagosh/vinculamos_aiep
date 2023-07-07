@@ -15,9 +15,18 @@ use App\Http\Controllers\AutenticacionController;
 */
 
 // inicio rutas ingreso al sistema
+//Route::get('/', function () {
+//    return view('auth.ingresar');
+//});
 Route::get('/', function () {
-    return view('auth.ingresar');
+    return view('admin.panel_admin');
 });
+Route::get('registrar', [AutenticacionController::class, 'registrar']);
+
+
+Route::get('/ingresar', [AutenticacionController::class, 'ingresar'])->name('vista.login');
+Route::post('registrar', [AutenticationController::class, 'guardarRegistro'])->name('nuevo.registro');
+
 //Route::get('/', [AutenticationController::class, 'ingresar'])->name('ingresar.formulario')->middleware('verificar.sesion');
 //Route::get('ingresar', [AutenticationController::class, 'ingresar'])->name('ingresar.formulario')->middleware('verificar.sesion');
 //Route::post('ingresar', [AutenticationController::class, 'validarIngreso'])->name('auth.ingresar');
