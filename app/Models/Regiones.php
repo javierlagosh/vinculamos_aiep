@@ -15,11 +15,11 @@ class Region extends Model
 
     protected $fillable = [
         'regi_codigo',
-        'regi_nombre',
         'pais_codigo',
+        'regi_nombre',
         'regi_creado',
         'regi_actualizado',
-        'regi_rut_mod',
+        'regi_nickname_mod',
         'regi_rol_mod'
     ];
 }

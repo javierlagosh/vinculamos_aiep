@@ -5,20 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pais extends Model
+class ParticipantesInternos extends Model
 {
     use HasFactory;
 
-    protected $table = 'pais';
+    protected $table = 'participantes_internos';
 
     public $timestamps = false;
 
     protected $fillable = [
-        'pais_codigo',
-        'pais_nombre',
-        'pais_creado',
-        'pais_actualizado',
-        'pais_nickname_mod',
-        'pais_rol_mod'
+        'escu_codigo',
+        'inic_codigo',
+        'pain_docentes',
+        'pain_estudiantes'
     ];
 }

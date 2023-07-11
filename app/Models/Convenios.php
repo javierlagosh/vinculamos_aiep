@@ -22,7 +22,7 @@ class Convenios extends Model
         'conv_creado',
         'conv_actualizado',
         'conv_visible',
-        'conv_rut_mod',
+        'conv_nickname_mod',
         'conv_rol_mod'
     ];
 }

@@ -5,21 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Comuna extends Model
+class IniciativasComuna extends Model
 {
     use HasFactory;
 
-    protected $table = 'comunas';
+    protected $table = 'iniciativas_comuna';
 
     public $timestamps = false;
 
     protected $fillable = [
+        'inic_codigo',
         'comu_codigo',
-        'regi_codigo',
-        'comu_nombre',
-        'comu_creado',
-        'comu_actualizado',
-        'comu_nickname_mod',
-        'comu_rol_mod'
+        'coin_creado',
+        'coin_actualizado',
+        'coin_nickname_mod',
+        'coin_rol_mod'
+
     ];
 }

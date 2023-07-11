@@ -15,14 +15,14 @@ class Programas extends Model
 
     protected $fillable = [
         'prog_codigo',
+        'tmec_codigo',
         'prog_nombre',
         'prog_descripcion',
         'prog_director',
         'prog_visible',
-        'prog_institucion',
         'prog_creado',
         'prog_actualizado',
-        'prog_rut_mod',
+        'prog_nickname_mod',
         'prog_rol_mod'
     ];
 }

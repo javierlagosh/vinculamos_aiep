@@ -15,14 +15,15 @@ class Carreras extends Model
 
     protected $fillable = [
         'care_codigo',
+        'escu_codigo',
         'care_nombre',
         'care_descripcion',
         'care_director',
         'care_visible',
-        'escu_codigo',
+        'care_institucion',
         'care_creado',
         'care_actualizado',
-        'care_rut_mod',
+        'care_nickname_mod',
         'care_rol_mod'
     ];
 }

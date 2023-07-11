@@ -16,13 +16,15 @@ class Sedes extends Model
     protected $fillable = [
         'sede_codigo',
         'sede_nombre',
-        'sede_director',
-        'sede_institucion',
+        'sede_meta_estudiantes',
+        'sede_meta_docentes',
+        'sede_meta_socios',
+        'sede_meta_iniciativas',
         'sede_descripcion',
         'sede_visible',
         'sede_creado',
         'sede_actualizado',
-        'sede_rut_mod',
+        'sede_nickname_mod',
         'sede_rol_mod'
     ];
 }

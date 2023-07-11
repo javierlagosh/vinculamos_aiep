@@ -22,7 +22,7 @@ class Escuelas extends Model
         'escu_institucion',
         'escu_creado',
         'escu_actualizado',
-        'escu_rut_mod',
+        'escu_nickname_mod',
         'escu_rol_mod'
     ];
 }
