@@ -111,9 +111,6 @@
                         <div class="main-content">
                             @yield('contenido')
                         </div>
-
-
-
                 </div>
             </div>
         </div>

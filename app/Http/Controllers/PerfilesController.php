@@ -12,7 +12,7 @@ use App\Models\Perfiles;
 
 
 
-class AutenticacionController extends Controller
+class PerfilesController extends Controller
 {
     // TODO: Listar Perfiles
     public function ListarPerfiles() {

@@ -28,7 +28,7 @@
         </div>
         <div class="row mt-4">
             <div class="col-md-6 offset-md-3" style="margin-top: 10%; margin-bottom: 10%;">
-            <form action="" class="signin-form" method="POST" >
+            <form action="{{route('auth.ingresar')}}" class="signin-form" method="POST" >
                                 @csrf
 
                                 @if (Session::has('errorName'))

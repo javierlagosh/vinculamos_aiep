@@ -27,6 +27,12 @@ class AutenticacionController extends Controller
         return view('auth.registrar');
     }
 
+    // TODO: FUNCIONES ACCESO Pruebas
+    public function acceder() {
+        $request->session()->put('admin');
+        return redirect()->route('auth.registrar');
+    }
+
     // TODO: Validar Ingreso
     public function validarIngreso(Request $request) {
         $request->validate(

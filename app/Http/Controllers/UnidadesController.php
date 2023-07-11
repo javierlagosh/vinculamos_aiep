@@ -12,7 +12,7 @@ use App\Models\Logs;
 use App\Models\IniciativaPlan;
 use App\Models\IniciativaPlanUnidad;
 
-class ParametrosController extends Controller
+class UnidadesController extends Controller
 {
     // TODO: Guardado
     public function GuardarUnidad(Request $request)
